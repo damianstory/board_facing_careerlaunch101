@@ -70,7 +70,6 @@ module.exports = {
       },
       animation: {
         'subtle-pulse': 'subtle-pulse 2s infinite',
-        'scroll-left': 'scroll-left 35s linear infinite',
         'underline-expand': 'underline-expand 200ms ease-out',
         'loading': 'loading 1.5s infinite',
       },
@@ -78,10 +77,6 @@ module.exports = {
         'subtle-pulse': {
           '0%, 100%': { boxShadow: '0 4px 12px rgba(249, 115, 22, 0.15)' },
           '50%': { boxShadow: '0 6px 20px rgba(249, 115, 22, 0.25)' },
-        },
-        'scroll-left': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
         },
         'underline-expand': {
           '0%': { width: '0' },

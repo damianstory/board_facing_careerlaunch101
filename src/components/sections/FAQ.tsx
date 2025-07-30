@@ -90,15 +90,6 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
       {...props}
     >
       <div className="container">
-        {/* Section header */}
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="h2-mobile md:h2 mb-4 md:mb-6 text-black">
-            Frequently Asked Questions
-          </h2>
-          <p className="body md:body-large text-gray-700 max-w-3xl mx-auto">
-            Everything you need to know about partnering with Ontario's largest virtual career fair
-          </p>
-        </div>
 
         {/* Search bar */}
         <div className="max-w-2xl mx-auto mb-8 md:mb-12">

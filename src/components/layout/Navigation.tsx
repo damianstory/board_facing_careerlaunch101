@@ -106,7 +106,7 @@ export const Navigation: React.FC = () => {
               className="flex items-center"
             >
               <Image
-                src="https://i.imgur.com/DBm75jp.png"
+                src="/images/logo.png"
                 alt="VCF Sponsors"
                 width={120}
                 height={40}
@@ -136,7 +136,7 @@ export const Navigation: React.FC = () => {
               <Button
                 variant="primary"
                 size="default"
-                className="ml-4"
+                className="ml-4 text-white"
                 onClick={() => {
                   const element = document.getElementById('tiers')
                   if (element) {
@@ -144,7 +144,7 @@ export const Navigation: React.FC = () => {
                   }
                 }}
               >
-                Book Consultation
+                Talk To Us
               </Button>
             </div>
           </div>
@@ -167,7 +167,7 @@ export const Navigation: React.FC = () => {
               className="flex items-center"
             >
               <Image
-                src="https://i.imgur.com/DBm75jp.png"
+                src="/images/logo.png"
                 alt="VCF Sponsors"
                 width={100}
                 height={32}
@@ -233,7 +233,7 @@ export const Navigation: React.FC = () => {
               <Button
                 variant="primary"
                 size="mobile"
-                className="mt-4 w-full"
+                className="mt-4 w-full text-white"
                 onClick={() => {
                   setIsMobileMenuOpen(false)
                   const element = document.getElementById('tiers')
@@ -244,7 +244,7 @@ export const Navigation: React.FC = () => {
                   }
                 }}
               >
-                Book Consultation
+                Talk To Us
               </Button>
             </div>
           </div>

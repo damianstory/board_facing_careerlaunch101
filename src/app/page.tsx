@@ -13,13 +13,13 @@ export default function Home() {
         <Hero />
         
         {/* Logo Carousel - Positioned just below hero */}
-        <section className="py-12 bg-white border-t border-gray-100">
+        <section className="py-6 bg-white border-t border-gray-100">
           <div className="container">
             <div className="text-center">
-              <p className="text-body-small text-functional-neutral mb-6">
-                Join leading companies already partnering with us
-              </p>
               <LogoCarousel />
+              <p className="text-body font-semibold text-functional-dark mt-6">
+                You're in good company.
+              </p>
             </div>
           </div>
         </section>

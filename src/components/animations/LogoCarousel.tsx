@@ -3,24 +3,21 @@
 import React, { useRef, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
+import { InfiniteSlider } from '@/components/ui/infinite-slider'
 
 // Generate placeholder logos array (1-25)
 const generateLogoArray = () => {
   return Array.from({ length: 25 }, (_, i) => ({
     id: i + 1,
-    src: `/logos/logo-${i + 1}.png`,
+    src: `/logos/coming-soon.jpg`,
     alt: `Company ${i + 1} Logo`,
   }))
 }
 
 export const LogoCarousel: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
-  const [isPaused, setIsPaused] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const logos = generateLogoArray()
-  
-  // Duplicate logos for seamless scrolling
-  const duplicatedLogos = [...logos, ...logos]
   
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -48,8 +45,6 @@ export const LogoCarousel: React.FC = () => {
     <div
       ref={containerRef}
       className="relative overflow-hidden"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
     >
       {isVisible && (
         <div className="relative">
@@ -57,38 +52,29 @@ export const LogoCarousel: React.FC = () => {
           <div className="absolute left-0 top-0 bottom-0 w-20 tablet:w-32 bg-gradient-to-r from-background-white to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-20 tablet:w-32 bg-gradient-to-l from-background-white to-transparent z-10 pointer-events-none" />
           
-          {/* Logo Track */}
-          <div
-            className={cn(
-              'flex items-center gap-8 tablet:gap-12',
-              isPaused ? '' : 'animate-scroll-left'
-            )}
-            style={{
-              animationPlayState: isPaused ? 'paused' : 'running',
-            }}
+          {/* Logo Track using InfiniteSlider */}
+          <InfiniteSlider
+            gap={32}
+            duration={35}
+            durationOnHover={70}
+            className="py-4"
           >
-            {duplicatedLogos.map((logo, index) => (
+            {logos.map((logo) => (
               <div
-                key={`${logo.id}-${index}`}
+                key={logo.id}
                 className="flex-shrink-0 w-24 h-12 tablet:w-32 tablet:h-16 relative"
               >
-                {/* Placeholder div with company name */}
-                <div className="w-full h-full bg-gray-100 rounded-lg flex items-center justify-center">
-                  <span className="text-caption tablet:text-body-small text-functional-neutral font-medium">
-                    Company {logo.id}
-                  </span>
-                </div>
-                {/* Next/Image will be used when actual logos are available */}
-                {/* <Image
+                <Image
                   src={logo.src}
                   alt={logo.alt}
                   fill
                   className="object-contain"
                   sizes="(max-width: 768px) 96px, 128px"
-                /> */}
+                  priority={logo.id <= 5}
+                />
               </div>
             ))}
-          </div>
+          </InfiniteSlider>
         </div>
       )}
     </div>
