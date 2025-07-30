@@ -1,0 +1,13 @@
+HERO BACKGROUND IMAGE PLACEHOLDER
+================================
+
+Please add your hero background image here with the filename:
+hero-background.jpg
+
+Recommended specifications:
+- Dimensions: 1920x1080 minimum (16:9 ratio)
+- Format: JPG or PNG
+- File size: Optimized for web (under 500KB)
+- Content: Professional image related to careers, education, or technology
+
+The image will be displayed with a gradient overlay from left (dark) to right (transparent) to ensure text readability.

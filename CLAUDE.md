@@ -54,6 +54,14 @@ export const Component: React.FC<ComponentProps> = ({ variant, className, ...pro
 }
 ```
 
+### Section Component Pattern
+All section components (Hero, About, Tiers, FAQ) follow this structure:
+- Located in `src/components/sections/`
+- Use `'use client'` directive for interactivity
+- Implement scroll-triggered animations with Intersection Observer
+- Include TypeScript interfaces extending `React.HTMLAttributes<HTMLElement>`
+- Support className override via `cn()` utility
+
 ### State Management Strategy
 - **Local State**: React hooks for component state
 - **Navigation State**: Intersection Observer tracks active sections
@@ -100,6 +108,18 @@ interface TierConfig {
 - Statistics counter: 2s duration with 60 steps
 - All animations respect prefers-reduced-motion
 
+### Data Structure Patterns
+```typescript
+// FAQ data structure in src/data/faq.ts
+interface FAQItem {
+  id: string
+  question: string
+  answer: string
+  category?: 'event-details' | 'sponsorship-process'
+  keywords?: string[]
+}
+```
+
 ## Core Requirements
 
 ### Performance Targets
@@ -120,16 +140,21 @@ interface TierConfig {
 - Desktop: 1024px
 - Large: 1200px
 
-## Project Status & Next Steps
-**Current State**: Phase 1 complete - Foundation, Navigation, Hero, LogoCarousel implemented
-
-**Pending Components**:
-- About section with video integration
-- Sponsorship Tiers with dynamic availability
-- FAQ section with search functionality
-- Performance optimizations (skeleton screens, critical CSS)
+## Project Status
+**Current State**: All major sections complete - Navigation, Hero, LogoCarousel, About, Tiers, and FAQ sections implemented
 
 **Business Goal**: Convert corporate visitors into consultation bookings through urgency and clear value proposition.
+
+## Common Issues & Solutions
+
+### Text Color Classes Not Working
+The project uses standard Tailwind color classes (e.g., `text-black`, `text-gray-700`). Avoid using undefined classes like `text-text-primary`.
+
+### Missing Animations
+Some animations (e.g., `animate-fade-in-up`) may be referenced but not defined in Tailwind config. Remove animation classes or add them to the config.
+
+### Border Colors
+Use standard Tailwind border colors (`border-gray-200`) instead of undefined ones (`border-stroke-light`).
 
 ## Development Workflow
 1. Review todo.md for current progress and planned tasks
