@@ -20,7 +20,7 @@ export const Card: React.FC<CardProps> = ({
     tier: cn(
       'p-8 tablet:p-8 shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-gray-100',
       'hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)]',
-      featured && 'border-2 border-accent-orange relative'
+      featured && 'border-2 border-[#0092ff] relative'
     ),
     content: 'p-5 tablet:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.05)]',
   }
@@ -35,8 +35,8 @@ export const Card: React.FC<CardProps> = ({
       {...props}
     >
       {featured && variant === 'tier' && (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent-orange text-primary-white px-4 py-1 rounded-xl text-caption font-bold uppercase tracking-wider">
-          Most Popular
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#0092ff] text-white px-4 py-1 rounded-xl text-caption font-bold uppercase tracking-wider text-center">
+          BEST VALUE
         </span>
       )}
       {children}

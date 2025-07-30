@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
 
@@ -102,9 +103,16 @@ export const Navigation: React.FC = () => {
             <a
               href="#hero"
               onClick={(e) => scrollToSection(e, '#hero')}
-              className="text-h4 font-bold text-primary-blue"
+              className="flex items-center"
             >
-              VCF Sponsors
+              <Image
+                src="https://i.imgur.com/DBm75jp.png"
+                alt="VCF Sponsors"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+                priority
+              />
             </a>
             
             {/* Navigation Links */}
@@ -115,16 +123,13 @@ export const Navigation: React.FC = () => {
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.href)}
                   className={cn(
-                    'relative py-2 text-body font-medium transition-colors duration-fast',
+                    'flex items-center h-full text-body font-medium transition-colors duration-fast',
                     activeSection === link.id
                       ? 'text-primary-blue'
                       : 'text-functional-neutral hover:text-primary-blue'
                   )}
                 >
                   {link.label}
-                  {activeSection === link.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary-blue animate-underline-expand" />
-                  )}
                 </a>
               ))}
               
@@ -159,9 +164,16 @@ export const Navigation: React.FC = () => {
             <a
               href="#hero"
               onClick={(e) => scrollToSection(e, '#hero')}
-              className="text-h4-mobile font-bold text-primary-blue"
+              className="flex items-center"
             >
-              VCF Sponsors
+              <Image
+                src="https://i.imgur.com/DBm75jp.png"
+                alt="VCF Sponsors"
+                width={100}
+                height={32}
+                className="h-8 w-auto"
+                priority
+              />
             </a>
             
             {/* Hamburger Menu Button */}

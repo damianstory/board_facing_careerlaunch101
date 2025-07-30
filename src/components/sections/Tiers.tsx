@@ -292,7 +292,7 @@ export const Tiers: React.FC = () => {
               <div className="text-center mb-6">
                 <span className={cn(
                   "text-body-small font-medium",
-                  isLimited(tier) ? "text-warning-orange" : "text-functional-neutral"
+                  isLimited(tier) ? "text-functional-neutral" : "text-functional-neutral"
                 )}>
                   {getAvailabilityText(tier)}
                 </span>
@@ -333,7 +333,10 @@ export const Tiers: React.FC = () => {
               <Button
                 variant={isLimited(tier) ? "urgency" : tier.featured ? "primary" : "secondary"}
                 size="default"
-                className="w-full"
+                className={cn(
+                  "w-full",
+                  (tier.id === 'freelancer' || tier.id === 'specialist' || tier.id === 'generalist') && "!bg-[#0092ff] !text-white hover:!bg-[#0076cc] active:!bg-[#005a99]"
+                )}
                 onClick={() => {
                   // In a real app, this would trigger a consultation booking flow
                   console.log(`Selected tier: ${tier.name}`)
@@ -375,12 +378,12 @@ export const Tiers: React.FC = () => {
                       key={tier.id} 
                       className={cn(
                         "py-4 px-4 text-center text-body font-semibold",
-                        tier.featured ? "text-accent-orange" : "text-functional-dark"
+                        tier.featured ? "text-[#0092ff]" : "text-functional-dark"
                       )}
                     >
                       {tier.name}
                       {tier.featured && (
-                        <span className="block text-caption font-normal mt-1">Most Popular</span>
+                        <span className="block text-caption font-normal mt-1">Best Value</span>
                       )}
                     </th>
                   ))}
@@ -471,7 +474,7 @@ export const Tiers: React.FC = () => {
                         key={tier.id} 
                         className={cn(
                           "py-3 px-3 text-center text-body-small font-semibold whitespace-nowrap",
-                          tier.featured ? "text-accent-orange" : "text-functional-dark"
+                          tier.featured ? "text-[#0092ff]" : "text-functional-dark"
                         )}
                       >
                         {tier.name}
