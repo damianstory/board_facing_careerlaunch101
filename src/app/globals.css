@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary-blue: #0092FF;
+    --primary-white: #FFFFFF;
+    
+    /* Secondary Colors */
+    --secondary-blue-light: #66B5FF;
+    --secondary-blue-pale: #E6F4FF;
+    
+    /* Accent Colors */
+    --accent-orange: #F97316;
+    --accent-teal: #0D9488;
+    
+    /* Functional Colors */
+    --success-green: #059669;
+    --warning-orange: #EA580C;
+    --error-red: #DC2626;
+    --neutral-gray: #6B7280;
+    --dark-gray: #1F2937;
+    
+    /* Background Colors */
+    --background-white: #FFFFFF;
+    --background-light: #F9FAFB;
+    --background-dark: #111827;
+    
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+    --space-3xl: 64px;
+    
+    /* Breakpoints */
+    --mobile: 320px;
+    --tablet: 768px;
+    --desktop: 1024px;
+    --large: 1200px;
+    
+    /* Transitions */
+    --duration-fast: 150ms;
+    --duration-standard: 250ms;
+    --duration-slow: 400ms;
+    --duration-carousel: 35s;
+    
+    /* Timing Functions */
+    --ease-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+    --ease-decelerate: cubic-bezier(0.0, 0.0, 0.2, 1);
+    --ease-accelerate: cubic-bezier(0.4, 0.0, 1, 1);
+    --ease-spring: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+    color: var(--dark-gray);
+    background-color: var(--background-white);
+  }
+  
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    outline: 3px solid var(--primary-blue);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  
+  /* Reduced motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  
+  /* Touch target minimum size */
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  /* Container utility */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      padding: 0 40px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      padding: 0 48px;
+    }
+  }
+}
+
+@layer components {
+  /* Skeleton loading state */
+  .skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+  
+  /* Micro interactions */
+  .micro-interaction {
+    transition: all var(--duration-fast) var(--ease-standard);
+  }
+  
+  /* Card hover effect */
+  .card-hover {
+    transition: all var(--duration-standard) var(--ease-decelerate);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+}
+
+@layer utilities {
+  /* Hide visually but keep accessible */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}

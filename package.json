@@ -1,0 +1,37 @@
+{
+  "name": "mybcs-sponsorshippage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev --turbo --port 3000",
+    "dev:host": "next dev -H 0.0.0.0",
+    "dev:port": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clean": "rm -rf .next node_modules/.cache",
+    "restart": "pkill -f 'next dev' || true && npm run dev",
+    "check": "curl -s -o /dev/null -w '%{http_code}' http://localhost:3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "24.1.0",
+    "@types/react": "19.1.9",
+    "@types/react-dom": "19.1.7",
+    "clsx": "^2.1.1",
+    "express": "^5.1.0",
+    "next": "15.4.5",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "tailwind-merge": "^3.3.1",
+    "typescript": "5.8.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+  }
+}
