@@ -20,10 +20,10 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
     <div className="border-b border-gray-200 last:border-b-0">
       <button
         onClick={onToggle}
-        className="w-full py-5 flex items-center justify-between text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 rounded-lg"
+        className="w-full py-5 px-6 flex items-center justify-between text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 rounded-lg"
         aria-expanded={isOpen}
       >
-        <span className="text-body tablet:text-body-large font-medium text-functional-dark pr-4">
+        <span className="text-body tablet:text-body-large font-medium text-black pr-4">
           {question}
         </span>
         <svg
@@ -50,7 +50,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
           isOpen ? 'max-h-96' : 'max-h-0'
         )}
       >
-        <div className="pb-5 pr-12 text-body text-functional-neutral">
+        <div className="px-6 pb-5 pr-12 text-body text-black">
           {answer}
         </div>
       </div>
