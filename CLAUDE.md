@@ -30,6 +30,7 @@ npm run check        # Check if server is running
 - **Tailwind CSS** with comprehensive design system
 - **React 19.1.1** with hooks for state management
 - **clsx + tailwind-merge** for dynamic styling
+- **Lucide React** for consistent iconography
 
 ### Key Design Patterns
 1. **Component Composition**: All components use TypeScript interfaces with the `cn()` utility for class merging
@@ -69,16 +70,17 @@ All section components (Hero, About, Tiers, FAQ) follow this structure:
 - **No Redux/Context**: Single-page app doesn't require global state
 
 ### Design System Integration
-The design system is implemented through:
+The design system is implemented through a dual approach:
 1. **Tailwind Config**: Extended with project colors, typography, spacing, animations
-2. **CSS Custom Properties**: Defined in globals.css for runtime theming
-3. **Utility Classes**: Custom utilities for skeleton loading, focus states, etc.
+2. **CSS Custom Properties**: Defined in globals.css for runtime theming and consistency
+3. **Utility Classes**: Custom utilities for skeleton loading, focus states, accessibility helpers
 
 ### Critical Performance Optimizations
 1. **Logo Carousel**: CSS animation with 35s duration, pauses on hover
 2. **Statistics Counters**: Only animate when visible via Intersection Observer
 3. **Navigation**: Uses `position: sticky` with backdrop blur for performance
 4. **Images**: All images must use Next.js Image component with lazy loading
+5. **Intersection Observer Pattern**: Used consistently across all sections for animation triggers
 
 ## Key Implementation Details
 
@@ -87,8 +89,9 @@ The design system is implemented through:
 - Intersection Observer with `-20% 0px -70% 0px` rootMargin for section tracking
 - Smooth scroll with offset calculation for sticky header
 - Mobile menu prevents body scroll when open
+- Dual implementation (desktop/mobile) for optimal UX
 
-### Tier System Architecture
+### Component Data Patterns
 ```typescript
 // Tier data structure in src/data/tiers.ts
 interface TierConfig {
@@ -100,16 +103,7 @@ interface TierConfig {
   featured?: boolean
   benefits: string[]
 }
-```
 
-### Animation Timing
-- Logo carousel: 35s infinite scroll
-- Transitions: 150ms (fast), 250ms (standard), 400ms (slow)
-- Statistics counter: 2s duration with 60 steps
-- All animations respect prefers-reduced-motion
-
-### Data Structure Patterns
-```typescript
 // FAQ data structure in src/data/faq.ts
 interface FAQItem {
   id: string
@@ -118,6 +112,21 @@ interface FAQItem {
   category?: 'event-details' | 'sponsorship-process'
   keywords?: string[]
 }
+```
+
+### Animation Architecture
+- **CSS Keyframes**: Defined in Tailwind config for optimal performance
+- **Intersection Observer**: Triggers animations only when elements are visible
+- **Staggered Delays**: Components use incremental delays for smooth sequences
+- **Reduced Motion**: Comprehensive support via CSS media queries
+- **Timing Standards**: Fast (150ms), Standard (250ms), Slow (400ms)
+
+### Bento Grid System
+Recent addition for flexible card layouts:
+```typescript
+// BentoGrid component provides responsive grid container
+// BentoCard component with hover effects and optional backgrounds
+// Usage pattern: col-span-3 desktop:col-span-1/2 for responsive layouts
 ```
 
 ## Core Requirements
@@ -133,6 +142,7 @@ interface FAQItem {
 - Color contrast: 4.5:1 (normal text), 3:1 (large text)
 - Keyboard navigation for all interactive elements
 - Screen reader compatible with semantic HTML
+- Focus-visible styles with 3px blue outline
 
 ### Mobile-First Breakpoints
 - Mobile: 320px (default)
@@ -141,25 +151,50 @@ interface FAQItem {
 - Large: 1200px
 
 ## Project Status
-**Current State**: All major sections complete - Navigation, Hero, LogoCarousel, About, Tiers, and FAQ sections implemented
+**Current State**: All major sections complete - Navigation, Hero, LogoCarousel, About (with bento grid), Tiers, and FAQ sections implemented
 
 **Business Goal**: Convert corporate visitors into consultation bookings through urgency and clear value proposition.
 
+## Development Patterns
+
+### Component Creation Workflow
+1. Create component in appropriate directory (`ui/`, `sections/`, `layout/`)
+2. Follow TypeScript interface pattern extending HTML attributes
+3. Implement responsive design mobile-first
+4. Add Intersection Observer for animations if needed
+5. Use `cn()` utility for all className composition
+6. Test at minimum 320px width
+
+### Data-Driven Components
+- All dynamic content should be configuration-driven
+- Use TypeScript interfaces for type safety
+- Centralize data in `src/data/` directory
+- Components should render from configuration objects
+
+### Animation Implementation
+1. Use CSS animations via Tailwind classes when possible
+2. Implement Intersection Observer for scroll-triggered animations
+3. Always include `prefers-reduced-motion` fallbacks
+4. Stagger animation delays for sequences (100ms increments)
+
 ## Common Issues & Solutions
 
-### Text Color Classes Not Working
-The project uses standard Tailwind color classes (e.g., `text-black`, `text-gray-700`). Avoid using undefined classes like `text-text-primary`.
+### CSS Class Conflicts
+The project uses standard Tailwind color classes (e.g., `text-black`, `text-gray-700`). Always check Tailwind config for custom extensions before using classes.
 
 ### Missing Animations
-Some animations (e.g., `animate-fade-in-up`) may be referenced but not defined in Tailwind config. Remove animation classes or add them to the config.
+Some animations may be referenced but not defined in Tailwind config. Either remove animation classes or add them to the config keyframes section.
 
-### Border Colors
-Use standard Tailwind border colors (`border-gray-200`) instead of undefined ones (`border-stroke-light`).
+### Container Usage
+Use the `.container` utility class for consistent max-width and responsive padding instead of custom implementations.
+
+### Focus States
+All interactive elements automatically receive focus-visible styles via globals.css. Don't override unless necessary.
 
 ## Development Workflow
-1. Review todo.md for current progress and planned tasks
-2. Create task list before implementing features
-3. Keep changes minimal and focused
-4. Update todo.md with completed work
-5. Test mobile-first at 320px width
-6. Verify accessibility with keyboard navigation
+1. Check if server is running with `npm run check`
+2. Use `npm run dev` for development with Turbo compilation
+3. Test mobile-first at 320px width
+4. Verify animations respect reduced-motion preferences  
+5. Ensure all touch targets meet 48px minimum
+6. Run `npm run lint` before committing changes

@@ -1,8 +1,9 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import { Button } from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
+import { BentoGrid } from '@/components/ui/BentoGrid'
+import { BentoCard } from '@/components/ui/BentoCard'
 
 interface ValuePropItem {
   id: string
@@ -14,8 +15,6 @@ interface ValuePropItem {
 export const About: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLDivElement>(null)
 
   // Value propositions data
   const valueProps: ValuePropItem[] = [
@@ -107,136 +106,123 @@ export const About: React.FC = () => {
           </p>
         </div>
 
-        {/* Two Column Layout */}
-        <div className="grid grid-cols-1 desktop:grid-cols-5 gap-8 tablet:gap-12">
-          
-          {/* Content Column (Left on Desktop, Top on Mobile) */}
-          <div 
-            ref={contentRef}
+        {/* Bento Grid */}
+        <BentoGrid>
+          {/* Statistics Card */}
+          <BentoCard 
             className={cn(
-              "desktop:col-span-3 transition-all duration-slow delay-200",
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+              "col-span-3 desktop:col-span-1 bg-secondary-blue-pale border-l-4 border-primary-blue transition-all duration-slow delay-200",
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
-            {/* Key Statistic */}
-            <div className="bg-secondary-blue-pale border-l-4 border-primary-blue p-6 rounded-lg mb-8">
-              <p className="text-h3-mobile tablet:text-h3 text-primary-blue font-bold mb-2">
-                65% of students
-              </p>
-              <p className="text-body tablet:text-body-large text-functional-dark">
-                will work in jobs that don't exist today. Help them discover opportunities 
-                in your industry and build awareness of career paths they haven't considered.
-              </p>
-            </div>
+            <p className="text-h3-mobile tablet:text-h3 text-primary-blue font-bold mb-2">
+              65% of students
+            </p>
+            <p className="text-body tablet:text-body-large text-functional-dark">
+              will work in jobs that don't exist today. Help them discover opportunities 
+              in your industry and build awareness of career paths they haven't considered.
+            </p>
+          </BentoCard>
 
-            {/* Event Details Card */}
-            <div className="bg-background-white rounded-xl p-6 tablet:p-8 shadow-sm mb-8">
-              <h3 className="text-h4-mobile tablet:text-h4 text-functional-dark mb-4">
-                Event Details
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <div>
-                    <p className="text-body font-semibold text-functional-dark">December 2, 2025</p>
-                    <p className="text-body-small text-functional-neutral">Full-day virtual event with extended on-demand access</p>
-                  </div>
+          {/* Event Details Card */}
+          <BentoCard 
+            className={cn(
+              "col-span-3 desktop:col-span-2 transition-all duration-slow delay-300",
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            )}
+          >
+            <h3 className="text-h4-mobile tablet:text-h4 text-functional-dark mb-6">
+              Event Details
+            </h3>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <div>
+                  <p className="text-body font-semibold text-functional-dark">December 2, 2025</p>
+                  <p className="text-body-small text-functional-neutral">Full-day virtual event with extended on-demand access</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                  <div>
-                    <p className="text-body font-semibold text-functional-dark">50,000+ Students</p>
-                    <p className="text-body-small text-functional-neutral">From 72 school boards across Ontario</p>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <div>
+                  <p className="text-body font-semibold text-functional-dark">50,000+ Students</p>
+                  <p className="text-body-small text-functional-neutral">From 72 school boards across Ontario</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <div>
-                    <p className="text-body font-semibold text-functional-dark">Virtual Format</p>
-                    <p className="text-body-small text-functional-neutral">Accessible from anywhere, no travel required</p>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <div>
+                  <p className="text-body font-semibold text-functional-dark">Virtual Format</p>
+                  <p className="text-body-small text-functional-neutral">Accessible from anywhere, no travel required</p>
                 </div>
               </div>
             </div>
+          </BentoCard>
 
-            {/* Value Propositions */}
-            <div className="space-y-4 mb-8">
-              <h3 className="text-h4-mobile tablet:text-h4 text-functional-dark mb-6">
-                Why Partner With Us
-              </h3>
-              {valueProps.map((prop, index) => (
+          {/* Video Card */}
+          <BentoCard 
+            className={cn(
+              "col-span-3 desktop:col-span-2 p-0 overflow-hidden transition-all duration-slow delay-400",
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            )}
+          >
+            {/* YouTube Video Embed with 16:9 Aspect Ratio */}
+            <div className="relative w-full pb-[56.25%]">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+                title="Virtual Career Fair Overview"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+            <div className="p-6">
+              <p className="text-caption text-center text-functional-neutral">
+                Learn how the virtual career fair connects students with opportunities
+              </p>
+            </div>
+          </BentoCard>
+
+          {/* Value Props Card */}
+          <BentoCard 
+            className={cn(
+              "col-span-3 desktop:col-span-1 transition-all duration-slow delay-500",
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            )}
+          >
+            <h3 className="text-h4-mobile tablet:text-h4 text-functional-dark mb-6">
+              Why Partner With Us
+            </h3>
+            <div className="space-y-4">
+              {valueProps.map((prop) => (
                 <div 
                   key={prop.id}
-                  className={cn(
-                    "flex gap-4 transition-all duration-slow",
-                    isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
-                  )}
-                  style={{ transitionDelay: `${300 + index * 100}ms` }}
+                  className="flex gap-3"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-secondary-blue-pale rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 bg-secondary-blue-pale rounded-lg flex items-center justify-center">
                     {prop.icon}
                   </div>
                   <div>
                     <h4 className="text-body font-semibold text-functional-dark mb-1">
                       {prop.title}
                     </h4>
-                    <p className="text-body-small text-functional-neutral">
+                    <p className="text-caption text-functional-neutral">
                       {prop.description}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
-
-            {/* CTA */}
-            <Button
-              variant="primary"
-              size="default"
-              onClick={() => {
-                const element = document.getElementById('tiers')
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                }
-              }}
-              className="w-full tablet:w-auto"
-            >
-              View Sponsorship Options
-            </Button>
-          </div>
-
-          {/* Video Column (Right on Desktop, Bottom on Mobile) */}
-          <div 
-            ref={videoRef}
-            className={cn(
-              "desktop:col-span-2 transition-all duration-slow delay-300",
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
-            )}
-          >
-            <div className="sticky top-24">
-              {/* YouTube Video Embed with 16:9 Aspect Ratio */}
-              <div className="relative w-full pb-[56.25%] bg-gray-100 rounded-xl overflow-hidden shadow-lg">
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
-                  title="Virtual Career Fair Overview"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                />
-              </div>
-              <p className="text-caption text-center mt-4 text-functional-neutral">
-                Learn how the virtual career fair connects students with opportunities
-              </p>
-            </div>
-          </div>
-        </div>
+          </BentoCard>
+        </BentoGrid>
       </div>
     </section>
   )
