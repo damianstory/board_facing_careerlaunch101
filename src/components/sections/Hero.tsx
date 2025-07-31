@@ -72,7 +72,7 @@ const AnimatedStatistic: React.FC<StatisticProps> = ({ value, suffix = '', label
   }
   
   return (
-    <div ref={ref} className="text-left">
+    <div ref={ref} className="text-center tablet:text-left">
       <div className="text-h2-mobile tablet:text-h2 font-extra-bold text-white">
         {formatValue(count)}{suffix}
       </div>
@@ -98,23 +98,23 @@ export const Hero: React.FC = () => {
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent max-[650px]:bg-gradient-to-r max-[650px]:from-black/90 max-[650px]:via-black/75 max-[650px]:to-black/50" />
       </div>
 
       {/* Content */}
       <div className="relative h-full flex items-center">
         <div className="container">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl mx-auto tablet:mx-0">
             {/* Main Content */}
-            <h1 className="text-h1-mobile tablet:text-h1 text-white mb-6">
+            <h1 className="text-h1-mobile tablet:text-h1 text-white mb-6 text-center tablet:text-left">
               Present at Ontario&apos;s Largest Student Career Fair
             </h1>
-            <p className="text-body-large-mobile tablet:text-body-large text-white/90 mb-12">
+            <p className="text-body-large-mobile tablet:text-body-large text-white/90 mb-12 text-center tablet:text-left">
               Connect with 50,000+ high school students on December 2, 2025
             </p>
             
             {/* Statistics */}
-            <div className="grid grid-cols-3 gap-6 tablet:gap-8">
+            <div className="grid grid-cols-3 gap-6 tablet:gap-8 text-center tablet:text-left">
               <AnimatedStatistic value={50000} suffix="+" label="Students Attending" format="k" />
               <AnimatedStatistic value={72} label="School Boards" />
               <AnimatedStatistic value={40} suffix="+" label="Industry Partners" />

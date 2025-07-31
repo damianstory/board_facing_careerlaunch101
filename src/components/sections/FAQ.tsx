@@ -89,7 +89,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
       )}
       {...props}
     >
-      <div className="container">
+      <div className="container" suppressHydrationWarning>
 
         {/* Search bar */}
         <div className="max-w-2xl mx-auto mb-8 md:mb-12">
@@ -112,6 +112,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
                 "text-base" // Prevents zoom on mobile
               )}
               aria-label="Search FAQs"
+              suppressHydrationWarning
             />
             {searchQuery && (
               <button

@@ -22,6 +22,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
         onClick={onToggle}
         className="w-full py-5 px-6 flex items-center justify-between text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 rounded-lg"
         aria-expanded={isOpen}
+        suppressHydrationWarning
       >
         <span className="text-body tablet:text-body-large font-medium text-black pr-4">
           {question}

@@ -247,10 +247,10 @@ export const Tiers: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-12 tablet:mb-16">
           <h2 className={cn(
-            "text-h2-mobile tablet:text-h2 text-functional-dark mb-4 transition-all duration-slow",
+            "text-h2-mobile tablet:text-h2 font-bold text-functional-dark mb-4 transition-all duration-slow",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}>
-            Choose Your Sponsorship Level
+            Choose Your <span style={{color: '#0092ff'}}>Sponsorship</span> Level
           </h2>
           <p className={cn(
             "text-body-large-mobile tablet:text-body-large text-functional-neutral max-w-3xl mx-auto transition-all duration-slow delay-100",
