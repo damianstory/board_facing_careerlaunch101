@@ -25,10 +25,7 @@ export const Tiers: React.FC = () => {
   const tableRef = useRef<HTMLDivElement>(null)
 
   // Format price with comma separator
-  const formatPrice = (price: number, tierId?: string): string => {
-    if (tierId === 'intern') {
-      return '0-250'
-    }
+  const formatPrice = (price: number): string => {
     return price.toLocaleString('en-US')
   }
 
@@ -290,7 +287,7 @@ export const Tiers: React.FC = () => {
               {/* Price */}
               <div className="text-center mb-4">
                 <span className="text-h2-mobile tablet:text-h2 font-bold text-primary-blue">
-                  ${formatPrice(tier.price, tier.id)}
+                  ${formatPrice(tier.price)}
                 </span>
               </div>
 
@@ -307,7 +304,7 @@ export const Tiers: React.FC = () => {
               {/* Benefits List */}
               <div className="flex-grow mb-6">
                 <ul className="space-y-3">
-                  {tier.benefits.slice(0, 5).map((benefit, idx) => (
+                  {tier.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <svg 
                         className="w-5 h-5 text-success-green mt-0.5 flex-shrink-0" 
@@ -327,11 +324,6 @@ export const Tiers: React.FC = () => {
                       </span>
                     </li>
                   ))}
-                  {tier.benefits.length > 5 && (
-                    <li className="text-body-small text-functional-neutral italic">
-                      + {tier.benefits.length - 5} more benefits
-                    </li>
-                  )}
                 </ul>
               </div>
 
