@@ -24,7 +24,7 @@ export const TIER_CONFIG: TierConfig[] = [
   {
     id: 'apprentice',
     name: 'Apprentice',
-    price: 500,
+    price: 750,
     availability: 'unlimited',
     benefits: [
       'Everything in Intern tier',
@@ -37,7 +37,7 @@ export const TIER_CONFIG: TierConfig[] = [
   {
     id: 'freelancer',
     name: 'Freelancer',
-    price: 1000,
+    price: 1500,
     availability: 5,
     limited: true,
     benefits: [
@@ -52,7 +52,7 @@ export const TIER_CONFIG: TierConfig[] = [
   {
     id: 'specialist',
     name: 'Specialist',
-    price: 1500,
+    price: 2000,
     availability: 10,
     limited: true,
     benefits: [
@@ -67,7 +67,7 @@ export const TIER_CONFIG: TierConfig[] = [
   {
     id: 'generalist',
     name: 'Generalist',
-    price: 2500,
+    price: 3000,
     availability: 10,
     limited: true,
     featured: true,

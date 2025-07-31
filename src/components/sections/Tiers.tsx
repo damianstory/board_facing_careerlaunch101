@@ -25,7 +25,10 @@ export const Tiers: React.FC = () => {
   const tableRef = useRef<HTMLDivElement>(null)
 
   // Format price with comma separator
-  const formatPrice = (price: number): string => {
+  const formatPrice = (price: number, tierId?: string): string => {
+    if (tierId === 'intern') {
+      return '0-250'
+    }
     return price.toLocaleString('en-US')
   }
 
@@ -33,6 +36,9 @@ export const Tiers: React.FC = () => {
   const getAvailabilityText = (tier: TierConfig): string => {
     if (tier.availability === 'unlimited') {
       return 'Unlimited spots'
+    }
+    if (tier.id === 'freelancer' || tier.id === 'specialist' || tier.id === 'generalist') {
+      return 'Limited spots available'
     }
     return `Only ${tier.availability} spots remaining`
   }
@@ -256,7 +262,7 @@ export const Tiers: React.FC = () => {
             "text-body-large-mobile tablet:text-body-large text-functional-neutral max-w-3xl mx-auto transition-all duration-slow delay-100",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}>
-            Select the perfect package to connect with students and achieve your recruitment goals
+            Something for everyone. And if there isn't, let us know. We can create something custom for you.  
           </p>
         </div>
 
@@ -284,7 +290,7 @@ export const Tiers: React.FC = () => {
               {/* Price */}
               <div className="text-center mb-4">
                 <span className="text-h2-mobile tablet:text-h2 font-bold text-primary-blue">
-                  ${formatPrice(tier.price)}
+                  ${formatPrice(tier.price, tier.id)}
                 </span>
               </div>
 

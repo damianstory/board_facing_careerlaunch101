@@ -122,18 +122,11 @@ export const About: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-12 tablet:mb-16">
           <h2 className={cn(
-            "text-h2-mobile tablet:text-h2 font-bold text-functional-dark mb-4 transition-all duration-slow",
+            "text-h2-mobile tablet:text-h2 font-bold text-functional-dark transition-all duration-slow",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}>
             Why This <span style={{color: '#0092ff'}}>Opportunity</span> Matters
           </h2>
-          <p className={cn(
-            "text-body-large-mobile tablet:text-body-large text-functional-neutral max-w-3xl mx-auto transition-all duration-slow delay-100",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          )}>
-            The future of work is changing rapidly. Connect with the next generation of talent
-            before your competitors do.
-          </p>
         </div>
 
         {/* Bento Grid */}
@@ -230,7 +223,7 @@ export const About: React.FC = () => {
             )}
           >
             <h3 className="text-h4-mobile tablet:text-h4 text-functional-dark mb-6">
-              Why Partner With Us
+              Why This? And Why Now?
             </h3>
             <div className="space-y-4">
               {valueProps.map((prop) => (

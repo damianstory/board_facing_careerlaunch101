@@ -199,10 +199,10 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
         <div className="mt-16 md:mt-20 text-center">
           <div className="bg-primary-blue/5 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
             <h3 className="h3-mobile md:h3 text-black mb-4">
-              Still have questions?
+              Ready to book your spot?
             </h3>
             <p className="body md:body-large text-gray-700 mb-6 md:mb-8">
-              Book a consultation to speak with our partnership team
+              Book a time to speak with our partnership team.
             </p>
             <a
               href="#contact"
@@ -215,7 +215,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
                 "transform hover:scale-105"
               )}
             >
-              Book a Consultation
+              Talk To Us
             </a>
           </div>
         </div>
