@@ -388,9 +388,6 @@ export const Tiers: React.FC = () => {
                       )}
                     >
                       {tier.name}
-                      {tier.featured && (
-                        <span className="block text-caption font-normal mt-1">Best Value</span>
-                      )}
                     </th>
                   ))}
                 </tr>
