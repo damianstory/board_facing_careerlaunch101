@@ -372,9 +372,9 @@ export const Tiers: React.FC = () => {
           </h3>
 
           {/* Desktop Table */}
-          <div className="hidden desktop:block overflow-x-auto">
+          <div className="hidden desktop:block">
             <table className="w-full border-collapse">
-              <thead>
+              <thead className="sticky top-[80px] z-40 bg-white">
                 <tr className="border-b-2 border-gray-200">
                   <th className="text-left py-4 px-4 text-body font-semibold text-functional-dark">
                     Features
@@ -470,9 +470,9 @@ export const Tiers: React.FC = () => {
             </div>
             <div className="overflow-x-auto -mx-5 px-5">
               <table className="min-w-[600px] w-full border-collapse">
-                <thead>
+                <thead className="sticky top-[64px] z-40 bg-white">
                   <tr className="border-b-2 border-gray-200">
-                    <th className="text-left py-3 px-3 text-body-small font-semibold text-functional-dark sticky left-0 bg-background-white">
+                    <th className="text-left py-3 px-3 text-body-small font-semibold text-functional-dark sticky left-0 bg-white z-50">
                       Features
                     </th>
                     {TIER_CONFIG.map(tier => (

@@ -191,6 +191,9 @@ Use the `.container` utility class for consistent max-width and responsive paddi
 ### Focus States
 All interactive elements automatically receive focus-visible styles via globals.css. Don't override unless necessary.
 
+### Sticky Table Headers
+Comparison tables in the Tiers section use sticky `<thead>` elements. Desktop tables position at `top-[80px]` and mobile at `top-[64px]` to account for navigation height.
+
 ## Development Workflow
 1. Check if server is running with `npm run check`
 2. Use `npm run dev` for development with Turbo compilation
@@ -198,3 +201,18 @@ All interactive elements automatically receive focus-visible styles via globals.
 4. Verify animations respect reduced-motion preferences  
 5. Ensure all touch targets meet 48px minimum
 6. Run `npm run lint` before committing changes
+
+## Configuration Notes
+
+### TypeScript Configuration
+- Strict mode enabled
+- Path alias `@/*` maps to `./src/*`
+- Target ES2017 for compatibility
+
+### Next.js Configuration
+- Images allowed from `i.imgur.com` domain
+- App Router enabled
+- Turbo development server for faster builds
+
+### No Test Framework
+Currently no test framework is configured. Components are tested manually during development.
