@@ -152,19 +152,14 @@ export const Navigation: React.FC = () => {
       </nav>
       
       {/* Mobile Navigation */}
-      <nav
-        className={cn(
-          'fixed top-0 left-0 right-0 z-50 block nav-break:hidden bg-white transition-shadow duration-standard',
-          isScrolled && 'shadow-[0_2px_8px_rgba(0,0,0,0.06)]'
-        )}
-      >
+      <nav className="fixed top-0 left-0 right-0 z-50 block nav-break:hidden bg-white shadow-sm">
         <div className="container relative">
-          <div className="flex items-center justify-center h-16">
-            {/* Logo/Brand - Positioned absolutely on the left */}
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
             <a
               href="#hero"
               onClick={(e) => scrollToSection(e, '#hero')}
-              className="absolute left-0 flex items-center"
+              className="flex items-center"
             >
               <Image
                 src="/images/logo.png"
@@ -176,79 +171,52 @@ export const Navigation: React.FC = () => {
               />
             </a>
             
-            {/* Hamburger Menu Button - Centered */}
+            {/* Simple Hamburger Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 rounded transition-colors"
-              aria-label="Toggle navigation menu"
-              aria-expanded={isMobileMenuOpen}
+              className="w-10 h-10 flex flex-col items-center justify-center space-y-1"
+              aria-label="Toggle menu"
             >
-              <span
-                className={cn(
-                  'w-6 h-0.5 bg-functional-dark transition-all duration-standard ease-spring',
-                  isMobileMenuOpen && 'rotate-45 translate-y-2'
-                )}
-              />
-              <span
-                className={cn(
-                  'w-6 h-0.5 bg-functional-dark transition-all duration-standard ease-spring',
-                  isMobileMenuOpen && 'opacity-0'
-                )}
-              />
-              <span
-                className={cn(
-                  'w-6 h-0.5 bg-functional-dark transition-all duration-standard ease-spring',
-                  isMobileMenuOpen && '-rotate-45 -translate-y-2'
-                )}
-              />
+              <div className={`w-6 h-0.5 bg-black transition-all ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
+              <div className={`w-6 h-0.5 bg-black transition-all ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
+              <div className={`w-6 h-0.5 bg-black transition-all ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
             </button>
           </div>
         </div>
         
         {/* Mobile Menu */}
-        <div
-          className={cn(
-            'fixed top-16 left-0 right-0 bottom-0 bg-background-white transform transition-transform duration-standard ease-spring',
-            isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full pointer-events-none'
-          )}
-        >
-          <div className="container py-8">
-            <div className="flex flex-col gap-6">
-              {navigationLinks.map((link) => (
-                <a
-                  key={link.id}
-                  href={link.href}
-                  onClick={(e) => scrollToSection(e, link.href)}
-                  className={cn(
-                    'py-3 text-body-large font-medium transition-colors duration-fast',
-                    activeSection === link.id
-                      ? 'text-primary-blue'
-                      : 'text-functional-dark'
-                  )}
+        {isMobileMenuOpen && (
+          <div className="bg-white border-t">
+            <div className="container py-4">
+              <div className="flex flex-col space-y-4">
+                {navigationLinks.map((link) => (
+                  <a
+                    key={link.id}
+                    href={link.href}
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    className="py-2 text-lg text-gray-900 hover:text-blue-600"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <button 
+                  className="mt-4 w-full bg-blue-600 text-white py-3 px-6 rounded-lg"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false)
+                    const element = document.getElementById('tiers')
+                    if (element) {
+                      setTimeout(() => {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                      }, 300)
+                    }
+                  }}
                 >
-                  {link.label}
-                </a>
-              ))}
-              
-              <Button
-                variant="primary"
-                size="mobile"
-                className="mt-4 w-full text-white"
-                onClick={() => {
-                  setIsMobileMenuOpen(false)
-                  const element = document.getElementById('tiers')
-                  if (element) {
-                    setTimeout(() => {
-                      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                    }, 300)
-                  }
-                }}
-              >
-                Talk To Us
-              </Button>
+                  Talk To Us
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </nav>
       
       {/* Spacer for fixed navigation */}
