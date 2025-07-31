@@ -55,8 +55,8 @@ export const LogoCarousel: React.FC = () => {
           {/* Logo Track using InfiniteSlider */}
           <InfiniteSlider
             gap={40}
-            duration={30}
-            durationOnHover={60}
+            duration={15}
+            durationOnHover={30}
             className="py-4"
           >
             {logos.map((logo) => (
