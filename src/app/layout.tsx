@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Virtual Career Fair Sponsorship | Connect with 50,000+ Students',
+  title: 'myBlueprint Career Summit',
   description: 'Partner with Ontario\'s largest virtual career fair. Connect with 50,000+ high school students on December 2, 2025. Explore sponsorship tiers.',
   openGraph: {
     title: 'Virtual Career Fair Sponsorship Opportunities',
