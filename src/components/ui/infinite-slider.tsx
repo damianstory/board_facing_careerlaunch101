@@ -39,16 +39,29 @@ export function InfiniteSlider({
 
       if (dimension === 0) return
 
-      await controls.start({
-        [direction === 'horizontal' ? 'x' : 'y']: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
-        transition: {
-          duration: currentDuration,
-          ease: 'linear',
-          repeat: Infinity,
-          repeatType: 'loop',
-          repeatDelay: 0,
-        },
-      })
+      if (direction === 'horizontal') {
+        await controls.start({
+          x: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
+          transition: {
+            duration: currentDuration,
+            ease: 'linear',
+            repeat: Infinity,
+            repeatType: 'loop',
+            repeatDelay: 0,
+          },
+        })
+      } else {
+        await controls.start({
+          y: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
+          transition: {
+            duration: currentDuration,
+            ease: 'linear',
+            repeat: Infinity,
+            repeatType: 'loop',
+            repeatDelay: 0,
+          },
+        })
+      }
     }
 
     const handleResize = () => {
@@ -69,16 +82,29 @@ export function InfiniteSlider({
     if (durationOnHover) {
       controls.stop()
       const dimension = direction === 'horizontal' ? width : height
-      controls.start({
-        [direction === 'horizontal' ? 'x' : 'y']: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
-        transition: {
-          duration: durationOnHover,
-          ease: 'linear',
-          repeat: Infinity,
-          repeatType: 'loop',
-          repeatDelay: 0,
-        },
-      })
+      if (direction === 'horizontal') {
+        controls.start({
+          x: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
+          transition: {
+            duration: durationOnHover,
+            ease: 'linear',
+            repeat: Infinity,
+            repeatType: 'loop',
+            repeatDelay: 0,
+          },
+        })
+      } else {
+        controls.start({
+          y: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
+          transition: {
+            duration: durationOnHover,
+            ease: 'linear',
+            repeat: Infinity,
+            repeatType: 'loop',
+            repeatDelay: 0,
+          },
+        })
+      }
     }
   }
 
@@ -87,16 +113,29 @@ export function InfiniteSlider({
     if (durationOnHover) {
       controls.stop()
       const dimension = direction === 'horizontal' ? width : height
-      controls.start({
-        [direction === 'horizontal' ? 'x' : 'y']: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
-        transition: {
-          duration: duration,
-          ease: 'linear',
-          repeat: Infinity,
-          repeatType: 'loop',
-          repeatDelay: 0,
-        },
-      })
+      if (direction === 'horizontal') {
+        controls.start({
+          x: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
+          transition: {
+            duration: duration,
+            ease: 'linear',
+            repeat: Infinity,
+            repeatType: 'loop',
+            repeatDelay: 0,
+          },
+        })
+      } else {
+        controls.start({
+          y: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
+          transition: {
+            duration: duration,
+            ease: 'linear',
+            repeat: Infinity,
+            repeatType: 'loop',
+            repeatDelay: 0,
+          },
+        })
+      }
     }
   }
 
