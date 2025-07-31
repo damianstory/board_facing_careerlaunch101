@@ -65,6 +65,7 @@ module.exports = {
       screens: {
         'mobile': '320px',
         'tablet': '768px',
+        'nav-break': '1030px',
         'desktop': '1024px',
         'large': '1200px',
       },

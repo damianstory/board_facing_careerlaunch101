@@ -93,7 +93,7 @@ export const Navigation: React.FC = () => {
       {/* Desktop Navigation */}
       <nav
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 hidden tablet:block bg-white/95 backdrop-blur-md transition-shadow duration-standard',
+          'fixed top-0 left-0 right-0 z-50 hidden nav-break:block bg-white/95 backdrop-blur-md transition-shadow duration-standard',
           isScrolled && 'shadow-[0_2px_8px_rgba(0,0,0,0.06)]'
         )}
       >
@@ -154,17 +154,17 @@ export const Navigation: React.FC = () => {
       {/* Mobile Navigation */}
       <nav
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 tablet:hidden bg-background-white transition-shadow duration-standard',
+          'fixed top-0 left-0 right-0 z-50 block nav-break:hidden bg-white transition-shadow duration-standard',
           isScrolled && 'shadow-[0_2px_8px_rgba(0,0,0,0.06)]'
         )}
       >
-        <div className="container">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo/Brand */}
+        <div className="container relative">
+          <div className="flex items-center justify-center h-16">
+            {/* Logo/Brand - Positioned absolutely on the left */}
             <a
               href="#hero"
               onClick={(e) => scrollToSection(e, '#hero')}
-              className="flex items-center"
+              className="absolute left-0 flex items-center"
             >
               <Image
                 src="/images/logo.png"
@@ -176,10 +176,10 @@ export const Navigation: React.FC = () => {
               />
             </a>
             
-            {/* Hamburger Menu Button */}
+            {/* Hamburger Menu Button - Centered */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="w-7 h-7 flex flex-col items-center justify-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 rounded"
+              className="w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 rounded transition-colors"
               aria-label="Toggle navigation menu"
               aria-expanded={isMobileMenuOpen}
             >
@@ -252,7 +252,7 @@ export const Navigation: React.FC = () => {
       </nav>
       
       {/* Spacer for fixed navigation */}
-      <div className="h-16 tablet:h-20" />
+      <div className="h-16 nav-break:h-20" />
     </>
   )
 }
