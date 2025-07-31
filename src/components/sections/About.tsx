@@ -138,26 +138,10 @@ export const About: React.FC = () => {
 
         {/* Bento Grid */}
         <BentoGrid>
-          {/* Statistics Card */}
+          {/* Event Details Card - Small */}
           <BentoCard 
             className={cn(
-              "col-span-3 desktop:col-span-1 bg-secondary-blue-pale border-l-4 border-primary-blue transition-all duration-slow delay-200",
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            )}
-          >
-            <p className="text-h3-mobile tablet:text-h3 text-primary-blue font-bold mb-2">
-              65% of students
-            </p>
-            <p className="text-body tablet:text-body-large text-functional-dark">
-              will work in jobs that don't exist today. Help them discover opportunities 
-              in your industry and build awareness of career paths they haven't considered.
-            </p>
-          </BentoCard>
-
-          {/* Event Details Card */}
-          <BentoCard 
-            className={cn(
-              "col-span-3 desktop:col-span-2 transition-all duration-slow delay-300",
+              "col-span-3 desktop:col-span-1 bg-white border-l-4 border-primary-blue transition-all duration-slow delay-200",
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
@@ -195,29 +179,46 @@ export const About: React.FC = () => {
             </div>
           </BentoCard>
 
+          {/* Statistics Card - Large */}
+          <BentoCard 
+            className={cn(
+              "col-span-3 desktop:col-span-2 flex items-center transition-all duration-slow delay-300",
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            )}
+          >
+            <div className="space-y-4">
+              <p className="text-body text-functional-dark">
+                About 50% of today's students expect to work in just 10 traditional jobs - doctor, teacher, lawyer, engineer - while career opportunities have never been more diverse. The OECD's landmark research shows that 'you cannot be what you cannot see,' and <strong>right now, students aren't seeing your industry</strong>.
+              </p>
+              <p className="text-body text-functional-dark">
+                With career uncertainty at an all-time high and student expectations 3x greater than actual job demand in professional fields, young people need your voice. Research proves that direct employer engagement leads to better employment outcomes at age 25.
+              </p>
+              <p className="text-body text-functional-dark">
+                <strong>Speak at the myBlueprint Career Summit</strong> to help Ontario's students discover the innovative careers, emerging technologies, and non-traditional pathways that exist in your sector.
+              </p>
+            </div>
+          </BentoCard>
+
           {/* Video Card */}
           <BentoCard 
             className={cn(
-              "col-span-3 desktop:col-span-2 p-0 overflow-hidden transition-all duration-slow delay-400",
+              "col-span-3 desktop:col-span-2 p-0 transition-all duration-slow delay-400",
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
             {/* YouTube Video Embed with 16:9 Aspect Ratio */}
-            <div className="relative w-full pb-[56.25%]">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
-                title="Virtual Career Fair Overview"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-              />
-            </div>
-            <div className="p-6">
-              <p className="text-caption text-center text-functional-neutral">
-                Learn how the virtual career fair connects students with opportunities
-              </p>
+            <div className="p-3 h-full flex items-center">
+              <div className="w-full aspect-video">
+                <iframe
+                  className="w-full h-full rounded-lg"
+                  src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+                  title="Virtual Career Fair Overview"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
             </div>
           </BentoCard>
 

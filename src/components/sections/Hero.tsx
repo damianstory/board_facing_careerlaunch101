@@ -107,7 +107,7 @@ export const Hero: React.FC = () => {
           <div className="max-w-2xl">
             {/* Main Content */}
             <h1 className="text-h1-mobile tablet:text-h1 text-white mb-6">
-              Partner with Ontario&apos;s Largest Virtual Career Fair
+              Present at Ontario&apos;s Largest Student Career Fair
             </h1>
             <p className="text-body-large-mobile tablet:text-body-large text-white/90 mb-12">
               Connect with 50,000+ high school students on December 2, 2025
