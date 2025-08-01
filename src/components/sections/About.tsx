@@ -195,23 +195,24 @@ export const About: React.FC = () => {
           {/* Video Card */}
           <BentoCard 
             className={cn(
-              "col-span-3 desktop:col-span-2 p-0 transition-all duration-slow delay-400",
+              "col-span-3 desktop:col-span-2 bg-gray-50 transition-all duration-slow delay-400",
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
-            {/* YouTube Video Embed with 16:9 Aspect Ratio */}
-            <div className="p-3 h-full flex items-center">
-              <div className="w-full aspect-video">
+            <div className="flex flex-col items-center justify-center px-6 py-8 tablet:px-8 tablet:py-10">
+              <div className="w-full max-w-xl tablet:max-w-2xl desktop:max-w-3xl aspect-video mb-6">
                 <iframe
-                  className="w-full h-full rounded-lg"
+                  className="w-full h-full rounded-lg shadow-lg border border-gray-200"
                   src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
-                  title="Virtual Career Fair Overview"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   loading="lazy"
                 />
               </div>
+              <p className="text-body text-center text-neutral-4 max-w-2xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
             </div>
           </BentoCard>
 
