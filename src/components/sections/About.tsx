@@ -122,7 +122,7 @@ export const About: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-12 tablet:mb-16">
           <h2 className={cn(
-            "text-h2-mobile tablet:text-h2 font-bold text-functional-dark transition-all duration-slow",
+            "text-h2-mobile tablet:text-h2 text-brand-navy transition-all duration-slow",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}>
             Why This <span style={{color: '#0092ff'}}>Opportunity</span> Matters
@@ -138,7 +138,7 @@ export const About: React.FC = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
-            <h3 className="text-h4-mobile tablet:text-h4 text-functional-dark mb-6">
+            <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-6">
               Event Details
             </h3>
             <div className="space-y-4">
@@ -147,8 +147,8 @@ export const About: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 <div>
-                  <p className="text-body font-semibold text-functional-dark">December 2, 2025</p>
-                  <p className="text-body-small text-functional-neutral">Full-day virtual event with extended on-demand access</p>
+                  <p className="text-body font-semibold text-brand-navy">December 2, 2025</p>
+                  <p className="text-body-small text-neutral-4">Full-day virtual event with extended on-demand access</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -156,8 +156,8 @@ export const About: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
                 <div>
-                  <p className="text-body font-semibold text-functional-dark">50,000+ Students</p>
-                  <p className="text-body-small text-functional-neutral">From 72 school boards across Ontario</p>
+                  <p className="text-body font-semibold text-brand-navy">50,000+ Students</p>
+                  <p className="text-body-small text-neutral-4">From 72 school boards across Ontario</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -165,8 +165,8 @@ export const About: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <div>
-                  <p className="text-body font-semibold text-functional-dark">Virtual Format</p>
-                  <p className="text-body-small text-functional-neutral">Accessible from anywhere, no travel required</p>
+                  <p className="text-body font-semibold text-brand-navy">Virtual Format</p>
+                  <p className="text-body-small text-neutral-4">Accessible from anywhere, no travel required</p>
                 </div>
               </div>
             </div>
@@ -180,14 +180,14 @@ export const About: React.FC = () => {
             )}
           >
             <div className="space-y-4">
-              <p className="text-body text-functional-dark">
-                About 50% of today's students expect to work in just 10 traditional jobs - doctor, teacher, lawyer, engineer - while career opportunities have never been more diverse. The OECD's landmark research shows that 'you cannot be what you cannot see,' and <strong>right now, students aren't seeing your industry</strong>.
+              <p className="text-body text-brand-navy">
+                <strong>About 50% of today's students expect to work in just 10 traditional jobs</strong> - doctor, teacher, lawyer, engineer - while career opportunities have never been more diverse. The OECD's landmark research shows that 'you cannot be what you cannot see,' and <strong style={{color: '#0092ff'}}>right now, students aren't seeing your industry</strong>.
               </p>
-              <p className="text-body text-functional-dark">
+              <p className="text-body text-brand-navy">
                 With career uncertainty at an all-time high and student expectations 3x greater than actual job demand in professional fields, young people need your voice. Research proves that direct employer engagement leads to better employment outcomes at age 25.
               </p>
-              <p className="text-body text-functional-dark">
-                <strong>Speak at the myBlueprint Career Summit</strong> to help Ontario's students discover the innovative careers, emerging technologies, and non-traditional pathways that exist in your sector.
+              <p className="text-body text-brand-navy">
+                <strong>Speak at the myBlueprint Career Launch</strong> to help Ontario's students discover the innovative careers, emerging technologies, and non-traditional pathways that exist in your sector.
               </p>
             </div>
           </BentoCard>
@@ -222,7 +222,7 @@ export const About: React.FC = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
-            <h3 className="text-h4-mobile tablet:text-h4 text-functional-dark mb-6">
+            <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-6">
               Why This? And Why Now?
             </h3>
             <div className="space-y-4">
@@ -235,10 +235,10 @@ export const About: React.FC = () => {
                     {prop.icon}
                   </div>
                   <div>
-                    <h4 className="text-body font-semibold text-functional-dark mb-1">
+                    <h4 className="text-body font-semibold text-brand-navy mb-1">
                       {prop.title}
                     </h4>
-                    <p className="text-caption text-functional-neutral">
+                    <p className="text-caption text-neutral-4">
                       {prop.description}
                     </p>
                   </div>

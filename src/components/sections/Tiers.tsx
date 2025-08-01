@@ -250,13 +250,13 @@ export const Tiers: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-12 tablet:mb-16">
           <h2 className={cn(
-            "text-h2-mobile tablet:text-h2 font-bold text-functional-dark mb-4 transition-all duration-slow",
+            "text-h2-mobile tablet:text-h2 text-brand-navy mb-4 transition-all duration-slow",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}>
             Choose Your <span style={{color: '#0092ff'}}>Sponsorship</span> Level
           </h2>
           <p className={cn(
-            "text-body-large-mobile tablet:text-body-large text-functional-neutral max-w-3xl mx-auto transition-all duration-slow delay-100",
+            "text-body-large-mobile tablet:text-body-large text-neutral-4 max-w-3xl mx-auto transition-all duration-slow delay-100",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}>
             Something for everyone. And if there isn't, let us know. We can create something custom for you.  
@@ -280,7 +280,7 @@ export const Tiers: React.FC = () => {
               style={{ transitionDelay: `${200 + index * 100}ms` }}
             >
               {/* Tier Name */}
-              <h3 className="text-h4-mobile tablet:text-h4 text-functional-dark mb-4 text-center">
+              <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-4 text-center">
                 {tier.name}
               </h3>
 
@@ -295,7 +295,7 @@ export const Tiers: React.FC = () => {
               <div className="text-center mb-6">
                 <span className={cn(
                   "text-body-small font-medium",
-                  isLimited(tier) ? "text-functional-neutral" : "text-functional-neutral"
+                  isLimited(tier) ? "text-neutral-4" : "text-neutral-4"
                 )}>
                   {getAvailabilityText(tier)}
                 </span>
@@ -319,7 +319,7 @@ export const Tiers: React.FC = () => {
                           d="M5 13l4 4L19 7" 
                         />
                       </svg>
-                      <span className="text-body-small text-functional-dark">
+                      <span className="text-body-small text-brand-navy">
                         {benefit}
                       </span>
                     </li>
@@ -359,7 +359,7 @@ export const Tiers: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
-          <h3 className="text-h3-mobile tablet:text-h3 text-functional-dark mb-8 text-center">
+          <h3 className="text-h3-mobile tablet:text-h3 text-brand-navy mb-8 text-center">
             Detailed Feature Comparison
           </h3>
 
@@ -368,7 +368,7 @@ export const Tiers: React.FC = () => {
             <table className="w-full border-collapse">
               <thead className="sticky top-[80px] z-40 bg-white">
                 <tr className="border-b-2 border-gray-200">
-                  <th className="text-left py-4 px-4 text-body font-semibold text-functional-dark">
+                  <th className="text-left py-4 px-4 text-body font-semibold text-brand-navy">
                     Features
                   </th>
                   {TIER_CONFIG.map(tier => (
@@ -376,7 +376,7 @@ export const Tiers: React.FC = () => {
                       key={tier.id} 
                       className={cn(
                         "py-4 px-4 text-center text-body font-semibold",
-                        tier.featured ? "text-[#0092ff]" : "text-functional-dark"
+                        tier.featured ? "text-[#0092ff]" : "text-brand-navy"
                       )}
                     >
                       {tier.name}
@@ -390,7 +390,7 @@ export const Tiers: React.FC = () => {
                     <tr className="bg-background-light">
                       <td 
                         colSpan={6} 
-                        className="py-3 px-4 text-body font-semibold text-functional-dark"
+                        className="py-3 px-4 text-body font-semibold text-brand-navy"
                       >
                         {category.category}
                       </td>
@@ -400,7 +400,7 @@ export const Tiers: React.FC = () => {
                         key={featIdx} 
                         className="border-b border-gray-100 hover:bg-gray-50 transition-colors"
                       >
-                        <td className="py-3 px-4 text-body-small text-functional-dark">
+                        <td className="py-3 px-4 text-body-small text-brand-navy">
                           {feature.name}
                         </td>
                         {(['intern', 'apprentice', 'freelancer', 'specialist', 'generalist'] as const).map(tierKey => (
@@ -436,7 +436,7 @@ export const Tiers: React.FC = () => {
                                 </svg>
                               )
                             ) : (
-                              <span className="text-body-small text-functional-dark font-medium">
+                              <span className="text-body-small text-brand-navy font-medium">
                                 {feature[tierKey]}
                               </span>
                             )}
@@ -461,7 +461,7 @@ export const Tiers: React.FC = () => {
               <table className="min-w-[600px] w-full border-collapse">
                 <thead className="sticky top-[64px] z-40 bg-white">
                   <tr className="border-b-2 border-gray-200">
-                    <th className="text-left py-3 px-3 text-body-small font-semibold text-functional-dark sticky left-0 bg-white z-50">
+                    <th className="text-left py-3 px-3 text-body-small font-semibold text-brand-navy sticky left-0 bg-white z-50">
                       Features
                     </th>
                     {TIER_CONFIG.map(tier => (
@@ -469,7 +469,7 @@ export const Tiers: React.FC = () => {
                         key={tier.id} 
                         className={cn(
                           "py-3 px-3 text-center text-body-small font-semibold whitespace-nowrap",
-                          tier.featured ? "text-[#0092ff]" : "text-functional-dark"
+                          tier.featured ? "text-[#0092ff]" : "text-brand-navy"
                         )}
                       >
                         {tier.name}
@@ -483,7 +483,7 @@ export const Tiers: React.FC = () => {
                       <tr className="bg-background-light">
                         <td 
                           colSpan={6} 
-                          className="py-2 px-3 text-body-small font-semibold text-functional-dark"
+                          className="py-2 px-3 text-body-small font-semibold text-brand-navy"
                         >
                           {category.category}
                         </td>
@@ -493,7 +493,7 @@ export const Tiers: React.FC = () => {
                           key={featIdx} 
                           className="border-b border-gray-100"
                         >
-                          <td className="py-2 px-3 text-body-small text-functional-dark sticky left-0 bg-background-white">
+                          <td className="py-2 px-3 text-body-small text-brand-navy sticky left-0 bg-background-white">
                             {feature.name}
                           </td>
                           {(['intern', 'apprentice', 'freelancer', 'specialist', 'generalist'] as const).map(tierKey => (
@@ -505,7 +505,7 @@ export const Tiers: React.FC = () => {
                                   <span className="text-gray-300">✗</span>
                                 )
                               ) : (
-                                <span className="text-caption text-functional-dark font-medium">
+                                <span className="text-caption text-brand-navy font-medium">
                                   {feature[tierKey]}
                                 </span>
                               )}

@@ -73,7 +73,7 @@ const AnimatedStatistic: React.FC<StatisticProps> = ({ value, suffix = '', label
   
   return (
     <div ref={ref} className="text-center tablet:text-left">
-      <div className="text-h2-mobile tablet:text-h2 font-extra-bold text-white">
+      <div className="text-h2-mobile tablet:text-h2 text-white">
         {formatValue(count)}{suffix}
       </div>
       <div className="text-body-small tablet:text-body text-white/80 mt-1">
@@ -110,13 +110,13 @@ export const Hero: React.FC = () => {
               Present at Ontario&apos;s Largest Student Career Fair
             </h1>
             <p className="text-body-large-mobile tablet:text-body-large text-white/90 mb-12 text-center tablet:text-left">
-              Want young people to know about your industry? Join us at the 2025 myBlueprint Career Summit.
+              Want young people to know about your industry? Join us at the 2025 myBlueprint Career Launch.
             </p>
             
             {/* Statistics */}
             <div className="grid grid-cols-3 gap-6 tablet:gap-8 text-center tablet:text-left">
               <AnimatedStatistic value={50000} suffix="+" label="Students Attending" format="k" />
-              <AnimatedStatistic value={72} label="School Boards" />
+              <AnimatedStatistic value={1000} suffix="+" label="Classrooms Watching" format="k" />
               <AnimatedStatistic value={40} suffix="+" label="Industry Partners" />
             </div>
           </div>

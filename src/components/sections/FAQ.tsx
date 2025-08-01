@@ -106,7 +106,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
               placeholder="Search frequently asked questions..."
               className={cn(
                 "w-full pl-12 pr-12 py-4 rounded-lg border border-gray-200",
-                "bg-background-white text-black placeholder:text-gray-500",
+                "bg-white text-brand-navy placeholder:text-gray-500",
                 "focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-primary-blue",
                 "transition-all duration-200",
                 "text-base" // Prevents zoom on mobile
@@ -146,7 +146,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
         <div className="max-w-4xl mx-auto space-y-8 md:space-y-12">
           {groupedFAQs.map(([category, items], categoryIndex) => (
             <div key={category} className="space-y-4 md:space-y-6">
-              <h3 className="h3-mobile md:h3 text-black">
+              <h3 className="text-h3-mobile md:text-h3 text-brand-navy">
                 {categoryLabels[category]} ({items.length})
               </h3>
               
@@ -157,7 +157,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
                     id={`faq-${faq.id}`}
                     className="faq-item"
                   >
-                    <div className="bg-background-white border border-gray-200 hover:border-gray-300 transition-colors duration-200 rounded-lg">
+                    <div className="bg-white border border-gray-200 hover:border-gray-300 transition-colors duration-200 rounded-lg">
                       <AccordionItem
                         question={faq.question}
                         answer={faq.answer}
@@ -175,10 +175,10 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
         {/* No results state */}
         {filteredFAQs.length === 0 && (
           <div className="text-center py-12">
-            <p className="body-large text-gray-700 mb-4">
+            <p className="text-body-large text-neutral-4 mb-4">
               No questions found matching "{searchDebounce}"
             </p>
-            <p className="body text-gray-500 mb-6">
+            <p className="text-body text-neutral-3 mb-6">
               Try searching for: sponsorship, students, payment, or booking
             </p>
             <button
@@ -198,10 +198,10 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
         {/* CTA Section */}
         <div className="mt-16 md:mt-20 text-center">
           <div className="bg-primary-blue/5 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
-            <h3 className="h3-mobile md:h3 text-black mb-4">
+            <h3 className="text-h3-mobile md:text-h3 text-brand-navy mb-4">
               Ready to book your spot?
             </h3>
-            <p className="body md:body-large text-gray-700 mb-6 md:mb-8">
+            <p className="text-body md:text-body-large text-neutral-4 mb-6 md:mb-8">
               Book a time to speak with our partnership team.
             </p>
             <a

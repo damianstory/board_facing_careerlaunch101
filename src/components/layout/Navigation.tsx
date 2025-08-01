@@ -126,7 +126,7 @@ export const Navigation: React.FC = () => {
                     'flex items-center h-full text-body font-medium transition-colors duration-fast',
                     activeSection === link.id
                       ? 'text-primary-blue'
-                      : 'text-functional-neutral hover:text-primary-blue'
+                      : 'text-brand-navy hover:text-primary-blue'
                   )}
                 >
                   {link.label}
@@ -177,9 +177,9 @@ export const Navigation: React.FC = () => {
               className="w-10 h-10 flex flex-col items-center justify-center space-y-1"
               aria-label="Toggle menu"
             >
-              <div className={`w-6 h-0.5 bg-black transition-all ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
-              <div className={`w-6 h-0.5 bg-black transition-all ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
-              <div className={`w-6 h-0.5 bg-black transition-all ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
+              <div className={`w-6 h-0.5 bg-brand-navy transition-all ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
+              <div className={`w-6 h-0.5 bg-brand-navy transition-all ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
+              <div className={`w-6 h-0.5 bg-brand-navy transition-all ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
             </button>
           </div>
         </div>
@@ -194,7 +194,7 @@ export const Navigation: React.FC = () => {
                     key={link.id}
                     href={link.href}
                     onClick={(e) => scrollToSection(e, link.href)}
-                    className="py-2 text-lg text-gray-900 hover:text-blue-600"
+                    className="py-2 text-lg text-brand-navy hover:text-primary-blue"
                   >
                     {link.label}
                   </a>
