@@ -31,7 +31,7 @@ const additionalOpportunities: AdditionalOpportunity[] = [
     title: 'Sponsor a School Board',
     price: 3000,
     availability: 20,
-    description: 'School boards are investing between 1-3k depending on the size of their board. You can pay for them to attend',
+    description: 'School boards are investing between 1-3k depending on the size of their board. You can pay for their students to attend',
     highlights: ['Special keynote shoutout & pre/post event communications', 'Email introduction to the school board lead', 'Great Booth included at no extra cost']
   },
   {
