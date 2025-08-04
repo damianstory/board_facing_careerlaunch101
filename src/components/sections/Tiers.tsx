@@ -6,6 +6,53 @@ import { Button } from '@/components/ui/Button'
 import { TIER_CONFIG, TierConfig } from '@/data/tiers'
 import { cn } from '@/lib/utils'
 
+// Additional sponsorship opportunities data
+interface AdditionalOpportunity {
+  id: string
+  title: string
+  price: number
+  availability: number
+  description: string
+  highlights: string[]
+  featured?: boolean
+}
+
+const additionalOpportunities: AdditionalOpportunity[] = [
+  {
+    id: 'session-track',
+    title: 'Sponsor a Session Track',
+    price: 2500,
+    availability: 5,
+    description: '"This session was brought to you by..." for each of the 5 sessions within a track of your choosing',
+    highlights: ['Includes 1 min video at start of each track session', 'Reaches all students regardless of session choice', 'Great Booth included at no extra cost']
+  },
+  {
+    id: 'school-board', 
+    title: 'Sponsor a School Board',
+    price: 3000,
+    availability: 20,
+    description: 'School boards are investing between 1-3k depending on the size of their board. You can pay for them to attend',
+    highlights: ['Special keynote shoutout & pre/post event communications', 'Email introduction to the school board lead', 'Great Booth included at no extra cost']
+  },
+  {
+    id: 'keynote',
+    title: 'Sponsor the Keynote', 
+    price: 5000,
+    availability: 1,
+    description: 'Introduce the keynote speaker, kick off the event, and get premium visibility to all attendees',
+    highlights: ['Includes 5 minutes to address all attendees', 'Premium visibility when engagement is the highest', 'Great Booth included at no extra cost'],
+    featured: false
+  },
+  {
+    id: 'evening-session',
+    title: 'Exclusive Evening Session',
+    price: 5000, 
+    availability: 1,
+    description: 'Host an exclusive (optional) evening session for students to attend from home on zoom.',
+    highlights: ['No other sessions will be scheduled at the same time', 'Promoted throughout the event', 'Great Booth included at no extra cost']
+  }
+]
+
 interface ComparisonFeature {
   category: string
   features: {
@@ -20,6 +67,7 @@ interface ComparisonFeature {
 
 export const Tiers: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
+  const [isAdditionalOpen, setIsAdditionalOpen] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const cardsRef = useRef<HTMLDivElement>(null)
   const tableRef = useRef<HTMLDivElement>(null)
@@ -281,7 +329,7 @@ export const Tiers: React.FC = () => {
                   {tier.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <svg 
-                        className="w-5 h-5 text-success-green mt-0.5 flex-shrink-0" 
+                        className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" 
                         fill="none" 
                         viewBox="0 0 24 24" 
                         stroke="currentColor"
@@ -382,7 +430,7 @@ export const Tiers: React.FC = () => {
                             {typeof feature[tierKey] === 'boolean' ? (
                               feature[tierKey] ? (
                                 <svg 
-                                  className="w-5 h-5 text-success-green mx-auto" 
+                                  className="w-5 h-5 text-green-600 mx-auto" 
                                   fill="none" 
                                   viewBox="0 0 24 24" 
                                   stroke="currentColor"
@@ -474,7 +522,7 @@ export const Tiers: React.FC = () => {
                             <td key={tierKey} className="py-2 px-3 text-center">
                               {typeof feature[tierKey] === 'boolean' ? (
                                 feature[tierKey] ? (
-                                  <span className="text-success-green">✓</span>
+                                  <span className="text-green-600">✓</span>
                                 ) : (
                                   <span className="text-gray-300">✗</span>
                                 )
@@ -491,6 +539,139 @@ export const Tiers: React.FC = () => {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Sponsorship Opportunities Section */}
+        <div className={cn(
+          "mt-20 transition-all duration-slow delay-[600ms]",
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        )}>
+          {/* Accordion Header */}
+          <button
+            onClick={() => setIsAdditionalOpen(!isAdditionalOpen)}
+            className="w-full bg-background-white border-2 border-[#0092ff] hover:shadow-md rounded-xl p-6 transition-all duration-standard mb-6 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
+            aria-expanded={isAdditionalOpen}
+            aria-controls="additional-opportunities-content"
+            type="button"
+          >
+            <div className="flex items-center justify-between">
+              <div className="text-center flex-1">
+                <h3 className="text-h3-mobile tablet:text-h3 text-brand-navy mb-2">
+                  Additional Sponsorship Opportunities
+                </h3>
+                <p className="text-body text-neutral-4">
+                  Click to explore other impactful ways to engage with students
+                </p>
+              </div>
+              <div className="flex-shrink-0 ml-4">
+                <svg 
+                  className={cn(
+                    "w-6 h-6 text-primary-blue transition-transform duration-standard",
+                    isAdditionalOpen && "rotate-180"
+                  )}
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M19 9l-7 7-7-7" 
+                  />
+                </svg>
+              </div>
+            </div>
+          </button>
+
+          {/* Collapsible Content */}
+          <div
+            id="additional-opportunities-content"
+            className={cn(
+              "overflow-hidden transition-all duration-500 ease-in-out",
+              isAdditionalOpen ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
+            )}
+            aria-hidden={!isAdditionalOpen}
+          >
+            {/* Opportunities Grid */}
+            <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-2 gap-6 max-w-5xl mx-auto pt-2">
+            {additionalOpportunities.map((opportunity, index) => (
+              <div
+                key={opportunity.id}
+                className={cn(
+                  "bg-background-white rounded-xl p-5 border transition-all duration-standard hover:shadow-lg hover:-translate-y-1",
+                  opportunity.featured 
+                    ? "border-2 border-[#0092ff] shadow-md" 
+                    : "border border-gray-100 shadow-sm"
+                )}
+              >
+                {/* Header with Title and Price */}
+                <div className="flex justify-between items-center mb-3">
+                  <h4 className="text-h4-mobile tablet:text-h4 text-brand-navy flex-1 pr-2">
+                    {opportunity.title}
+                  </h4>
+                  <div className="text-h4-mobile tablet:text-h4 font-bold text-primary-blue">
+                    ${opportunity.price.toLocaleString()}
+                  </div>
+                </div>
+
+                {/* Availability Badge */}
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 rounded-full text-caption font-semibold bg-secondary-blue-pale text-primary-blue">
+                    {opportunity.availability === 1 
+                      ? "Only 1 remaining"
+                      : `${opportunity.availability} spots remaining`}
+                  </span>
+                </div>
+
+                {/* Description */}
+                <p className="text-body-small text-neutral-5 mb-4">
+                  {opportunity.description}
+                </p>
+
+                {/* Highlights */}
+                <ul className="space-y-2 mb-5">
+                  {opportunity.highlights.map((highlight, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <svg 
+                        className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                      >
+                        <path 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeWidth={2} 
+                          d="M5 13l4 4L19 7" 
+                        />
+                      </svg>
+                      <span className="text-body-small text-brand-navy">
+                        {highlight}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+            {/* Bottom CTA */}
+            <div className="text-center mt-12">
+              <p className="text-body text-neutral-4 mb-4">
+                Ready to get started? Want to discuss custom options?
+              </p>
+              <Button
+                variant="secondary"
+                size="default"
+                onClick={() => {
+                  console.log('Custom package consultation requested')
+                }}
+              >
+                Book a Time to Talk
+              </Button>
             </div>
           </div>
         </div>
