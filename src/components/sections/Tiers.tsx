@@ -51,6 +51,14 @@ export const Tiers: React.FC = () => {
       category: 'Session Structure',
       features: [
         {
+          name: 'Choice of session time',
+          intern: false,
+          apprentice: false,
+          freelancer: false,
+          specialist: false,
+          generalist: true,
+        },
+        {
           name: 'Q&A with students',
           intern: false,
           apprentice: false,
@@ -133,7 +141,7 @@ export const Tiers: React.FC = () => {
           generalist: true,
         },
         {
-          name: 'Presentation slides embedded',
+          name: 'Session slides embedded',
           intern: false,
           apprentice: false,
           freelancer: false,
@@ -151,10 +159,10 @@ export const Tiers: React.FC = () => {
         {
           name: 'Downloadable resources',
           intern: false,
-          apprentice: true,
-          freelancer: true,
-          specialist: true,
-          generalist: true,
+          apprentice: '2',
+          freelancer: '3',
+          specialist: '4',
+          generalist: '5',
         },
         {
           name: '5 min max promo video',
