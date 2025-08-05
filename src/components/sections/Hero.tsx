@@ -110,7 +110,7 @@ export const Hero: React.FC = () => {
               Present at Ontario&apos;s Largest Student Career Fair
             </h1>
             <p className="text-body-large-mobile tablet:text-body-large text-white/90 mb-12 text-center tablet:text-left">
-              Want young people to know about your industry? Join us at the 2025 myBlueprint Career Launch.
+              Want young people to know about your industry? Join us at the 2025 <span className="underline">myBlueprint Career Launch</span>.
             </p>
             
             {/* Statistics */}

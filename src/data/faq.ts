@@ -64,7 +64,7 @@ export const faqs: FAQItem[] = [
   {
     id: 'engagement-activity-lead-gen',
     question: 'What is an Engagement Activity? And what is lead-gen*?',
-    answer: 'An engagement activity is something interactive that students can do at your booth.\n\nFor example, we can repurpose existing company content or industry information and turn it into a multiple choice quiz, true or false, two truths and a lie, etc. type of activity.',
+    answer: 'An engagement activity is something interactive that students can do at your booth.\n\nFor example, we can repurpose existing company content or industry information and turn it into a multiple choice quiz, true or false, two truths and a lie, etc. type of activity.\n\nFor Generalist sponsors, students will be prompted to enter their email before completing the engagement activity. Student emails will not be shared with the sponsor. However, the sponsor will have the ability to draft an email (to be sent by myBlueprint) in January to all students who engaged with the activity.',
     keywords: ['engagement', 'activities', 'polls', 'quizzes', 'lead generation', 'recruitment', 'permissions']
   },
   {
