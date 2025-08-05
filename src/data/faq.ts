@@ -10,73 +10,67 @@ export const faqs: FAQItem[] = [
   {
     id: 'what-is-myblueprint',
     question: 'What is myBlueprint?',
-    answer: 'myBlueprint is Canada\'s leading career exploration platform, serving over 1 million students annually. We provide career assessments, education planning tools, and experiential learning opportunities that help students discover their interests, skills, and career pathways from elementary through post-secondary.',
+    answer: 'myBlueprint exists to help empower every student to thrive and succeed in education, career, and life.\n\nMore specifically, we create career education software that is trusted by ~300 Canadian school boards to support over 1 million grade 7-12 students in researching and creating a plan for life after high school.',
     keywords: ['myblueprint', 'platform', 'career', 'students', 'canada']
   },
   {
     id: 'format-agenda',
     question: 'What is the format/agenda for the day?',
-    answer: 'The myBlueprint Career Launch is a full-day virtual event featuring live presentations from industry leaders, interactive workshops, employer showcases, and Q&A sessions. The day includes both school-day sessions (during school hours) and after-school programming to maximize student participation.',
+    answer: 'In addition to a kickoff/keynote, there will be 4 traditional blocks throughout the school day, with 5 sessions to choose from within each block. These sessions will be 45 minutes long, which includes roughly 15 minutes of Q&A.\n\nThe Freelance lunchtime block (optional for students) will feature 30 min long skills-focused sessions.\n\nTentative agenda looks like:\n• 9 - 9:15 am Welcome & Opening Remarks from myBlueprint\n• 9:15 - 9:45 am Keynote Speaker\n• 9:45 - 10:30 am Session Block 1\n• 10:45 - 11:30 am Session Block 2\n• 11:45 am - 12:30 pm Session Block 3\n• 12:30 - 1:15 pm Lunch + Sponsor Skills Sessions\n• 1:15 - 2 pm Session Block 4\n• 2 - 2:45 pm Explore Expo & Wrap-up\n• 7 - 7:45 pm Optional evening session',
     keywords: ['format', 'agenda', 'virtual', 'presentations', 'workshops', 'schedule']
   },
   {
     id: 'school-day-session',
     question: 'What is a School-day Session?',
-    answer: 'School-day sessions are live presentations scheduled during regular school hours (typically 9am-3pm) that teachers can integrate into their classroom programming. These sessions allow entire classes to participate together and include curriculum-connected content that supports learning objectives.',
+    answer: 'These are the sessions that will take place during the school day, with students attending from their schools.\n\nAll sponsorship levels will have their session recording available for post-event on-demand viewing after the event has wrapped up for students to access on their own, but only school-day sessions will be streamed during the day with students watching from school.',
     keywords: ['school-day', 'session', 'classroom', 'teachers', 'curriculum', 'hours']
   },
   {
     id: 'student-viewing',
     question: 'How will students be watching the sessions?',
-    answer: 'Students access sessions through our secure online platform via web browsers on computers, tablets, or mobile devices. Teachers can facilitate viewing in classrooms, or students can join individually from home. All sessions include interactive features like live chat, polls, and Q&A capabilities.',
+    answer: 'It will be up to individual schools to decide. Some have expressed keeping regular blocks for students, and voting as a class for which session to watch.\n\nOthers have indicated that they will designate specific rooms for specific sessions, and let students choose with their feet.\n\nAll sessions regardless of sponsorship tier will be available on-demand after the event for students to revisit on their own time.',
     keywords: ['viewing', 'platform', 'browsers', 'devices', 'interactive', 'chat']
   },
   {
     id: 'participating-school-boards',
     question: 'Which school boards are participating?',
-    answer: 'We partner with up to 72 school boards across Ontario, representing both English and French public and Catholic systems. This includes major boards like Toronto District School Board, York Region District School Board, and many others, reaching over 50,000 students province-wide.',
+    answer: 'We hope they all do. This event specifically will be promoted to Ontario specific school boards. We have structured the event to make it financially feasible for boards to participate.\n\nTo make it even easier, you can sponsor a school board to attend. See the Additional Sponsorship Options above for more details.',
     keywords: ['school boards', 'ontario', 'participating', 'english', 'french', 'catholic', 'public']
   },
   {
     id: 'ontario-only',
     question: 'Why is this just for Ontario school boards?',
-    answer: 'This specific event focuses on Ontario to provide targeted, province-specific career information that aligns with Ontario\'s curriculum standards and post-secondary pathways. However, myBlueprint serves students nationally, and we host similar events in other provinces throughout the year.',
+    answer: 'Because this is our first time running an event like this, and we\'re doing it on a tight timeline. Based on how this event goes, we are hoping to run similar events at a provincial level, from coast to coast moving forward.',
     keywords: ['ontario', 'province', 'curriculum', 'targeted', 'national', 'pathways']
-  },
-  {
-    id: 'sponsor-session-types',
-    question: 'What types of sessions are you looking for from sponsors?',
-    answer: 'We seek engaging presentations that showcase career pathways, emerging industries, workplace innovation, and real-world applications of skills students are learning. Popular formats include "Day in the Life" stories, industry overviews, skill demonstrations, and interactive career exploration sessions.',
-    keywords: ['sessions', 'presentations', 'career pathways', 'industry', 'skills', 'workplace']
   },
   {
     id: 'post-secondary-participation',
     question: 'Can post-secondary institutions participate as well?',
-    answer: 'Absolutely! Post-secondary institutions are valuable partners in helping students understand education pathways, program options, and how different fields of study connect to careers. Universities, colleges, and trade schools all play important roles in our programming.',
+    answer: 'Absolutely. We hope you do. If you want to include a traditional \'Your School 101\' type of session, we suggest the Apprentice option. There will be a dedicated post-secondary section for the on-demand recordings.\n\nTo be included in the school day sessions, we would want to see something like an alumni panel talking about where they work now, and how your school helped prepare them for that. Or a skills based lunch time session (Freelance) that would be applicable for students regardless of where they go to school.',
     keywords: ['post-secondary', 'universities', 'colleges', 'education', 'programs', 'pathways']
   },
   {
     id: 'title-sponsor',
     question: 'Can my company become the title sponsor for this event?',
-    answer: 'Yes! We offer exclusive title sponsorship opportunities that provide maximum brand visibility and recognition. Title sponsors receive premium placement in all event communications, opening/closing acknowledgments, and enhanced engagement opportunities. Contact us to discuss availability and benefits.',
+    answer: 'Yes. For $50k CAD, you can sponsor all Ontario school boards to attend for free.\n\nYou and your company would instantly become legendary in the eyes of educators and students across the province, along with a few extra event perks.',
     keywords: ['title sponsor', 'exclusive', 'brand', 'visibility', 'premium', 'recognition']
   },
   {
     id: 'content-hub',
     question: 'What is the myBlueprint Content Hub?',
-    answer: 'The myBlueprint Content Hub is our centralized library of career exploration resources, videos, and interactive content. Sponsor materials and session recordings are featured here, providing ongoing access for students, teachers, and families beyond the live event date.',
+    answer: 'This is a new feature, currently in development, that will be available to myBlueprint student users. Content specific to careers, life skills, mindsets, emerging technologies, innovative industries, etc. is being created and curated for students to access within the myBlueprint platform.\n\nRecordings and clips from these recordings will be included within the content hub for students nationally to continue to access well after the event.',
     keywords: ['content hub', 'library', 'resources', 'videos', 'recordings', 'ongoing access']
   },
   {
     id: 'engagement-activity-lead-gen',
     question: 'What is an Engagement Activity? And what is lead-gen*?',
-    answer: 'Engagement Activities are interactive elements like polls, quizzes, career assessments, or contests that encourage student participation. Lead-gen refers to lead generation - capturing interested student information (with appropriate permissions) for future recruitment, internship programs, or educational outreach initiatives.',
+    answer: 'An engagement activity is something interactive that students can do at your booth.\n\nFor example, we can repurpose existing company content or industry information and turn it into a multiple choice quiz, true or false, two truths and a lie, etc. type of activity.',
     keywords: ['engagement', 'activities', 'polls', 'quizzes', 'lead generation', 'recruitment', 'permissions']
   },
   {
     id: 'booth-content-availability',
     question: 'How long will booth content be available to students?',
-    answer: 'Sponsor booth content and session recordings remain accessible to students through the myBlueprint platform for 6 months following the live event. This extended access maximizes your investment and allows students to revisit information when making education and career decisions.',
+    answer: 'Booth content will be promoted a week ahead of the event, for students and educators to explore beforehand, and will remain ungated, and available throughout the month of December.',
     keywords: ['booth content', 'availability', 'recordings', 'platform', '6 months', 'extended access']
   }
 ]

@@ -350,25 +350,28 @@ export const Tiers: React.FC = () => {
               </div>
 
               {/* CTA Button */}
-              <Button
-                variant={isLimited(tier) ? "urgency" : tier.featured ? "primary" : "secondary"}
-                size="default"
-                className={cn(
-                  "w-full",
-                  (tier.id === 'freelancer' || tier.id === 'specialist' || tier.id === 'generalist') && "!bg-[#0092ff] !text-white hover:!bg-[#0076cc] active:!bg-[#005a99]"
-                )}
-                onClick={() => {
-                  // In a real app, this would trigger a consultation booking flow
-                  console.log(`Selected tier: ${tier.name}`)
-                }}
+              <a
+                href="https://tidycal.com/damianmatheson/career-launch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
               >
-                {isLimited(tier) 
-                  ? `Book Now - ${tier.availability} left`
-                  : tier.featured
-                  ? "Book Consultation"
-                  : `Choose ${tier.name}`
-                }
-              </Button>
+                <Button
+                  variant={isLimited(tier) ? "urgency" : tier.featured ? "primary" : "secondary"}
+                  size="default"
+                  className={cn(
+                    "w-full",
+                    (tier.id === 'freelancer' || tier.id === 'specialist' || tier.id === 'generalist') && "!bg-[#0092ff] !text-white hover:!bg-[#0076cc] active:!bg-[#005a99]"
+                  )}
+                >
+                  {isLimited(tier) 
+                    ? `Book Now - ${tier.availability} left`
+                    : tier.featured
+                    ? "Book Consultation"
+                    : `Choose ${tier.name}`
+                  }
+                </Button>
+              </a>
             </Card>
           ))}
         </div>
@@ -663,15 +666,18 @@ export const Tiers: React.FC = () => {
               <p className="text-body text-neutral-4 mb-4">
                 Ready to get started? Want to discuss custom options?
               </p>
-              <Button
-                variant="secondary"
-                size="default"
-                onClick={() => {
-                  console.log('Custom package consultation requested')
-                }}
+              <a
+                href="https://tidycal.com/damianmatheson/career-launch"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Book a Time to Talk
-              </Button>
+                <Button
+                  variant="secondary"
+                  size="default"
+                >
+                  Book a Time to Talk
+                </Button>
+              </a>
             </div>
           </div>
         </div>

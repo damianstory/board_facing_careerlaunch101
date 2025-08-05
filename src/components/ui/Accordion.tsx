@@ -48,10 +48,10 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
       <div
         className={cn(
           'overflow-hidden transition-all duration-standard ease-spring',
-          isOpen ? 'max-h-96' : 'max-h-0'
+          isOpen ? 'max-h-[600px]' : 'max-h-0'
         )}
       >
-        <div className="px-6 pb-5 pr-12 text-body text-black">
+        <div className="px-6 pb-5 pr-12 text-body text-black whitespace-pre-line">
           {answer}
         </div>
       </div>

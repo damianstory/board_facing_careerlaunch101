@@ -11,7 +11,7 @@ interface FAQProps extends React.HTMLAttributes<HTMLElement> {}
 export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
   const [searchQuery, setSearchQuery] = useState('')
   const [searchDebounce, setSearchDebounce] = useState('')
-  const [openItems, setOpenItems] = useState<Set<string>>(() => new Set())
+  const [openItem, setOpenItem] = useState<string | null>(null)
   const [hasMounted, setHasMounted] = useState(false)
 
   // Ensure hydration consistency
@@ -52,15 +52,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
   }, [])
 
   const handleToggle = useCallback((id: string) => {
-    setOpenItems(prev => {
-      const newSet = new Set(prev)
-      if (newSet.has(id)) {
-        newSet.delete(id)
-      } else {
-        newSet.add(id)
-      }
-      return newSet
-    })
+    setOpenItem(prev => prev === id ? null : id)
   }, [])
 
 
@@ -144,7 +136,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
                     <AccordionItem
                       question={faq.question}
                       answer={faq.answer}
-                      isOpen={hasMounted && openItems.has(faq.id)}
+                      isOpen={hasMounted && openItem === faq.id}
                       onToggle={() => handleToggle(faq.id)}
                     />
                   </div>
@@ -187,7 +179,9 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
               Book a time to speak with our partnership team.
             </p>
             <a
-              href="#contact"
+              href="https://tidycal.com/damianmatheson/career-launch"
+              target="_blank"
+              rel="noopener noreferrer"
               className={cn(
                 "inline-flex items-center justify-center",
                 "px-8 py-4 rounded-lg",

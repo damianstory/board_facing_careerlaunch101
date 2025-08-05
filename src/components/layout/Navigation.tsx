@@ -139,19 +139,20 @@ export const Navigation: React.FC = () => {
                 </a>
               ))}
               
-              <Button
-                variant="primary"
-                size="default"
-                className="ml-4 text-white"
-                onClick={() => {
-                  const element = document.getElementById('tiers')
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                  }
-                }}
+              <a
+                href="https://tidycal.com/damianmatheson/career-launch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-4"
               >
-                Talk To Us
-              </Button>
+                <Button
+                  variant="primary"
+                  size="default"
+                  className="text-white"
+                >
+                  Talk To Us
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -205,20 +206,15 @@ export const Navigation: React.FC = () => {
                     {link.label}
                   </a>
                 ))}
-                <button 
-                  className="mt-4 w-full bg-blue-600 text-white py-3 px-6 rounded-lg"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false)
-                    const element = document.getElementById('tiers')
-                    if (element) {
-                      setTimeout(() => {
-                        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                      }, 300)
-                    }
-                  }}
+                <a 
+                  href="https://tidycal.com/damianmatheson/career-launch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-center block"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Talk To Us
-                </button>
+                </a>
               </div>
             </div>
           </div>
