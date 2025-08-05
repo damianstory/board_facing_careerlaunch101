@@ -123,7 +123,7 @@ export const Tiers: React.FC = () => {
           generalist: true,
         },
         {
-          name: 'On-demand recording',
+          name: 'On-demand recording (post-event)',
           intern: true,
           apprentice: true,
           freelancer: true,
@@ -160,7 +160,7 @@ export const Tiers: React.FC = () => {
           generalist: true,
         },
         {
-          name: 'Recording analytics',
+          name: 'Post-event recording analytics',
           intern: true,
           apprentice: true,
           freelancer: true,
