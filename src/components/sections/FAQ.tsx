@@ -11,7 +11,13 @@ interface FAQProps extends React.HTMLAttributes<HTMLElement> {}
 export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
   const [searchQuery, setSearchQuery] = useState('')
   const [searchDebounce, setSearchDebounce] = useState('')
-  const [openItems, setOpenItems] = useState<Set<string>>(new Set())
+  const [openItems, setOpenItems] = useState<Set<string>>(() => new Set())
+  const [hasMounted, setHasMounted] = useState(false)
+
+  // Ensure hydration consistency
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
 
   // Debounce search input
   useEffect(() => {
@@ -38,28 +44,6 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
     })
   }, [searchDebounce])
 
-  // Group FAQs by category
-  const groupedFAQs = useMemo(() => {
-    const groups: Record<string, typeof faqs> = {
-      'event-details': [],
-      'sponsorship-process': []
-    }
-
-    filteredFAQs.forEach(faq => {
-      const category = faq.category || 'event-details'
-      if (groups[category]) {
-        groups[category].push(faq)
-      }
-    })
-
-    return Object.entries(groups).filter(([_, items]) => items.length > 0)
-  }, [filteredFAQs])
-
-  // Category labels
-  const categoryLabels: Record<string, string> = {
-    'event-details': 'Event Details',
-    'sponsorship-process': 'Sponsorship Process'
-  }
 
   const handleClearSearch = useCallback(() => {
     setSearchQuery('')
@@ -131,7 +115,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
           </div>
           
           {/* Search results count */}
-          {searchDebounce && (
+          {hasMounted && searchDebounce && (
             <p className="mt-3 text-sm text-gray-700 text-center">
               {filteredFAQs.length === 0 ? (
                 'No results found. Try different keywords or browse all questions below.'
@@ -142,38 +126,36 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
           )}
         </div>
 
-        {/* FAQ Categories */}
-        <div className="max-w-4xl mx-auto space-y-8 md:space-y-12">
-          {groupedFAQs.map(([category, items], categoryIndex) => (
-            <div key={category} className="space-y-4 md:space-y-6">
-              <h3 className="text-h3-mobile md:text-h3 text-brand-navy">
-                {categoryLabels[category]} ({items.length})
-              </h3>
-              
-              <div className="space-y-3 md:space-y-4">
-                {items.map((faq, index) => (
-                  <div
-                    key={faq.id}
-                    id={`faq-${faq.id}`}
-                    className="faq-item"
-                  >
-                    <div className="bg-white border border-gray-200 hover:border-gray-300 transition-colors duration-200 rounded-lg">
-                      <AccordionItem
-                        question={faq.question}
-                        answer={faq.answer}
-                        isOpen={openItems.has(faq.id)}
-                        onToggle={() => handleToggle(faq.id)}
-                      />
-                    </div>
+        {/* FAQ Section */}
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-4 md:space-y-6">
+            <h3 className="text-h3-mobile md:text-h3 text-brand-navy text-center mb-8 md:mb-12">
+              Frequently Asked Questions
+            </h3>
+            
+            <div className="space-y-3 md:space-y-4">
+              {filteredFAQs.map((faq) => (
+                <div
+                  key={faq.id}
+                  id={`faq-${faq.id}`}
+                  className="faq-item"
+                >
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 transition-colors duration-200 rounded-lg">
+                    <AccordionItem
+                      question={faq.question}
+                      answer={faq.answer}
+                      isOpen={hasMounted && openItems.has(faq.id)}
+                      onToggle={() => handleToggle(faq.id)}
+                    />
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
 
         {/* No results state */}
-        {filteredFAQs.length === 0 && (
+        {hasMounted && filteredFAQs.length === 0 && searchDebounce && (
           <div className="text-center py-12">
             <p className="text-body-large text-neutral-4 mb-4">
               No questions found matching "{searchDebounce}"

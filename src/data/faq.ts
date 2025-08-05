@@ -7,77 +7,76 @@ export interface FAQItem {
 }
 
 export const faqs: FAQItem[] = [
-  // Event Details (5 questions)
   {
-    id: 'event-format',
-    question: 'What is the format of the virtual career fair?',
-    answer: 'The myBCS Virtual Career Fair is a fully online event hosted on our custom platform. Sponsors have dedicated virtual booths where they can engage with students through live chat, video calls, and scheduled presentations. Students can browse company profiles, submit resumes, and book 1-on-1 meetings throughout the day.',
-    category: 'event-details',
-    keywords: ['format', 'virtual', 'online', 'platform']
+    id: 'what-is-myblueprint',
+    question: 'What is myBlueprint?',
+    answer: 'myBlueprint is Canada\'s leading career exploration platform, serving over 1 million students annually. We provide career assessments, education planning tools, and experiential learning opportunities that help students discover their interests, skills, and career pathways from elementary through post-secondary.',
+    keywords: ['myblueprint', 'platform', 'career', 'students', 'canada']
   },
   {
-    id: 'attendance-expectations',
-    question: 'How many students typically attend?',
-    answer: 'Based on previous events, we expect 2,500+ registered students from Ontario universities and colleges. Past events have seen 85% attendance rates with highly engaged participants actively seeking internships and full-time opportunities in business, technology, and related fields.',
-    category: 'event-details',
-    keywords: ['attendance', 'students', 'participants', 'numbers']
+    id: 'format-agenda',
+    question: 'What is the format/agenda for the day?',
+    answer: 'The myBlueprint Career Launch is a full-day virtual event featuring live presentations from industry leaders, interactive workshops, employer showcases, and Q&A sessions. The day includes both school-day sessions (during school hours) and after-school programming to maximize student participation.',
+    keywords: ['format', 'agenda', 'virtual', 'presentations', 'workshops', 'schedule']
   },
   {
-    id: 'recruitment-goals',
-    question: 'What types of roles can we recruit for?',
-    answer: 'Sponsors typically recruit for internships, co-op positions, new graduate roles, and experienced positions across business, technology, marketing, finance, and operations. Students attending span all years of study with diverse backgrounds, making it ideal for various recruitment needs.',
-    category: 'event-details',
-    keywords: ['recruitment', 'roles', 'positions', 'internships', 'jobs']
+    id: 'school-day-session',
+    question: 'What is a School-day Session?',
+    answer: 'School-day sessions are live presentations scheduled during regular school hours (typically 9am-3pm) that teachers can integrate into their classroom programming. These sessions allow entire classes to participate together and include curriculum-connected content that supports learning objectives.',
+    keywords: ['school-day', 'session', 'classroom', 'teachers', 'curriculum', 'hours']
   },
   {
-    id: 'previous-sponsors',
-    question: 'What companies have sponsored previous events?',
-    answer: 'Past sponsors include Fortune 500 companies, leading Canadian corporations, innovative startups, and government organizations. Many sponsors return year after year due to the quality of candidates and ROI. We\'re happy to share specific success stories and testimonials during your consultation.',
-    category: 'event-details',
-    keywords: ['sponsors', 'companies', 'testimonials', 'success', 'previous']
+    id: 'student-viewing',
+    question: 'How will students be watching the sessions?',
+    answer: 'Students access sessions through our secure online platform via web browsers on computers, tablets, or mobile devices. Teachers can facilitate viewing in classrooms, or students can join individually from home. All sessions include interactive features like live chat, polls, and Q&A capabilities.',
+    keywords: ['viewing', 'platform', 'browsers', 'devices', 'interactive', 'chat']
   },
   {
-    id: 'roi-metrics',
-    question: 'How do sponsors measure ROI from the event?',
-    answer: 'Sponsors typically measure success through qualified leads generated, interviews scheduled, offers extended, and brand awareness metrics. Our post-event report includes all key metrics. Past sponsors report average cost-per-hire 70% lower than traditional recruitment methods.',
-    category: 'event-details',
-    keywords: ['roi', 'metrics', 'success', 'measurement', 'results']
-  },
-  
-  // Sponsorship Process (5 questions)
-  {
-    id: 'sponsorship-tiers',
-    question: 'What sponsorship tiers are available?',
-    answer: 'We offer multiple sponsorship tiers to fit different needs and budgets, starting from Bronze at $1,500 up to our limited Title Sponsor package. Each tier includes different benefits such as booth customization, speaking opportunities, logo placement, and post-event analytics. Contact us for a detailed comparison.',
-    category: 'sponsorship-process',
-    keywords: ['tiers', 'packages', 'pricing', 'options', 'bronze', 'silver', 'gold']
+    id: 'participating-school-boards',
+    question: 'Which school boards are participating?',
+    answer: 'We partner with up to 72 school boards across Ontario, representing both English and French public and Catholic systems. This includes major boards like Toronto District School Board, York Region District School Board, and many others, reaching over 50,000 students province-wide.',
+    keywords: ['school boards', 'ontario', 'participating', 'english', 'french', 'catholic', 'public']
   },
   {
-    id: 'booking-process',
-    question: 'How does the sponsorship booking process work?',
-    answer: 'The process is simple: 1) Book a consultation call with our team, 2) Select your preferred sponsorship tier, 3) Complete the sponsorship agreement and payment, 4) Receive your sponsor portal access to set up your booth and prepare for the event. Most sponsors complete the entire process within 48 hours.',
-    category: 'sponsorship-process',
-    keywords: ['booking', 'process', 'steps', 'timeline', 'registration']
+    id: 'ontario-only',
+    question: 'Why is this just for Ontario school boards?',
+    answer: 'This specific event focuses on Ontario to provide targeted, province-specific career information that aligns with Ontario\'s curriculum standards and post-secondary pathways. However, myBlueprint serves students nationally, and we host similar events in other provinces throughout the year.',
+    keywords: ['ontario', 'province', 'curriculum', 'targeted', 'national', 'pathways']
   },
   {
-    id: 'student-data',
-    question: 'What student data do sponsors receive?',
-    answer: 'Sponsors receive comprehensive analytics including booth visitor counts, resume submissions, chat transcripts (with consent), and contact information for students who express interest. Post-event, you\'ll receive a detailed report with all interactions and qualified leads within 48 hours.',
-    category: 'sponsorship-process',
-    keywords: ['data', 'analytics', 'resumes', 'leads', 'information']
+    id: 'sponsor-session-types',
+    question: 'What types of sessions are you looking for from sponsors?',
+    answer: 'We seek engaging presentations that showcase career pathways, emerging industries, workplace innovation, and real-world applications of skills students are learning. Popular formats include "Day in the Life" stories, industry overviews, skill demonstrations, and interactive career exploration sessions.',
+    keywords: ['sessions', 'presentations', 'career pathways', 'industry', 'skills', 'workplace']
   },
   {
-    id: 'payment-terms',
-    question: 'What are the payment terms and options?',
-    answer: 'We accept payment via credit card, wire transfer, or check. Full payment is due within 7 days of signing the sponsorship agreement to secure your spot. We offer flexible payment plans for non-profit organizations and startups - please discuss with our team during consultation.',
-    category: 'sponsorship-process',
-    keywords: ['payment', 'terms', 'options', 'pricing', 'invoice']
+    id: 'post-secondary-participation',
+    question: 'Can post-secondary institutions participate as well?',
+    answer: 'Absolutely! Post-secondary institutions are valuable partners in helping students understand education pathways, program options, and how different fields of study connect to careers. Universities, colleges, and trade schools all play important roles in our programming.',
+    keywords: ['post-secondary', 'universities', 'colleges', 'education', 'programs', 'pathways']
   },
   {
-    id: 'cancellation-policy',
-    question: 'What is your cancellation policy?',
-    answer: 'We understand plans can change. Cancellations made 30+ days before the event receive a full refund. Cancellations 15-29 days prior receive 50% refund. Within 14 days, we offer credit toward future myBCS events. We also provide sponsorship transfer options to other organizations.',
-    category: 'sponsorship-process',
-    keywords: ['cancellation', 'refund', 'policy', 'changes']
+    id: 'title-sponsor',
+    question: 'Can my company become the title sponsor for this event?',
+    answer: 'Yes! We offer exclusive title sponsorship opportunities that provide maximum brand visibility and recognition. Title sponsors receive premium placement in all event communications, opening/closing acknowledgments, and enhanced engagement opportunities. Contact us to discuss availability and benefits.',
+    keywords: ['title sponsor', 'exclusive', 'brand', 'visibility', 'premium', 'recognition']
+  },
+  {
+    id: 'content-hub',
+    question: 'What is the myBlueprint Content Hub?',
+    answer: 'The myBlueprint Content Hub is our centralized library of career exploration resources, videos, and interactive content. Sponsor materials and session recordings are featured here, providing ongoing access for students, teachers, and families beyond the live event date.',
+    keywords: ['content hub', 'library', 'resources', 'videos', 'recordings', 'ongoing access']
+  },
+  {
+    id: 'engagement-activity-lead-gen',
+    question: 'What is an Engagement Activity? And what is lead-gen*?',
+    answer: 'Engagement Activities are interactive elements like polls, quizzes, career assessments, or contests that encourage student participation. Lead-gen refers to lead generation - capturing interested student information (with appropriate permissions) for future recruitment, internship programs, or educational outreach initiatives.',
+    keywords: ['engagement', 'activities', 'polls', 'quizzes', 'lead generation', 'recruitment', 'permissions']
+  },
+  {
+    id: 'booth-content-availability',
+    question: 'How long will booth content be available to students?',
+    answer: 'Sponsor booth content and session recordings remain accessible to students through the myBlueprint platform for 6 months following the live event. This extended access maximizes your investment and allows students to revisit information when making education and career decisions.',
+    keywords: ['booth content', 'availability', 'recordings', 'platform', '6 months', 'extended access']
   }
 ]

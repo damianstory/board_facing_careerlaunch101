@@ -20,7 +20,7 @@ export const About: React.FC = () => {
   const valueProps: ValuePropItem[] = [
     {
       id: 'reach',
-      title: 'Reach Students Early',
+      title: 'Early Exposure',
       description: 'Connect with students at the beginning of their career journey when they\'re most curious.',
       icon: (
         <svg className="w-6 h-6 text-primary-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,19 +59,9 @@ export const About: React.FC = () => {
       ),
     },
     {
-      id: 'exclusive',
-      title: 'Exclusive Access',
-      description: 'Get priority access to emerging talent before they enter the competitive job market.',
-      icon: (
-        <svg className="w-6 h-6 text-primary-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-        </svg>
-      ),
-    },
-    {
       id: 'diversity',
       title: 'Diverse Talent Pool',
-      description: 'Access students from diverse backgrounds and 72 school boards across Ontario.',
+      description: 'Access students with diverse backgrounds from all across Ontario.',
       icon: (
         <svg className="w-6 h-6 text-primary-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -85,6 +75,16 @@ export const About: React.FC = () => {
       icon: (
         <svg className="w-6 h-6 text-primary-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      id: 'unparalleled-reach',
+      title: 'Unparalleled Reach',
+      description: 'Over 1 million Canadian students use myBlueprint to research/create a plan for life after high school.',
+      icon: (
+        <svg className="w-6 h-6 text-primary-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
         </svg>
       ),
     },
@@ -157,7 +157,7 @@ export const About: React.FC = () => {
                 </svg>
                 <div>
                   <p className="text-body font-semibold text-brand-navy">50,000+ Students</p>
-                  <p className="text-body-small text-neutral-4">From 72 school boards across Ontario</p>
+                  <p className="text-body-small text-neutral-4">From up to 72 school boards across Ontario</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -166,7 +166,7 @@ export const About: React.FC = () => {
                 </svg>
                 <div>
                   <p className="text-body font-semibold text-brand-navy">Virtual Format</p>
-                  <p className="text-body-small text-neutral-4">Accessible from anywhere, no travel required</p>
+                  <p className="text-body-small text-neutral-4">Accessible from anywhere, with recordings shared to our community of 1+ million students nationally</p>
                 </div>
               </div>
             </div>
@@ -187,7 +187,7 @@ export const About: React.FC = () => {
                 With career uncertainty at an all-time high and student expectations 3x greater than actual job demand in professional fields, young people need your voice. Research proves that direct employer engagement leads to better employment outcomes at age 25.
               </p>
               <p className="text-body text-brand-navy">
-                <strong>Speak at the myBlueprint Career Launch</strong> to help Ontario's students discover the innovative careers, emerging technologies, and non-traditional pathways that exist in your sector.
+                <strong>Speak at the </strong><strong style={{color: '#0092ff'}}>myBlueprint Career Launch</strong> to help Ontario's students discover the meaningful careers, emerging technologies, and non-traditional pathways that exist in your sector.
               </p>
             </div>
           </BentoCard>

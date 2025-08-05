@@ -72,7 +72,7 @@ export const Accordion: React.FC<AccordionProps> = ({
   items,
   allowMultiple = true,
 }) => {
-  const [openItems, setOpenItems] = useState<Set<string>>(new Set())
+  const [openItems, setOpenItems] = useState<Set<string>>(() => new Set())
   
   const handleToggle = (id: string) => {
     setOpenItems(prev => {

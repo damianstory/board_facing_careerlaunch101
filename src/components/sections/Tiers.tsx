@@ -173,7 +173,7 @@ export const Tiers: React.FC = () => {
       category: 'Booth Features',
       features: [
         {
-          name: 'Engagement activity w/ lead gen*',
+          name: 'Engagement activity w/ lead-gen*',
           intern: false,
           apprentice: false,
           freelancer: false,

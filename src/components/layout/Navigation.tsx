@@ -16,6 +16,12 @@ export const Navigation: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [hasMounted, setHasMounted] = useState(false)
+
+  // Ensure hydration consistency
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
   
   // Handle scroll for sticky nav shadow
   useEffect(() => {
@@ -94,7 +100,7 @@ export const Navigation: React.FC = () => {
       <nav
         className={cn(
           'fixed top-0 left-0 right-0 z-50 hidden nav-break:block bg-white/95 backdrop-blur-md transition-shadow duration-standard',
-          isScrolled && 'shadow-[0_2px_8px_rgba(0,0,0,0.06)]'
+          hasMounted && isScrolled && 'shadow-[0_2px_8px_rgba(0,0,0,0.06)]'
         )}
       >
         <div className="container">
@@ -124,7 +130,7 @@ export const Navigation: React.FC = () => {
                   onClick={(e) => scrollToSection(e, link.href)}
                   className={cn(
                     'flex items-center h-full text-body font-medium transition-colors duration-fast',
-                    activeSection === link.id
+                    hasMounted && activeSection === link.id
                       ? 'text-primary-blue'
                       : 'text-brand-navy hover:text-primary-blue'
                   )}
@@ -177,15 +183,15 @@ export const Navigation: React.FC = () => {
               className="w-10 h-10 flex flex-col items-center justify-center space-y-1"
               aria-label="Toggle menu"
             >
-              <div className={`w-6 h-0.5 bg-brand-navy transition-all ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
-              <div className={`w-6 h-0.5 bg-brand-navy transition-all ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
-              <div className={`w-6 h-0.5 bg-brand-navy transition-all ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
+              <div className={`w-6 h-0.5 bg-brand-navy transition-all ${hasMounted && isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
+              <div className={`w-6 h-0.5 bg-brand-navy transition-all ${hasMounted && isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
+              <div className={`w-6 h-0.5 bg-brand-navy transition-all ${hasMounted && isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
             </button>
           </div>
         </div>
         
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
+        {hasMounted && isMobileMenuOpen && (
           <div className="bg-white border-t">
             <div className="container py-4">
               <div className="flex flex-col space-y-4">
