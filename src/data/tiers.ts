@@ -15,7 +15,7 @@ export const TIER_CONFIG: TierConfig[] = [
     price: 250,
     availability: 'unlimited',
     benefits: [
-      'On-demand recording',
+      'Post-event Recording',
     ],
   },
   {
@@ -24,20 +24,20 @@ export const TIER_CONFIG: TierConfig[] = [
     price: 750,
     availability: 'unlimited',
     benefits: [
-      'Good booth',
-      'On-demand recording',
+      'Good Booth',
+      'Post-event Recording',
     ],
   },
   {
     id: 'freelancer',
     name: 'Freelancer',
-    price: 1500,
+    price: 1250,
     availability: 5,
     limited: true,
     benefits: [
-      'School-day Session at Lunch)',
+      'School-day Session (at Lunch)',
       'Good Booth',
-      'On-demand Recording',
+      'Post-event Recording',
     ],
   },
   {
@@ -51,7 +51,7 @@ export const TIER_CONFIG: TierConfig[] = [
       'Q&A with Students',
       'School-day Session',
       'Great Booth',
-      'On-demand Recording',
+      'Post-event Recording',
     ],
   },
   {
@@ -66,7 +66,7 @@ export const TIER_CONFIG: TierConfig[] = [
       'Q&A with Students',
       'School-day Session',
       'Best Booth',
-      'On-demand Recording',
+      'Post-event Recording',
     ],
   },
 ]

@@ -123,7 +123,7 @@ export const Tiers: React.FC = () => {
           generalist: true,
         },
         {
-          name: 'On-demand recording (post-event)',
+          name: 'Post-event Recording',
           intern: true,
           apprentice: true,
           freelancer: true,
