@@ -203,15 +203,16 @@ export const About: React.FC = () => {
               <div className="w-full max-w-xl tablet:max-w-2xl desktop:max-w-3xl aspect-video mb-6">
                 <iframe
                   className="w-full h-full rounded-lg shadow-lg border border-gray-200"
-                  src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+                  src="https://www.youtube.com/embed/9jo51nJrO0k"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
                   loading="lazy"
                 />
               </div>
               <p className="text-body text-center text-neutral-4 max-w-2xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                This video (coming soon) will share a bit more context about the myBlueprint Career Launch event, how you and your company can get involved, and the impact that will create. Dont want to wait? Book a time to talk to us now.
               </p>
             </div>
           </BentoCard>
