@@ -72,5 +72,11 @@ export const faqs: FAQItem[] = [
     question: 'How long will booth content be available to students?',
     answer: 'Booth content will be promoted a week ahead of the event, for students and educators to explore beforehand, and will remain ungated, and available throughout the month of December.',
     keywords: ['booth content', 'availability', 'recordings', 'platform', '6 months', 'extended access']
+  },
+  {
+    id: 'other-collaboration-ways',
+    question: 'Are there other ways for my company to collaborate with myBlueprint?',
+    answer: 'Definitely. You can participate in our national <a href="https://www.industryimmersionseries.ca/" target="_blank" rel="noopener noreferrer" style="color: #0092ff; font-weight: bold; text-decoration: none;">Industry Immersion Series</a> campaign, or have us promote, review/select winners, and disburse post-secondary <a href="https://education.myblueprint.ca/scholarship-success-stories" target="_blank" rel="noopener noreferrer" style="color: #0092ff; font-weight: bold; text-decoration: none;">scholarships on your behalf</a>.\n\nWe\'re also always open to custom opportunities. Click the <em>Talk To Us</em> button below to learn more.',
+    keywords: ['collaboration', 'industry immersion', 'scholarships', 'custom opportunities', 'partnership']
   }
 ]

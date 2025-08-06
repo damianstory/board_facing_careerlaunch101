@@ -11,7 +11,7 @@ export interface TierConfig {
 export const TIER_CONFIG: TierConfig[] = [
   {
     id: 'intern',
-    name: 'Intern',
+    name: 'Bronze',
     price: 250,
     availability: 'unlimited',
     benefits: [
@@ -20,7 +20,7 @@ export const TIER_CONFIG: TierConfig[] = [
   },
   {
     id: 'apprentice',
-    name: 'Apprentice',
+    name: 'Silver',
     price: 750,
     availability: 'unlimited',
     benefits: [
@@ -30,19 +30,19 @@ export const TIER_CONFIG: TierConfig[] = [
   },
   {
     id: 'freelancer',
-    name: 'Freelancer',
+    name: 'Gold',
     price: 1250,
     availability: 5,
     limited: true,
     benefits: [
-      'School-day Session (at Lunch)',
+      'Skills-based school-day session (at lunch)',
       'Standard Booth',
       'Post-event Recording',
     ],
   },
   {
     id: 'specialist',
-    name: 'Specialist',
+    name: 'Platinum',
     price: 2000,
     availability: 10,
     limited: true,
@@ -56,7 +56,7 @@ export const TIER_CONFIG: TierConfig[] = [
   },
   {
     id: 'generalist',
-    name: 'Generalist',
+    name: 'Diamond',
     price: 3000,
     availability: 10,
     limited: true,
