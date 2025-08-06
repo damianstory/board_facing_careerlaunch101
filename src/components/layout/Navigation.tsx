@@ -107,8 +107,9 @@ export const Navigation: React.FC = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo/Brand */}
             <a
-              href="#hero"
-              onClick={(e) => scrollToSection(e, '#hero')}
+              href="https://myblueprint.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center"
             >
               <Image
@@ -164,8 +165,9 @@ export const Navigation: React.FC = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <a
-              href="#hero"
-              onClick={(e) => scrollToSection(e, '#hero')}
+              href="https://myblueprint.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center"
             >
               <Image

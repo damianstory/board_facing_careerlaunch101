@@ -10,7 +10,7 @@ export const faqs: FAQItem[] = [
   {
     id: 'what-is-myblueprint',
     question: 'What is myBlueprint?',
-    answer: 'myBlueprint exists to help empower every student to thrive and succeed in education, career, and life.\n\nMore specifically, we create career education software that is trusted by ~300 Canadian school boards to support over 1 million grade 7-12 students in researching and creating a plan for life after high school.',
+    answer: '<a href="https://myblueprint.ca/" target="_blank" rel="noopener noreferrer" style="color: #0092ff; text-decoration: none;">myBlueprint</a> exists to help empower every student to thrive and succeed in education, career, and life.\n\nMore specifically, we create career education software that is trusted by ~300 Canadian school boards to support over 1 million grade 7-12 students in researching and creating a plan for life after high school.',
     keywords: ['myblueprint', 'platform', 'career', 'students', 'canada']
   },
   {
@@ -28,13 +28,13 @@ export const faqs: FAQItem[] = [
   {
     id: 'student-viewing',
     question: 'How will students be watching the sessions?',
-    answer: 'It will be up to individual schools to decide. Some have expressed keeping regular blocks for students, and voting as a class for which session to watch.\n\nOthers have indicated that they will designate specific rooms for specific sessions, and let students choose with their feet.\n\nAll sessions regardless of sponsorship tier will be available on-demand after the event for students to revisit on their own time.',
+    answer: 'It will be up to individual schools to decide. Some have expressed keeping regular blocks for students, and voting as a class for which session to watch.\n\nOther schools will be setting up designated rooms for specific sessions and letting students decide which ones they want to attend.\n\nAll sessions regardless of sponsorship tier will be available on-demand after the event for students to revisit on their own time.',
     keywords: ['viewing', 'platform', 'browsers', 'devices', 'interactive', 'chat']
   },
   {
     id: 'participating-school-boards',
     question: 'Which school boards are participating?',
-    answer: 'We hope they all do. This event specifically will be promoted to Ontario specific school boards. We have structured the event to make it financially feasible for boards to participate.\n\nTo make it even easier, you can sponsor a school board to attend. See the Additional Sponsorship Options above for more details.',
+    answer: 'We hope they all do. This event specifically will be promoted to Ontario school boards. We have structured the event to make it financially feasible for boards to participate.\n\nTo make it even easier, you can sponsor a school board to attend. See the Additional Sponsorship Options above for more details.',
     keywords: ['school boards', 'ontario', 'participating', 'english', 'french', 'catholic', 'public']
   },
   {

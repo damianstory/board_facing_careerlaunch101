@@ -51,9 +51,10 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
           isOpen ? 'max-h-[600px]' : 'max-h-0'
         )}
       >
-        <div className="px-6 pb-5 pr-12 text-body text-black whitespace-pre-line">
-          {answer}
-        </div>
+        <div 
+          className="px-6 pb-5 pr-12 text-body text-black whitespace-pre-line"
+          dangerouslySetInnerHTML={{ __html: answer }}
+        />
       </div>
     </div>
   )
