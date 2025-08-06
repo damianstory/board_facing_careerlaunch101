@@ -115,8 +115,8 @@ export const Navigation: React.FC = () => {
               <Image
                 src="/images/logo.png"
                 alt="VCF Sponsors"
-                width={120}
-                height={40}
+                width={240}
+                height={80}
                 className="h-10 w-auto"
                 priority
               />
@@ -173,8 +173,8 @@ export const Navigation: React.FC = () => {
               <Image
                 src="/images/logo.png"
                 alt="VCF Sponsors"
-                width={100}
-                height={32}
+                width={200}
+                height={64}
                 className="h-8 w-auto"
                 priority
               />
