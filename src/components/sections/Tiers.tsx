@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
+import { InfoIcon } from '@/components/ui/Tooltip'
 import { TIER_CONFIG, TierConfig } from '@/data/tiers'
 import { cn } from '@/lib/utils'
 
@@ -56,7 +57,7 @@ const additionalOpportunities: AdditionalOpportunity[] = [
 interface ComparisonFeature {
   category: string
   features: {
-    name: string
+    name: string | React.ReactNode
     intern: boolean | string
     apprentice: boolean | string
     freelancer: boolean | string
@@ -98,7 +99,15 @@ export const Tiers: React.FC = () => {
       category: 'Session Structure',
       features: [
         {
-          name: 'Choice of session time',
+          name: (
+            <span className="flex items-center gap-1">
+              Choice of session time
+              <InfoIcon 
+                tooltip="Available to the first 5 sponsors. Move fast."
+                size="sm"
+              />
+            </span>
+          ),
           intern: false,
           apprentice: false,
           freelancer: false,
