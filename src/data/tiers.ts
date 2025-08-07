@@ -43,22 +43,8 @@ export const TIER_CONFIG: TierConfig[] = [
   {
     id: 'specialist',
     name: 'Platinum',
-    price: 2000,
-    availability: 10,
-    limited: true,
-    benefits: [
-      'Engagement Activity',
-      'Q&A with Students',
-      'School-day Session',
-      'Premium Booth',
-      'Post-event Recording',
-    ],
-  },
-  {
-    id: 'generalist',
-    name: 'Diamond',
-    price: 3000,
-    availability: 10,
+    price: 2500,
+    availability: 20,
     limited: true,
     featured: true,
     benefits: [

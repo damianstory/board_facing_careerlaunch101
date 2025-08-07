@@ -61,7 +61,6 @@ interface ComparisonFeature {
     apprentice: boolean | string
     freelancer: boolean | string
     specialist: boolean | string
-    generalist: boolean | string
   }[]
 }
 
@@ -103,8 +102,7 @@ export const Tiers: React.FC = () => {
           intern: false,
           apprentice: false,
           freelancer: false,
-          specialist: false,
-          generalist: true,
+          specialist: true,
         },
         {
           name: 'Q&A with students',
@@ -112,7 +110,6 @@ export const Tiers: React.FC = () => {
           apprentice: false,
           freelancer: false,
           specialist: true,
-          generalist: true,
         },
         {
           name: 'School day session',
@@ -120,7 +117,6 @@ export const Tiers: React.FC = () => {
           apprentice: false,
           freelancer: true,
           specialist: true,
-          generalist: true,
         },
         {
           name: 'Post-event Recording',
@@ -128,7 +124,6 @@ export const Tiers: React.FC = () => {
           apprentice: true,
           freelancer: true,
           specialist: true,
-          generalist: true,
         },
       ],
     },
@@ -141,7 +136,6 @@ export const Tiers: React.FC = () => {
           apprentice: false,
           freelancer: true,
           specialist: true,
-          generalist: true,
         },
         {
           name: 'Added to myB content hub',
@@ -149,7 +143,6 @@ export const Tiers: React.FC = () => {
           apprentice: false,
           freelancer: true,
           specialist: true,
-          generalist: true,
         },
         {
           name: 'Session analytics',
@@ -157,7 +150,6 @@ export const Tiers: React.FC = () => {
           apprentice: false,
           freelancer: true,
           specialist: true,
-          generalist: true,
         },
         {
           name: 'Post-event recording analytics',
@@ -165,7 +157,6 @@ export const Tiers: React.FC = () => {
           apprentice: true,
           freelancer: true,
           specialist: true,
-          generalist: true,
         },
       ],
     },
@@ -177,16 +168,7 @@ export const Tiers: React.FC = () => {
           intern: false,
           apprentice: false,
           freelancer: false,
-          specialist: false,
-          generalist: true,
-        },
-        {
-          name: 'Engagement activity',
-          intern: false,
-          apprentice: false,
-          freelancer: false,
           specialist: true,
-          generalist: true,
         },
         {
           name: 'Session slides embedded',
@@ -194,7 +176,6 @@ export const Tiers: React.FC = () => {
           apprentice: false,
           freelancer: false,
           specialist: true,
-          generalist: true,
         },
         {
           name: 'Custom call to action',
@@ -202,15 +183,13 @@ export const Tiers: React.FC = () => {
           apprentice: true,
           freelancer: true,
           specialist: true,
-          generalist: true,
         },
         {
           name: 'Downloadable resources',
           intern: false,
           apprentice: '2',
           freelancer: '3',
-          specialist: '4',
-          generalist: '5',
+          specialist: '5',
         },
         {
           name: '5 min max promo video',
@@ -218,7 +197,6 @@ export const Tiers: React.FC = () => {
           apprentice: true,
           freelancer: true,
           specialist: true,
-          generalist: true,
         },
         {
           name: 'Ability for booth raffle',
@@ -226,7 +204,6 @@ export const Tiers: React.FC = () => {
           apprentice: true,
           freelancer: true,
           specialist: true,
-          generalist: true,
         },
         {
           name: 'Company description',
@@ -234,7 +211,6 @@ export const Tiers: React.FC = () => {
           apprentice: true,
           freelancer: true,
           specialist: true,
-          generalist: true,
         },
       ],
     },
@@ -288,7 +264,7 @@ export const Tiers: React.FC = () => {
         {/* Tier Cards Grid */}
         <div 
           ref={cardsRef}
-          className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-5 gap-6 mb-16"
+          className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4 gap-6 mb-16"
         >
           {TIER_CONFIG.map((tier, index) => (
             <Card 
@@ -414,7 +390,7 @@ export const Tiers: React.FC = () => {
                   <React.Fragment key={catIdx}>
                     <tr className="bg-background-light">
                       <td 
-                        colSpan={6} 
+                        colSpan={5} 
                         className="py-3 px-4 text-body font-semibold text-brand-navy"
                       >
                         {category.category}
@@ -428,7 +404,7 @@ export const Tiers: React.FC = () => {
                         <td className="py-3 px-4 text-body-small text-brand-navy">
                           {feature.name}
                         </td>
-                        {(['intern', 'apprentice', 'freelancer', 'specialist', 'generalist'] as const).map(tierKey => (
+                        {(['intern', 'apprentice', 'freelancer', 'specialist'] as const).map(tierKey => (
                           <td key={tierKey} className="py-3 px-4 text-center">
                             {typeof feature[tierKey] === 'boolean' ? (
                               feature[tierKey] ? (
@@ -507,7 +483,7 @@ export const Tiers: React.FC = () => {
                     <React.Fragment key={catIdx}>
                       <tr className="bg-background-light">
                         <td 
-                          colSpan={6} 
+                          colSpan={5} 
                           className="py-2 px-3 text-body-small font-semibold text-brand-navy"
                         >
                           {category.category}
@@ -521,7 +497,7 @@ export const Tiers: React.FC = () => {
                           <td className="py-2 px-3 text-body-small text-brand-navy sticky left-0 bg-background-white">
                             {feature.name}
                           </td>
-                          {(['intern', 'apprentice', 'freelancer', 'specialist', 'generalist'] as const).map(tierKey => (
+                          {(['intern', 'apprentice', 'freelancer', 'specialist'] as const).map(tierKey => (
                             <td key={tierKey} className="py-2 px-3 text-center">
                               {typeof feature[tierKey] === 'boolean' ? (
                                 feature[tierKey] ? (

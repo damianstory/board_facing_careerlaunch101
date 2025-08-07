@@ -46,7 +46,7 @@ export const faqs: FAQItem[] = [
   {
     id: 'post-secondary-participation',
     question: 'Can post-secondary institutions participate as well?',
-    answer: 'Absolutely. We hope you do. If you want to include a traditional \'Your School 101\' type of session, we suggest the Apprentice option. There will be a dedicated post-secondary section for the on-demand recordings.\n\nTo be included in the school day sessions, we would want to see something like an alumni panel talking about where they work now, and how your school helped prepare them for that. Or a skills based lunch time session (Freelance) that would be applicable for students regardless of where they go to school.',
+    answer: 'Absolutely. We hope you do. If you want to include a traditional \'Your School 101\' type of session, we suggest the Silver option. There will be a dedicated post-secondary section for the on-demand recordings.\n\nTo be included in the school day sessions, we would want to see something like an alumni panel talking about where they work now, and how your school helped prepare them for that. Or a skills based lunch time session (Gold) that would be applicable for students regardless of where they go to school.',
     keywords: ['post-secondary', 'universities', 'colleges', 'education', 'programs', 'pathways']
   },
   {
@@ -64,7 +64,7 @@ export const faqs: FAQItem[] = [
   {
     id: 'engagement-activity-lead-gen',
     question: 'What is an Engagement Activity? And what is lead-gen*?',
-    answer: 'An engagement activity is something interactive that students can do at your booth.\n\nFor example, we can repurpose existing company content or industry information and turn it into a multiple choice quiz, true or false, two truths and a lie, etc. type of activity.\n\nFor Generalist sponsors, students will be prompted to enter their email before completing the engagement activity. Student emails will not be shared with the sponsor. However, the sponsor will have the ability to draft an email (to be sent by myBlueprint) in January to all students who engaged with the activity.',
+    answer: 'An engagement activity is something interactive that students can do at your booth.\n\nFor example, we can repurpose existing company content or industry information and turn it into a multiple choice quiz, true or false, two truths and a lie, etc. type of activity.\n\nStudents will be prompted to enter their email before completing the engagement activity in return for the chance of winning a prize/giveaway.\n\nStudent emails will not be shared with the sponsor. However, the sponsor will have the ability to draft an email (to be sent by myBlueprint) in January to all students who engaged with the activity.',
     keywords: ['engagement', 'activities', 'polls', 'quizzes', 'lead generation', 'recruitment', 'permissions']
   },
   {
