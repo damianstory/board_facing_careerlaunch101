@@ -199,11 +199,11 @@ export const About: React.FC = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
-            <div className="flex flex-col items-center justify-center px-6 py-8 tablet:px-8 tablet:py-10">
-              <div className="w-full max-w-xl tablet:max-w-2xl desktop:max-w-3xl aspect-video mb-6">
+            <div className="flex flex-col items-center justify-center px-6 py-8 pb-0 tablet:px-8 tablet:py-10 tablet:pb-2">
+              <div className="w-full max-w-xl tablet:max-w-2xl desktop:max-w-3xl aspect-video mb-8">
                 <iframe
                   className="w-full h-full rounded-lg shadow-lg border border-gray-200"
-                  src="https://www.youtube.com/embed/9jo51nJrO0k"
+                  src="https://www.youtube.com/embed/oCVcxrJ-HVE"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
@@ -211,9 +211,14 @@ export const About: React.FC = () => {
                   loading="lazy"
                 />
               </div>
-              <p className="text-body text-center text-neutral-4 max-w-2xl">
-                This video (coming soon) will share a bit more context about the myBlueprint Career Launch event, how you and your company can get involved, and the impact that will create. Dont want to wait? Book a time to talk to us now.
-              </p>
+              <div className="text-body text-center text-neutral-4 max-w-2xl space-y-4">
+                <p>
+                  Bright, talented young people are uncertain about their future and <strong className="text-black">unaware of the careers you offer</strong> — <strong style={{color: '#0092ff'}}>meaning you miss out on your best future hires.</strong>
+                </p>
+                <p>
+                  This video explains how direct engagement, like participating in this career fair, is the single most effective way to bridge that gap, build your talent pipeline, and connect with an informed, excited future workforce.
+                </p>
+              </div>
             </div>
           </BentoCard>
 
@@ -227,7 +232,7 @@ export const About: React.FC = () => {
             <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-6">
               Why This? And Why Now?
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-6">
               {valueProps.map((prop) => (
                 <div 
                   key={prop.id}
