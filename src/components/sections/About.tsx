@@ -203,7 +203,8 @@ export const About: React.FC = () => {
               <div className="w-full max-w-xl tablet:max-w-2xl desktop:max-w-3xl aspect-video mb-8">
                 <iframe
                   className="w-full h-full rounded-lg shadow-lg border border-gray-200"
-                  src="https://www.youtube.com/embed/oCVcxrJ-HVE"
+                  src="https://www.youtube.com/embed/p_dVqhXep1U"
+                  title="Your Future Workforce"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
@@ -216,7 +217,7 @@ export const About: React.FC = () => {
                   Bright, talented young people are uncertain about their future and <strong className="text-black">unaware of the careers you offer</strong> — <strong style={{color: '#0092ff'}}>meaning you miss out on your best future hires.</strong>
                 </p>
                 <p>
-                  This video explains how direct engagement, like participating in this career fair, is the single most effective way to bridge that gap, build your talent pipeline, and connect with an informed, excited future workforce.
+                  This video explains how direct engagement, like participating in myBlueprint Career Launch, is the single most effective way to bridge that gap, build your talent pipeline, and connect with an informed, excited future workforce.
                 </p>
               </div>
             </div>
