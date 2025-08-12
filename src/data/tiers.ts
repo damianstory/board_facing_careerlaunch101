@@ -12,7 +12,7 @@ export const TIER_CONFIG: TierConfig[] = [
   {
     id: 'intern',
     name: 'Bronze',
-    price: 250,
+    price: 0,
     availability: 'unlimited',
     benefits: [
       'Post-event Recording',
@@ -21,7 +21,7 @@ export const TIER_CONFIG: TierConfig[] = [
   {
     id: 'apprentice',
     name: 'Silver',
-    price: 750,
+    price: 500,
     availability: 'unlimited',
     benefits: [
       'Standard Booth',
