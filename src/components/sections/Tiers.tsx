@@ -25,7 +25,7 @@ const additionalOpportunities: AdditionalOpportunity[] = [
     price: 2500,
     availability: 5,
     description: '"This session was brought to you by..." for each of the 5 sessions within a track of your choosing',
-    highlights: ['Includes 1 min video at start of each track session', 'Reaches all students regardless of session choice', 'Great Booth included at no extra cost']
+    highlights: ['Includes 1 min video at start of each track session', 'Reaches all students regardless of session choice', 'Deluxe Booth included at no extra cost']
   },
   {
     id: 'school-board', 
@@ -33,7 +33,7 @@ const additionalOpportunities: AdditionalOpportunity[] = [
     price: 3000,
     availability: 20,
     description: 'School boards are investing between 1-3k depending on the size of their board. You can pay for their students to attend',
-    highlights: ['Special keynote shoutout & pre/post event communications', 'Email introduction to the school board lead', 'Great Booth included at no extra cost']
+    highlights: ['Special keynote shoutout & pre/post event communications', 'Email introduction to the school board lead', 'Deluxe Booth included at no extra cost']
   },
   {
     id: 'keynote',
@@ -41,7 +41,7 @@ const additionalOpportunities: AdditionalOpportunity[] = [
     price: 5000,
     availability: 1,
     description: 'Introduce the keynote speaker, kick off the event, and get premium visibility to all attendees',
-    highlights: ['Includes 5 minutes to address all attendees', 'Premium visibility when engagement is the highest', 'Great Booth included at no extra cost'],
+    highlights: ['Includes 5 minutes to address all attendees', 'Premium visibility when engagement is the highest', 'Deluxe Booth included at no extra cost'],
     featured: false
   },
   {
@@ -50,7 +50,7 @@ const additionalOpportunities: AdditionalOpportunity[] = [
     price: 5000, 
     availability: 1,
     description: 'Host an exclusive (optional) evening session for students to attend from home on zoom.',
-    highlights: ['No other sessions will be scheduled at the same time', 'Promoted throughout the event', 'Great Booth included at no extra cost']
+    highlights: ['No other sessions will be scheduled at the same time', 'Promoted throughout the event', 'Deluxe Booth included at no extra cost']
   }
 ]
 
