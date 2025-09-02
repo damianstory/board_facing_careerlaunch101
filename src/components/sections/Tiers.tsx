@@ -60,7 +60,6 @@ interface ComparisonFeature {
     name: string | React.ReactNode
     intern: boolean | string
     apprentice: boolean | string
-    freelancer: boolean | string
     specialist: boolean | string
   }[]
 }
@@ -82,7 +81,7 @@ export const Tiers: React.FC = () => {
     if (tier.availability === 'unlimited') {
       return 'Unlimited spots'
     }
-    if (tier.id === 'freelancer' || tier.id === 'specialist' || tier.id === 'generalist') {
+    if (tier.id === 'specialist' || tier.id === 'generalist') {
       return 'Limited spots available'
     }
     return `Only ${tier.availability} spots remaining`
@@ -110,28 +109,24 @@ export const Tiers: React.FC = () => {
           ),
           intern: false,
           apprentice: false,
-          freelancer: false,
           specialist: true,
         },
         {
           name: 'Q&A with students',
           intern: false,
           apprentice: false,
-          freelancer: false,
           specialist: true,
         },
         {
           name: 'School day session',
           intern: false,
           apprentice: false,
-          freelancer: true,
           specialist: true,
         },
         {
           name: 'Post-event recording',
           intern: true,
           apprentice: true,
-          freelancer: true,
           specialist: true,
         },
       ],
@@ -143,28 +138,24 @@ export const Tiers: React.FC = () => {
           name: 'Pre & post event promotion',
           intern: false,
           apprentice: false,
-          freelancer: true,
           specialist: true,
         },
         {
           name: 'Added to myB content hub',
           intern: false,
           apprentice: false,
-          freelancer: true,
           specialist: true,
         },
         {
           name: 'Session analytics',
           intern: false,
           apprentice: false,
-          freelancer: true,
           specialist: true,
         },
         {
           name: 'Post-event recording analytics',
           intern: true,
           apprentice: true,
-          freelancer: true,
           specialist: true,
         },
       ],
@@ -176,49 +167,42 @@ export const Tiers: React.FC = () => {
           name: 'Engagement activity w/ lead-gen*',
           intern: false,
           apprentice: false,
-          freelancer: false,
           specialist: true,
         },
         {
           name: 'Session slides embedded',
           intern: false,
           apprentice: false,
-          freelancer: false,
           specialist: true,
         },
         {
           name: 'Custom call to action',
           intern: false,
           apprentice: true,
-          freelancer: true,
           specialist: true,
         },
         {
           name: 'Downloadable resources',
           intern: false,
           apprentice: '2',
-          freelancer: '3',
           specialist: '5',
         },
         {
           name: '5 min max promo video',
           intern: false,
           apprentice: true,
-          freelancer: true,
           specialist: true,
         },
         {
           name: 'Ability for booth raffle',
           intern: false,
           apprentice: true,
-          freelancer: true,
           specialist: true,
         },
         {
           name: 'Company description',
           intern: false,
           apprentice: true,
-          freelancer: true,
           specialist: true,
         },
       ],
@@ -273,7 +257,7 @@ export const Tiers: React.FC = () => {
         {/* Tier Cards Grid */}
         <div 
           ref={cardsRef}
-          className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4 gap-6 mb-16"
+          className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-6 mb-16"
         >
           {TIER_CONFIG.map((tier, index) => (
             <Card 
@@ -346,7 +330,7 @@ export const Tiers: React.FC = () => {
                   size="default"
                   className={cn(
                     "w-full",
-                    (tier.id === 'freelancer' || tier.id === 'specialist' || tier.id === 'generalist') && "!bg-[#0092ff] !text-white hover:!bg-[#0076cc] active:!bg-[#005a99]"
+                    (tier.id === 'specialist' || tier.id === 'generalist') && "!bg-[#0092ff] !text-white hover:!bg-[#0076cc] active:!bg-[#005a99]"
                   )}
                 >
                   {isLimited(tier) 
@@ -399,7 +383,7 @@ export const Tiers: React.FC = () => {
                   <React.Fragment key={catIdx}>
                     <tr className="bg-background-light">
                       <td 
-                        colSpan={5} 
+                        colSpan={4} 
                         className="py-3 px-4 text-body font-semibold text-brand-navy"
                       >
                         {category.category}
@@ -413,7 +397,7 @@ export const Tiers: React.FC = () => {
                         <td className="py-3 px-4 text-body-small text-brand-navy">
                           {feature.name}
                         </td>
-                        {(['intern', 'apprentice', 'freelancer', 'specialist'] as const).map(tierKey => (
+                        {(['intern', 'apprentice', 'specialist'] as const).map(tierKey => (
                           <td key={tierKey} className="py-3 px-4 text-center">
                             {typeof feature[tierKey] === 'boolean' ? (
                               feature[tierKey] ? (
@@ -492,7 +476,7 @@ export const Tiers: React.FC = () => {
                     <React.Fragment key={catIdx}>
                       <tr className="bg-background-light">
                         <td 
-                          colSpan={5} 
+                          colSpan={4} 
                           className="py-2 px-3 text-body-small font-semibold text-brand-navy"
                         >
                           {category.category}
@@ -506,7 +490,7 @@ export const Tiers: React.FC = () => {
                           <td className="py-2 px-3 text-body-small text-brand-navy sticky left-0 bg-background-white">
                             {feature.name}
                           </td>
-                          {(['intern', 'apprentice', 'freelancer', 'specialist'] as const).map(tierKey => (
+                          {(['intern', 'apprentice', 'specialist'] as const).map(tierKey => (
                             <td key={tierKey} className="py-2 px-3 text-center">
                               {typeof feature[tierKey] === 'boolean' ? (
                                 feature[tierKey] ? (

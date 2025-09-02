@@ -16,7 +16,7 @@ export const faqs: FAQItem[] = [
   {
     id: 'format-agenda',
     question: 'What is the format/agenda for the day?',
-    answer: 'In addition to a kickoff/keynote, there will be 4 traditional blocks throughout the school day, with 5 sessions to choose from within each block. These sessions will be 45 minutes long, which includes roughly 15 minutes of Q&A.\n\nThe Freelance lunchtime block (optional for students) will feature 30 min long skills-focused sessions.\n\nTentative agenda looks like:\n• 9 - 9:15 am Welcome & Opening Remarks from myBlueprint\n• 9:15 - 9:45 am Keynote Speaker\n• 9:45 - 10:30 am Session Block 1\n• 10:45 - 11:30 am Session Block 2\n• 11:45 am - 12:30 pm Session Block 3\n• 12:30 - 1:15 pm Lunch + Sponsor Skills Sessions\n• 1:15 - 2 pm Session Block 4\n• 2 - 2:45 pm Explore Expo & Wrap-up\n• 7 - 7:45 pm Optional evening session',
+    answer: 'In addition to a kickoff/keynote, there will be 4 traditional blocks throughout the school day, with 5 sessions to choose from within each block. These sessions will be 45 minutes long, which includes roughly 15 minutes of Q&A.\n\nThe lunchtime block (optional for students) will feature 30 min long skills-focused sessions.\n\nTentative agenda looks like:\n• 9 - 9:15 am Welcome & Opening Remarks from myBlueprint\n• 9:15 - 9:45 am Keynote Speaker\n• 9:45 - 10:30 am Session Block 1\n• 10:45 - 11:30 am Session Block 2\n• 11:45 am - 12:30 pm Session Block 3\n• 12:30 - 1:15 pm Lunch + Sponsor Skills Sessions\n• 1:15 - 2 pm Session Block 4\n• 2 - 2:45 pm Explore Expo & Wrap-up\n• 7 - 7:45 pm Optional evening session',
     keywords: ['format', 'agenda', 'virtual', 'presentations', 'workshops', 'schedule']
   },
   {
