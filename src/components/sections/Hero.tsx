@@ -107,17 +107,17 @@ export const Hero: React.FC = () => {
           <div className="max-w-2xl mx-auto tablet:mx-0">
             {/* Main Content */}
             <h1 className="text-h1-mobile tablet:text-h1 text-white mb-6 text-center tablet:text-left">
-              Present at Ontario&apos;s Largest Student Career Fair
+             Attend Ontario&apos;s Largest Student Career Fair
             </h1>
             <p className="text-body-large-mobile tablet:text-body-large text-white/90 mb-12 text-center tablet:text-left">
-              Want young people to know about your industry? Join us at the 2025 <span className="underline">myBlueprint Career Launch</span>.
+              Want your students to know which industries are in demand? Join us at the 2025 <span className="underline">myBlueprint Career Launch</span>.
             </p>
             
             {/* Statistics */}
             <div className="grid grid-cols-3 gap-6 tablet:gap-8 text-center tablet:text-left">
               <AnimatedStatistic value={50000} suffix="+" label="Students Attending" format="k" />
               <AnimatedStatistic value={1000} suffix="+" label="Classrooms Watching" format="k" />
-              <AnimatedStatistic value={40} suffix="+" label="Industry Partners" />
+              <AnimatedStatistic value={25} suffix="+" label="Industry Partners" />
             </div>
           </div>
         </div>

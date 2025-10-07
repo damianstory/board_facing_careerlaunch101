@@ -13,7 +13,7 @@ export const BentoGrid: React.FC<BentoGridProps> = ({
   return (
     <div
       className={cn(
-        'grid grid-cols-3 gap-4 tablet:gap-6',
+        'grid grid-cols-6 gap-4 tablet:gap-6',
         className
       )}
       {...props}

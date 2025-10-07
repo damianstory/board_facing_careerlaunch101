@@ -132,9 +132,9 @@ export const About: React.FC = () => {
         {/* Bento Grid */}
         <BentoGrid>
           {/* Event Details Card - Small */}
-          <BentoCard 
+          <BentoCard
             className={cn(
-              "col-span-3 desktop:col-span-1 bg-white border-l-4 border-primary-blue transition-all duration-slow delay-200",
+              "col-span-6 desktop:col-span-2 bg-white border-l-4 border-primary-blue transition-all duration-slow delay-200",
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
@@ -169,13 +169,22 @@ export const About: React.FC = () => {
                   <p className="text-body-small text-neutral-4">Accessible from anywhere, with recordings shared to our community of 1+ million students nationally</p>
                 </div>
               </div>
+              <div className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <div>
+                  <p className="text-body font-semibold text-brand-navy">View the Agenda</p>
+                  <p className="text-body-small text-neutral-4">The working <a href="https://phantom-harrier-dac.notion.site/278f4a4d79df8042a3f6e26838685056?v=278f4a4d79df803e85a6000c44612ed2" target="_blank" rel="noopener noreferrer" className="text-primary-blue hover:underline">agenda is now available</a>. Hover over a session title and click Open to see the full description.</p>
+                </div>
+              </div>
             </div>
           </BentoCard>
 
-          {/* Statistics Card - Large */}
-          <BentoCard 
+          {/* Statistics Card */}
+          <BentoCard
             className={cn(
-              "col-span-3 desktop:col-span-2 flex items-center transition-all duration-slow delay-300",
+              "col-span-6 desktop:col-span-2 flex items-center transition-all duration-slow delay-300",
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
@@ -186,72 +195,114 @@ export const About: React.FC = () => {
               <p className="text-body text-brand-navy">
                 With career uncertainty at an all-time high and student expectations 3x greater than actual job demand in professional fields, young people need your voice. Research proves that direct employer engagement leads to better employment outcomes at age 25.
               </p>
-              <p className="text-body text-brand-navy">
-                <strong>Speak at the </strong><strong style={{color: '#0092ff'}}>myBlueprint Career Launch</strong> to help Ontario's students discover the meaningful careers, emerging technologies, and non-traditional pathways that exist in your sector.
-              </p>
             </div>
           </BentoCard>
 
-          {/* Video Card */}
-          <BentoCard 
+          {/* Investment/Pricing Card */}
+          <BentoCard
             className={cn(
-              "col-span-3 desktop:col-span-2 bg-gray-50 transition-all duration-slow delay-400",
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            )}
-          >
-            <div className="flex flex-col items-center justify-center px-6 py-8 pb-0 tablet:px-8 tablet:py-10 tablet:pb-2">
-              <div className="w-full max-w-xl tablet:max-w-2xl desktop:max-w-3xl aspect-video mb-8">
-                <iframe
-                  className="w-full h-full rounded-lg shadow-lg border border-gray-200"
-                  src="https://www.youtube.com/embed/p_dVqhXep1U"
-                  title="Your Future Workforce"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  loading="lazy"
-                />
-              </div>
-              <div className="text-body text-center text-neutral-4 max-w-2xl space-y-4">
-                <p>
-                  Bright, talented young people are uncertain about their future and <strong className="text-black">unaware of the careers you offer</strong> — <strong style={{color: '#0092ff'}}>meaning you miss out on your best future hires.</strong>
-                </p>
-                <p>
-                  This video explains how direct engagement, like participating in myBlueprint Career Launch, is the single most effective way to bridge that gap, build your talent pipeline, and connect with an informed, excited future workforce.
-                </p>
-              </div>
-            </div>
-          </BentoCard>
-
-          {/* Value Props Card */}
-          <BentoCard 
-            className={cn(
-              "col-span-3 desktop:col-span-1 transition-all duration-slow delay-500",
+              "col-span-6 desktop:col-span-2 bg-white border-l-4 border-accent-teal transition-all duration-slow delay-400",
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
             <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-6">
-              Why This? And Why Now?
+              Your Investment
             </h3>
-            <div className="space-y-6">
-              {valueProps.map((prop) => (
-                <div 
-                  key={prop.id}
-                  className="flex gap-3"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 bg-secondary-blue-pale rounded-lg flex items-center justify-center">
-                    {prop.icon}
-                  </div>
-                  <div>
-                    <h4 className="text-body font-semibold text-brand-navy mb-1">
-                      {prop.title}
-                    </h4>
-                    <p className="text-caption text-neutral-4">
-                      {prop.description}
-                    </p>
-                  </div>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="border-b-2 border-brand-navy">
+                    <th className="text-left py-3 px-2 text-body font-semibold text-brand-navy">Before Date</th>
+                    <th className="text-left py-3 px-2 text-body font-semibold text-brand-navy">Boards</th>
+                    <th className="text-center py-3 px-2 text-body font-semibold text-brand-navy">Independents</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-neutral-2">
+                    <td className="py-3 px-2 text-body text-brand-navy">Oct 31</td>
+                    <td className="py-3 px-2 text-body text-brand-navy">$1000</td>
+                    <td className="text-center py-3 px-2 text-body text-brand-navy">$500</td>
+                  </tr>
+                  <tr className="border-b border-neutral-2">
+                    <td className="py-3 px-2 text-body text-brand-navy">Nov 15</td>
+                    <td className="py-3 px-2 text-body text-brand-navy">$2000</td>
+                    <td className="text-center py-3 px-2 text-body text-brand-navy">$750</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-2 text-body text-brand-navy">Nov 30</td>
+                    <td className="py-3 px-2 text-body text-brand-navy">$2500</td>
+                    <td className="text-center py-3 px-2 text-body text-brand-navy">$1000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </BentoCard>
+
+          {/* Event Logistics Options Card */}
+          <BentoCard
+            className={cn(
+              "col-span-6 bg-white transition-all duration-slow delay-500",
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            )}
+          >
+            {/* Header Section */}
+            <div className="mb-6">
+              <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-4">
+                Event Logistics Update
+              </h3>
+              <p className="text-body text-neutral-4 leading-relaxed">
+                Based on conversations I&apos;ve had with many of you these past few weeks (thank you to those who have already committed your board to the event) this is now how I see it playing out logistically. The truly &quot;live&quot; day doesn&apos;t seem to make sense for anyone. Noted. The extra lift to change class times around to give it a live feel, isn&apos;t worth the extra hassle that comes with it.
+              </p>
+            </div>
+
+            {/* Two-Column Options Grid */}
+            <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6 my-8">
+              {/* Option 1 - Recommended */}
+              <div className="relative border-2 border-primary-blue rounded-lg p-5 bg-secondary-blue-pale">
+                {/* Recommended Badge */}
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                  <span className="bg-primary-blue text-white text-caption px-3 py-1 rounded-full font-semibold">
+                    RECOMMENDED
+                  </span>
                 </div>
-              ))}
+
+                <h4 className="text-h4-mobile text-brand-navy mt-2 mb-3">
+                  Option 1: Career Launch Day
+                </h4>
+                <div className="text-body-small text-brand-navy leading-relaxed space-y-3">
+                  <p>
+                    Still commit to December 2nd being the Career Launch Day with students watching sessions in class. But since the sessions will all be pre-recorded, the teacher will hit play when they are ready, instead of a predetermined set time that has to work for everyone. Sessions are 45min max so should fit in most classes, along with a pre/post resource we create to compliment each session.
+                  </p>
+                  <p>
+                    With Option 1, we&apos;ll organize sessions into groups, across 4 separate blocks, to ensure no student has to watch the same session twice that day, just like how a real conference would work. As a class you&apos;ll pick the session you want to watch out of the ~5 that are available in that block.
+                  </p>
+                </div>
+              </div>
+
+              {/* Option 2 */}
+              <div className="border border-neutral-2 rounded-lg p-5 bg-white">
+                <h4 className="text-h4-mobile text-brand-navy mb-3 mt-2">
+                  Option 2: Career Launch Week
+                </h4>
+                <div className="text-body-small text-brand-navy leading-relaxed space-y-3">
+                  <p>
+                    For schools that can&apos;t commit to the dedicated full day career focus, position it as Career Launch Week where over the course of December 1-5, educators are encouraged to watch at least one of the sessions with each of their classes, on the days that make the most sense to them.
+                  </p>
+                  <p>
+                    With Option 2, sessions wouldn&apos;t be organized in blocks like a conference, they would be a la carte like you see them listed in the agenda right now. The risk with this option is that you could have students who will sit through the same session more than once over the course of the week.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer Section */}
+            <div className="space-y-4 pt-4 border-t border-neutral-2 text-center">
+              <p className="text-body-small text-neutral-4 leading-relaxed">
+                The whole board doesn&apos;t have to commit to each school doing the same thing. If Option 1 is better for some schools, and not others, that&apos;s fine. You don&apos;t need to know who is doing what before securing your spot. We&apos;ll communicate instructions for both options.
+              </p>
+              <p className="text-body-small text-brand-navy font-semibold leading-relaxed">
+                And as a reminder, with either option, your investment gives you on-demand access to all the Career Launch recordings for students/staff to watch for the remainder of the school year, whether in class, or at home.
+              </p>
             </div>
           </BentoCard>
         </BentoGrid>

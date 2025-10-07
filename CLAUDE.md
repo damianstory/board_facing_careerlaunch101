@@ -155,6 +155,13 @@ Recent addition for flexible card layouts:
 
 **Business Goal**: Convert corporate visitors into consultation bookings through urgency and clear value proposition.
 
+## Custom Sub-Agents
+
+This project includes custom Claude Code sub-agents in `.claude/agents/`:
+- **@senior-frontend-engineer** - Systematic frontend implementation specialist for building production-ready components following established architectural patterns
+
+Use `@agent-name` to invoke a sub-agent, or `/agents` to see all available agents.
+
 ## Development Patterns
 
 ### Component Creation Workflow
