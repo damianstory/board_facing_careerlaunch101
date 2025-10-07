@@ -5,19 +5,22 @@ import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { InfiniteSlider } from '@/components/ui/infinite-slider'
 
-// Generate placeholder logos array (1-25)
-const generateLogoArray = () => {
-  return Array.from({ length: 25 }, (_, i) => ({
-    id: i + 1,
-    src: `/logos/coming-soon.jpg`,
-    alt: `Company ${i + 1} Logo`,
-  }))
-}
+// School board logos
+const logos = [
+  { id: 1, src: '/logos/algoma.png', alt: 'Algoma District School Board' },
+  { id: 2, src: '/logos/bluewater.png', alt: 'Bluewater District School Board' },
+  { id: 3, src: '/logos/dufferin-peel.png', alt: 'Dufferin-Peel Catholic District School Board' },
+  { id: 4, src: '/logos/grand-erie.png', alt: 'Grand Erie District School Board' },
+  { id: 5, src: '/logos/lambton-kent.png', alt: 'Lambton Kent District School Board' },
+  { id: 6, src: '/logos/northwest-catholic.png', alt: 'Northwest Catholic District School Board' },
+  { id: 7, src: '/logos/peel.png', alt: 'Peel District School Board' },
+  { id: 8, src: '/logos/toronto-catholic.png', alt: 'Toronto Catholic District School Board' },
+  { id: 9, src: '/logos/upper-canada.png', alt: 'Upper Canada District School Board' },
+]
 
 export const LogoCarousel: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
-  const logos = generateLogoArray()
   
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -54,22 +57,22 @@ export const LogoCarousel: React.FC = () => {
           
           {/* Logo Track using InfiniteSlider */}
           <InfiniteSlider
-            gap={40}
-            duration={15}
-            durationOnHover={30}
-            className="py-4"
+            gap={48}
+            duration={20}
+            durationOnHover={40}
+            className="py-6"
           >
             {logos.map((logo) => (
               <div
                 key={logo.id}
-                className="flex-shrink-0 w-24 h-12 tablet:w-32 tablet:h-16 relative"
+                className="flex-shrink-0 w-32 h-16 tablet:w-40 tablet:h-20 desktop:w-48 desktop:h-24 relative"
               >
                 <Image
                   src={logo.src}
                   alt={logo.alt}
                   fill
                   className="object-contain"
-                  sizes="(max-width: 768px) 96px, 128px"
+                  sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 192px"
                   priority={logo.id <= 5}
                 />
               </div>

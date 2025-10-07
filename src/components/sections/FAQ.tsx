@@ -60,7 +60,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
     <section
       id="faq"
       className={cn(
-        'py-16 md:py-24 bg-background-light',
+        'py-8 md:py-12 bg-background-light',
         className
       )}
       {...props}
@@ -125,7 +125,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
               Ready to book your spot?
             </h3>
             <p className="text-body md:text-body-large text-neutral-4 mb-6 md:mb-8">
-              Book a time to speak with our partnership team.
+              Book a time to speak with Damian, or email your partner success specialist.
             </p>
             <a
               href="https://tidycal.com/damianmatheson/career-launch"
@@ -140,7 +140,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
                 "transform hover:scale-105"
               )}
             >
-              Talk To Us
+              Book with Damian
             </a>
           </div>
         </div>

@@ -262,7 +262,7 @@ export const About: React.FC = () => {
             {/* Two-Column Options Grid */}
             <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6 my-8">
               {/* Option 1 - Recommended */}
-              <div className="relative border-2 border-primary-blue rounded-lg p-5 bg-secondary-blue-pale">
+              <div className="relative border-2 border-primary-blue rounded-lg p-5 bg-white">
                 {/* Recommended Badge */}
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                   <span className="bg-primary-blue text-white text-caption px-3 py-1 rounded-full font-semibold">
@@ -302,7 +302,7 @@ export const About: React.FC = () => {
             {/* Footer Section */}
             <div className="space-y-4 pt-4 border-t border-neutral-2 text-center">
               <p className="text-body text-neutral-4 leading-relaxed">
-                The whole board doesn&apos;t have to commit to each school doing the same thing. If Option 1 is better for some schools, and not others, that&apos;s fine. You don&apos;t need to know who is doing what before securing your spot. We&apos;ll communicate instructions for both options.
+                The whole board doesn&apos;t have to commit to each school doing the same thing. If Option 1 is better for some schools, and Option 2 for others, that&apos;s fine. You don&apos;t need to know who is doing what before securing your spot. We&apos;ll communicate instructions for both options.
               </p>
               <p className="text-body text-brand-navy font-semibold leading-relaxed">
                 And as a reminder, with either option, your investment gives you on-demand access to all the Career Launch recordings for students/staff to watch for the remainder of the school year, whether in class, or at home.
