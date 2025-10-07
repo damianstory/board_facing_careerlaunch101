@@ -122,7 +122,7 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
         <div className="mt-16 md:mt-20 text-center">
           <div className="bg-primary-blue/5 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
             <h3 className="text-h3-mobile md:text-h3 text-brand-navy mb-4">
-              Ready to book your spot?
+              Ready to secure your spot?
             </h3>
             <p className="text-body md:text-body-large text-neutral-4 mb-6 md:mb-8">
               Book a time to speak with Damian, or email your partner success specialist.

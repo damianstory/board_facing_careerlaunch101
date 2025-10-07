@@ -176,7 +176,7 @@ export const About: React.FC = () => {
                 </svg>
                 <div>
                   <p className="text-body font-semibold text-brand-navy">View the Agenda</p>
-                  <p className="text-body-small text-neutral-4">The working <a href="https://phantom-harrier-dac.notion.site/278f4a4d79df8042a3f6e26838685056?v=278f4a4d79df803e85a6000c44612ed2" target="_blank" rel="noopener noreferrer" className="text-primary-blue hover:underline">agenda is now available</a>. Hover over a session title and click Open to see the full description.</p>
+                  <p className="text-body-small text-neutral-4">The working <a href="https://phantom-harrier-dac.notion.site/278f4a4d79df8042a3f6e26838685056?v=278f4a4d79df803e85a6000c44612ed2" target="_blank" rel="noopener noreferrer" className="text-primary-blue hover:underline font-bold">agenda is now available</a>. Hover over a session title and click Open to see the full description.</p>
                 </div>
               </div>
             </div>
@@ -185,7 +185,7 @@ export const About: React.FC = () => {
           {/* Statistics Card */}
           <BentoCard
             className={cn(
-              "col-span-6 desktop:col-span-2 flex items-center transition-all duration-slow delay-300",
+              "col-span-6 desktop:col-span-2 bg-white flex items-center transition-all duration-slow delay-300",
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
@@ -197,7 +197,7 @@ export const About: React.FC = () => {
                 With career uncertainty at an all-time high and student expectations 3x greater than actual job demand in professional fields, young people need direct employer engagement.
               </p>
               <p className="text-body text-brand-navy">
-              Attend <strong style={{color: '#0092ff'}}>myBlueprint Career Launch</strong> to help your students discover the meaningful careers, emerging industries, and non-traditional pathways that exist across Ontario.
+              Attend <strong>myBlueprint Career Launch</strong> to help your students discover the meaningful careers, emerging industries, and non-traditional pathways that exist across Ontario.
               </p>
             </div>
           </BentoCard>
@@ -240,6 +240,9 @@ export const About: React.FC = () => {
                 </tbody>
               </table>
             </div>
+            <p className="text-body text-brand-navy mt-6">
+              To secure your spot before the deadline, email your partner success specialist (or click the Talk to Us button above) with your intention to participate.
+            </p>
           </BentoCard>
 
           {/* Event Logistics Options Card */}
