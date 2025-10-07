@@ -8,75 +8,105 @@ export interface FAQItem {
 
 export const faqs: FAQItem[] = [
   {
-    id: 'what-is-myblueprint',
-    question: 'What is myBlueprint?',
-    answer: '<a href="https://myblueprint.ca/" target="_blank" rel="noopener noreferrer" style="color: #0092ff; text-decoration: none;">myBlueprint</a> exists to help empower every student to thrive and succeed in education, career, and life.\n\nMore specifically, we create career education software that is trusted by ~300 Canadian school boards to support over 1 million grade 7-12 students in researching and creating a plan for life after high school.',
-    keywords: ['myblueprint', 'platform', 'career', 'students', 'canada']
-  },
-  {
-    id: 'format-agenda',
-    question: 'What is the format/agenda for the day?',
-    answer: 'In addition to a kickoff/keynote, there will be 4 traditional blocks throughout the school day, with 5 sessions to choose from within each block. These sessions will be 45 minutes long, which includes roughly 15 minutes of Q&A.\n\nThe lunchtime block (optional for students) will feature 30 min long skills-focused sessions.\n\nTentative agenda looks like:\n• 9 - 9:15 am Welcome & Opening Remarks from myBlueprint\n• 9:15 - 9:45 am Keynote Speaker\n• 9:45 - 10:30 am Session Block 1\n• 10:45 - 11:30 am Session Block 2\n• 11:45 am - 12:30 pm Session Block 3\n• 12:30 - 1:15 pm Lunch + Sponsor Skills Sessions\n• 1:15 - 2 pm Session Block 4\n• 2 - 2:45 pm Explore Expo & Wrap-up\n• 7 - 7:45 pm Optional evening session',
-    keywords: ['format', 'agenda', 'virtual', 'presentations', 'workshops', 'schedule']
-  },
-  {
-    id: 'school-day-session',
-    question: 'What is a School-day Session?',
-    answer: 'These are the sessions that will take place during the school day, with students attending from their schools.\n\nAll sponsorship levels will have their session recording available for post-event on-demand viewing after the event has wrapped up for students to access on their own, but only school-day sessions will be streamed during the day with students watching from school.',
-    keywords: ['school-day', 'session', 'classroom', 'teachers', 'curriculum', 'hours']
-  },
-  {
-    id: 'student-viewing',
-    question: 'How will students be watching the sessions?',
-    answer: 'It will be up to individual schools to decide. Some have expressed keeping regular blocks for students, and voting as a class for which session to watch.\n\nOther schools will be setting up designated rooms for specific sessions and letting students decide which ones they want to attend.\n\nAll sessions regardless of sponsorship tier will be available on-demand after the event for students to revisit on their own time.',
-    keywords: ['viewing', 'platform', 'browsers', 'devices', 'interactive', 'chat']
-  },
-  {
-    id: 'participating-school-boards',
-    question: 'Which school boards are participating?',
-    answer: 'We hope they all do. This event specifically will be promoted to Ontario school boards. We have structured the event to make it financially feasible for boards to participate.\n\nTo make it even easier, you can sponsor a school board to attend. See the Additional Sponsorship Options above for more details.',
-    keywords: ['school boards', 'ontario', 'participating', 'english', 'french', 'catholic', 'public']
+    id: 'on-demand-structure',
+    question: 'If all sessions are on-demand, why do we need to commit to a day or week to watch them?',
+    answer: 'So that there is structure in place to support your educators with an understanding of how and when to best use these recordings. And as another example to communicate to your school community that your board/school is invested in student career/life readiness.\n\nAs a reminder, you and your students will have access to these recordings so you can use them throughout the school year as you see fit, as well. They don\'t disappear after December 5th.',
+    keywords: ['on-demand', 'structure', 'recordings', 'schedule', 'flexibility']
   },
   {
     id: 'ontario-only',
-    question: 'Why is this just for Ontario school boards?',
-    answer: 'Because this is our first time running an event like this, and we\'re doing it on a tight timeline. Based on how this event goes, we are hoping to run similar events at a provincial level, from coast to coast moving forward.',
-    keywords: ['ontario', 'province', 'curriculum', 'targeted', 'national', 'pathways']
+    question: 'Why is this only for Ontario boards?',
+    answer: 'This is our first time running an event like this, so we wanted to start small, and learn before scaling this. We also wanted to offer sessions that were specific to Ontario students.\n\nIf all goes well, next year, we plan to expand the event, and run it in November as part of Take Your Kids to Work Day and National Career Development Month.',
+    keywords: ['ontario', 'boards', 'scaling', 'provincial', 'expansion']
   },
   {
-    id: 'post-secondary-participation',
-    question: 'Can post-secondary institutions participate as well?',
-    answer: 'Absolutely. We hope you do. If you want to include a traditional \'Your School 101\' type of session, we suggest the Silver option. There will be a dedicated post-secondary section for the on-demand recordings.\n\nTo be included in the school day sessions, we would want to see something like an alumni panel talking about where they work now, and how your school helped prepare them for that. Or a skills based lunch time session (Gold) that would be applicable for students regardless of where they go to school.',
-    keywords: ['post-secondary', 'universities', 'colleges', 'education', 'programs', 'pathways']
+    id: 'virtual-platform',
+    question: 'What is the virtual conference tool you are using to host the videos?',
+    answer: 'It\'s a well known platform called RingCentral Events (formerly Hopin Events). This is what teachers will use during the week of December 1-5 to access recordings to play in class. We will make sure you have access to the url well in advance to share with your IT teams.\n\nStudents are not expected to create accounts with this platform. They will be able to access recordings from their myBlueprint account as of December 7th, 2025.',
+    keywords: ['platform', 'ringcentral', 'hopin', 'virtual', 'conference', 'access']
   },
   {
-    id: 'title-sponsor',
-    question: 'Can my company become the title sponsor for this event?',
-    answer: 'Yes. For $50k CAD, you can sponsor all Ontario school boards to attend for free.\n\nYou and your company would instantly become legendary in the eyes of educators and students across the province, along with a few extra event perks.',
-    keywords: ['title sponsor', 'exclusive', 'brand', 'visibility', 'premium', 'recognition']
+    id: 'student-access-recordings',
+    question: 'How will students get access to recordings after the event',
+    answer: 'Starting on December 7th, students will be able to access the recordings through a link in their myBlueprint account, accessed via the Dashboard.\n\nStudents will not need to create an account to access recordings.',
+    keywords: ['students', 'access', 'recordings', 'myblueprint', 'dashboard']
   },
   {
-    id: 'content-hub',
-    question: 'What is the myBlueprint Content Hub?',
-    answer: 'This is a new feature, currently in development, that will be available to myBlueprint student users. Content specific to careers, life skills, mindsets, emerging technologies, innovative industries, etc. is being created and curated for students to access within the myBlueprint platform.\n\nRecordings and clips from these recordings will be included within the content hub for students nationally to continue to access well after the event.',
-    keywords: ['content hub', 'library', 'resources', 'videos', 'recordings', 'ongoing access']
+    id: 'participation-tracking',
+    question: 'Will we be able to see how many of our board/school classes participated?',
+    answer: 'Yes. Because teachers need to create an account on RingCentral to access the recordings during the week of December 1-5, we will be able to tell how many individual sessions were watched at a teacher, school, and board level for that week. ',
+    keywords: ['tracking', 'participation', 'analytics', 'data', 'reporting']
   },
   {
-    id: 'engagement-activity-lead-gen',
-    question: 'What is an Engagement Activity? And what is lead-gen*?',
-    answer: 'An engagement activity is something interactive that students can do at your booth.\n\nFor example, we can repurpose existing company content or industry information and turn it into a multiple choice quiz, true or false, two truths and a lie, etc. type of activity.\n\nStudents will be prompted to enter their email before completing the engagement activity in return for the chance of winning a prize/giveaway.\n\nStudent emails will not be shared with the sponsor. However, the sponsor will have the ability to draft an email (to be sent by myBlueprint) in January to all students who engaged with the activity.',
-    keywords: ['engagement', 'activities', 'polls', 'quizzes', 'lead generation', 'recruitment', 'permissions']
+    id: 'licensing-requirement',
+    question: 'Do you have to be licensing myBlueprint to participate?',
+    answer: 'No. Any school board or independent school can participate.',
+    keywords: ['licensing', 'myblueprint', 'participation', 'requirements', 'eligibility']
   },
   {
-    id: 'booth-content-availability',
-    question: 'How long will booth content be available to students?',
-    answer: 'Booth content will be promoted a week ahead of the event, for students and educators to explore beforehand, and will remain ungated, and available throughout the month of December.',
-    keywords: ['booth content', 'availability', 'recordings', 'platform', '6 months', 'extended access']
+    id: 'shsm-connection',
+    question: 'How does this connect to SHSM?',
+    answer: 'Some boards are thinking about using this as a vehicle to support Reach Aheads for currently enrolled students, and as a tool to promote SHSM experiences to their 9s and 10s.',
+    keywords: ['shsm', 'reach ahead', 'specialist high skills', 'ontario', 'pathways']
   },
   {
-    id: 'other-collaboration-ways',
-    question: 'Are there other ways for my company to collaborate with myBlueprint?',
-    answer: 'Definitely. You can participate in our national <a href="https://www.industryimmersionseries.ca/" target="_blank" rel="noopener noreferrer" style="color: #0092ff; font-weight: bold; text-decoration: none;">Industry Immersion Series</a> campaign, or have us promote, review/select winners, and disburse post-secondary <a href="https://education.myblueprint.ca/scholarship-success-stories" target="_blank" rel="noopener noreferrer" style="color: #0092ff; font-weight: bold; text-decoration: none;">scholarships on your behalf</a>.\n\nWe\'re also always open to custom opportunities. Click the <em>Talk To Us</em> button below to learn more.',
-    keywords: ['collaboration', 'industry immersion', 'scholarships', 'custom opportunities', 'partnership']
+    id: 'post-secondary-involvement',
+    question: 'Are post-secondaries going to be involved?',
+    answer: 'We hope so. Largely through the exhibit hall with booths. This event was intended to focus on career opportunities specifically.',
+    keywords: ['post-secondary', 'universities', 'colleges', 'booths', 'exhibit']
+  },
+  {
+    id: 'session-count',
+    question: 'How many sessions are there?',
+    answer: 'There will be somewhere between 20-25 when the agenda is fully finalized.',
+    keywords: ['sessions', 'count', 'agenda', 'schedule', 'number']
+  },
+  {
+    id: 'career-coaching-initiative',
+    question: 'Can participating in Career Launch "satisfy" the Ontario career coaching initiative?',
+    answer: 'That\'s a good question. We plan to talk to the HIEC team about that but don\'t have an answer for that yet.',
+    keywords: ['career coaching', 'ontario', 'initiative', 'hiec', 'requirements']
+  },
+  {
+    id: 'intermediate-suitability',
+    question: 'Are these sessions suitable for our 7s and 8s?',
+    answer: 'Many of them will be, yes. Some will be specifically for grade 11/12 students but those are the exception, not the rule.\n\nAhead of the event, we can flag specific sessions that would be well suited for the intermediate audience.',
+    keywords: ['grade 7', 'grade 8', 'intermediate', 'suitability', 'age appropriate']
+  },
+  {
+    id: 'pre-post-resources',
+    question: 'What are these pre/post resources you mentioned?',
+    answer: 'The myBlueprint team will be creating some resources/lesson plans to support pre (exploration), and post (reflection) activities related to individual sessions.',
+    keywords: ['resources', 'lesson plans', 'pre-activities', 'post-activities', 'teachers']
+  },
+  {
+    id: 'same-as-2024',
+    question: 'Is this the same Launch event as the 2024 version?',
+    answer: 'No. This was inspired by that event, but the myBlueprint Career Launch is being organized solely by the myBlueprint team.',
+    keywords: ['2024', 'launch', 'comparison', 'history', 'previous event']
+  },
+  {
+    id: 'french-sessions',
+    question: 'Will there be any sessions delivered in French?',
+    answer: 'Sessions will have French transcriptions available, however, all of the speakers for this year\'s event have indicated they will be delivering their sessions in English.',
+    keywords: ['french', 'language', 'transcription', 'bilingual', 'translation']
+  },
+  {
+    id: 'oecd-stat',
+    question: 'Where did you get that 50% stat from above?',
+    answer: 'It\'s from a recently published OECD report titled: <a href="https://www.oecd.org/en/publications/the-state-of-global-teenage-career-preparation_d5f8e3f2-en.html" target="_blank" rel="noopener noreferrer" style="color: #0092ff; text-decoration: none;">The State of Global Teenage Career Preparation</a>',
+    keywords: ['oecd', 'statistics', 'report', 'data', 'research']
+  },
+  {
+    id: 'industry-immersion',
+    question: 'Is this connected to the Industry Immersion Series?',
+    answer: 'No, this is completely independent from the <a href="https://www.industryimmersionseries.ca/" target="_blank" rel="noopener noreferrer" style="color: #0092ff; text-decoration: none;">Industry Immersion Series</a>.',
+    keywords: ['industry immersion', 'series', 'connection', 'independent', 'separate']
+  },
+  {
+    id: 'contact-questions',
+    question: 'Who can I reach out to with questions about the event?',
+    answer: 'Contact Damian at <a href="mailto:damian.matheson@myblueprint.ca" style="color: #0092ff; text-decoration: none;">damian.matheson@myblueprint.ca</a>',
+    keywords: ['contact', 'questions', 'support', 'email', 'damian']
   }
 ]

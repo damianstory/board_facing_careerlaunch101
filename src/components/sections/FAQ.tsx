@@ -67,57 +67,6 @@ export const FAQ: React.FC<FAQProps> = ({ className, ...props }) => {
     >
       <div className="container" suppressHydrationWarning>
 
-        {/* Search bar */}
-        <div className="max-w-2xl mx-auto mb-8 md:mb-12">
-          <div className="relative">
-            <Search 
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" 
-              aria-hidden="true"
-            />
-            <input
-              id="faq-search"
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search frequently asked questions..."
-              className={cn(
-                "w-full pl-12 pr-12 py-4 rounded-lg border border-gray-200",
-                "bg-white text-brand-navy placeholder:text-gray-500",
-                "focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-primary-blue",
-                "transition-all duration-200",
-                "text-base" // Prevents zoom on mobile
-              )}
-              aria-label="Search FAQs"
-              suppressHydrationWarning
-            />
-            {searchQuery && (
-              <button
-                onClick={handleClearSearch}
-                className={cn(
-                  "absolute right-4 top-1/2 -translate-y-1/2",
-                  "p-1 rounded hover:bg-background-light",
-                  "transition-colors duration-150",
-                  "focus:outline-none focus:ring-2 focus:ring-primary-blue"
-                )}
-                aria-label="Clear search"
-              >
-                <X className="w-4 h-4 text-gray-500" />
-              </button>
-            )}
-          </div>
-          
-          {/* Search results count */}
-          {hasMounted && searchDebounce && (
-            <p className="mt-3 text-sm text-gray-700 text-center">
-              {filteredFAQs.length === 0 ? (
-                'No results found. Try different keywords or browse all questions below.'
-              ) : (
-                `Found ${filteredFAQs.length} result${filteredFAQs.length !== 1 ? 's' : ''}`
-              )}
-            </p>
-          )}
-        </div>
-
         {/* FAQ Section */}
         <div className="max-w-4xl mx-auto">
           <div className="space-y-4 md:space-y-6">

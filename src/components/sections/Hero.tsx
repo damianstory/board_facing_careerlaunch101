@@ -110,12 +110,13 @@ export const Hero: React.FC = () => {
              Attend Ontario&apos;s Largest Student Career Fair
             </h1>
             <p className="text-body-large-mobile tablet:text-body-large text-white/90 mb-12 text-center tablet:text-left">
-              Want your students to know which industries are in demand? Join us at the 2025 <span className="underline">myBlueprint Career Launch</span>.
+              Ontario employers supporting Ontario students.<br />
+              Join us at the 2025 <strong>myBlueprint Career Launch</strong>.
             </p>
             
             {/* Statistics */}
             <div className="grid grid-cols-3 gap-6 tablet:gap-8 text-center tablet:text-left">
-              <AnimatedStatistic value={50000} suffix="+" label="Students Attending" format="k" />
+              <AnimatedStatistic value={10} suffix="+" label="Boards Attending" />
               <AnimatedStatistic value={1000} suffix="+" label="Classrooms Watching" format="k" />
               <AnimatedStatistic value={25} suffix="+" label="Industry Partners" />
             </div>

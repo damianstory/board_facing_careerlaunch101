@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
 import { BentoGrid } from '@/components/ui/BentoGrid'
 import { BentoCard } from '@/components/ui/BentoCard'
+import { Handshake } from 'lucide-react'
 
 interface ValuePropItem {
   id: string
@@ -125,7 +126,7 @@ export const About: React.FC = () => {
             "text-h2-mobile tablet:text-h2 text-brand-navy transition-all duration-slow",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}>
-            Why This <span style={{color: '#0092ff'}}>Opportunity</span> Matters
+            What You <span style={{color: '#0092ff'}}>Need to Know</span>
           </h2>
         </div>
 
@@ -148,16 +149,7 @@ export const About: React.FC = () => {
                 </svg>
                 <div>
                   <p className="text-body font-semibold text-brand-navy">December 2, 2025</p>
-                  <p className="text-body-small text-neutral-4">Full-day virtual event with extended on-demand access</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-                <div>
-                  <p className="text-body font-semibold text-brand-navy">50,000+ Students</p>
-                  <p className="text-body-small text-neutral-4">From up to 72 school boards across Ontario</p>
+                  <p className="text-body-small text-neutral-4">Join for a full day on Dec 2, or throughout the week. </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -165,8 +157,17 @@ export const About: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <div>
-                  <p className="text-body font-semibold text-brand-navy">Virtual Format</p>
-                  <p className="text-body-small text-neutral-4">Accessible from anywhere, with recordings shared to our community of 1+ million students nationally</p>
+                  <p className="text-body font-semibold text-brand-navy">Virtual & On-Demand</p>
+                  <p className="text-body-small text-neutral-4">During Career Launch Week, students watch from their classes. After that, they can access recordings on-demand from their myBlueprint account.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <div>
+                  <p className="text-body font-semibold text-brand-navy">Prizes for Teachers</p>
+                  <p className="text-body-small text-neutral-4">The more sessions you watch in class during Career Launch Week, the more chances you have to win.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -190,10 +191,13 @@ export const About: React.FC = () => {
           >
             <div className="space-y-4">
               <p className="text-body text-brand-navy">
-                <strong>About 50% of today's students expect to work in just 10 traditional jobs</strong> - doctor, teacher, lawyer, engineer - while career opportunities have never been more diverse. The OECD's landmark research shows that 'you cannot be what you cannot see,' and <strong style={{color: '#0092ff'}}>right now, students aren't seeing your industry</strong>.
+                Career opportunities have never been more diverse,<strong> but about 50% of today's students expect to work in just 10 traditional jobs</strong> - doctor, teacher, lawyer, engineer. The OECD's landmark research (in FAQs) shows that 'you cannot be what you cannot see'.
               </p>
               <p className="text-body text-brand-navy">
-                With career uncertainty at an all-time high and student expectations 3x greater than actual job demand in professional fields, young people need your voice. Research proves that direct employer engagement leads to better employment outcomes at age 25.
+                With career uncertainty at an all-time high and student expectations 3x greater than actual job demand in professional fields, young people need direct employer engagement.
+              </p>
+              <p className="text-body text-brand-navy">
+              Attend <strong style={{color: '#0092ff'}}>myBlueprint Career Launch</strong> to help your students discover the meaningful careers, emerging industries, and non-traditional pathways that exist across Ontario.
               </p>
             </div>
           </BentoCard>
@@ -248,10 +252,10 @@ export const About: React.FC = () => {
             {/* Header Section */}
             <div className="mb-6">
               <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-4">
-                Event Logistics Update
+                Event Logistics
               </h3>
               <p className="text-body text-neutral-4 leading-relaxed">
-                Based on conversations I&apos;ve had with many of you these past few weeks (thank you to those who have already committed your board to the event) this is now how I see it playing out logistically. The truly &quot;live&quot; day doesn&apos;t seem to make sense for anyone. Noted. The extra lift to change class times around to give it a live feel, isn&apos;t worth the extra hassle that comes with it.
+                Based on conversations I&apos;ve had with many of you these past few weeks (thank you to those who have already committed your board to the event) this is now how I see it playing out logistically. The truly &quot;live&quot; day doesn&apos;t seem to make sense for anyone. Noted. Here are your options:
               </p>
             </div>
 
@@ -269,12 +273,12 @@ export const About: React.FC = () => {
                 <h4 className="text-h4-mobile text-brand-navy mt-2 mb-3">
                   Option 1: Career Launch Day
                 </h4>
-                <div className="text-body-small text-brand-navy leading-relaxed space-y-3">
+                <div className="text-body text-brand-navy leading-relaxed space-y-3">
                   <p>
-                    Still commit to December 2nd being the Career Launch Day with students watching sessions in class. But since the sessions will all be pre-recorded, the teacher will hit play when they are ready, instead of a predetermined set time that has to work for everyone. Sessions are 45min max so should fit in most classes, along with a pre/post resource we create to compliment each session.
+                    Commit to <strong>December 2nd</strong> being the Career Launch Day with students watching sessions in class. But since <strong>the sessions will all be pre-recorded</strong>, the teacher will hit play when they are ready, instead of a predetermined set time that has to work for everyone. Sessions are 45min max so should fit in most classes, along with a pre/post resource we create to compliment each session.
                   </p>
                   <p>
-                    With Option 1, we&apos;ll organize sessions into groups, across 4 separate blocks, to ensure no student has to watch the same session twice that day, just like how a real conference would work. As a class you&apos;ll pick the session you want to watch out of the ~5 that are available in that block.
+                    With Option 1, we&apos;ll organize sessions into groups, across 4 separate blocks, to ensure no student has to watch the same session twice that day, <strong>just like how a real conference would work</strong>. As a class you&apos;ll pick the session you want to watch out of the ~5 that are available in that block.
                   </p>
                 </div>
               </div>
@@ -284,12 +288,12 @@ export const About: React.FC = () => {
                 <h4 className="text-h4-mobile text-brand-navy mb-3 mt-2">
                   Option 2: Career Launch Week
                 </h4>
-                <div className="text-body-small text-brand-navy leading-relaxed space-y-3">
+                <div className="text-body text-brand-navy leading-relaxed space-y-3">
                   <p>
-                    For schools that can&apos;t commit to the dedicated full day career focus, position it as Career Launch Week where over the course of December 1-5, educators are encouraged to watch at least one of the sessions with each of their classes, on the days that make the most sense to them.
+                    For schools that can&apos;t commit to the dedicated full day career focus, <strong>position it as Career Launch Week</strong> where over the course of <strong>December 1-5</strong>, educators are encouraged to watch at least one of the sessions with each of their classes, on the days that make the most sense to them.
                   </p>
                   <p>
-                    With Option 2, sessions wouldn&apos;t be organized in blocks like a conference, they would be a la carte like you see them listed in the agenda right now. The risk with this option is that you could have students who will sit through the same session more than once over the course of the week.
+                    With Option 2, sessions wouldn&apos;t be organized in blocks like a conference, they would be <strong>a la carte like you see them listed in the agenda right now</strong>. The risk with this option is that you could have students who will sit through the same session more than once over the course of the week.
                   </p>
                 </div>
               </div>
@@ -297,10 +301,10 @@ export const About: React.FC = () => {
 
             {/* Footer Section */}
             <div className="space-y-4 pt-4 border-t border-neutral-2 text-center">
-              <p className="text-body-small text-neutral-4 leading-relaxed">
+              <p className="text-body text-neutral-4 leading-relaxed">
                 The whole board doesn&apos;t have to commit to each school doing the same thing. If Option 1 is better for some schools, and not others, that&apos;s fine. You don&apos;t need to know who is doing what before securing your spot. We&apos;ll communicate instructions for both options.
               </p>
-              <p className="text-body-small text-brand-navy font-semibold leading-relaxed">
+              <p className="text-body text-brand-navy font-semibold leading-relaxed">
                 And as a reminder, with either option, your investment gives you on-demand access to all the Career Launch recordings for students/staff to watch for the remainder of the school year, whether in class, or at home.
               </p>
             </div>

@@ -3,7 +3,6 @@ import { Footer } from '@/components/layout/Footer'
 import { Hero } from '@/components/sections/Hero'
 import { LogoCarousel } from '@/components/animations/LogoCarousel'
 import { About } from '@/components/sections/About'
-import { Tiers } from '@/components/sections/Tiers'
 import { FAQ } from '@/components/sections/FAQ'
 
 export default function Home() {
@@ -19,16 +18,14 @@ export default function Home() {
             <div className="text-center">
               <LogoCarousel />
               <p className="text-body font-semibold text-functional-dark mt-6">
-                You're in good company.
+                Students from these boards will be attending. Yours should too.
               </p>
             </div>
           </div>
         </section>
         
         <About />
-        
-        <Tiers />
-        
+
         <FAQ />
       </main>
       <Footer />

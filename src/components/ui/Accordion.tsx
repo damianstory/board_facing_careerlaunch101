@@ -24,7 +24,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
         aria-expanded={isOpen}
         suppressHydrationWarning
       >
-        <span className="text-body tablet:text-body-large font-medium text-black pr-4">
+        <span className="text-body tablet:text-body-large font-medium text-brand-navy pr-4">
           {question}
         </span>
         <svg
@@ -51,8 +51,8 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
           isOpen ? 'max-h-[600px]' : 'max-h-0'
         )}
       >
-        <div 
-          className="px-6 pb-5 pr-12 text-body text-black whitespace-pre-line"
+        <div
+          className="px-6 pb-5 pr-12 text-body text-brand-navy whitespace-pre-line"
           dangerouslySetInnerHTML={{ __html: answer }}
         />
       </div>
