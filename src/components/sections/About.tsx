@@ -276,7 +276,7 @@ export const About: React.FC = () => {
                 </h4>
                 <div className="text-body text-brand-navy leading-relaxed space-y-3">
                   <p>
-                    Commit to <strong>December 2nd</strong> being the Career Launch Day with students watching sessions in class. But since <strong>the sessions will all be pre-recorded</strong>, the teacher will hit play when they are ready, instead of a predetermined set time that has to work for everyone. Sessions are 45min max so should fit in most classes, along with a pre/post resource we create to compliment each session.
+                    Commit to <strong>December 2nd</strong> being the Career Launch Day with students watching sessions in class. As <strong>the sessions will all be pre-recorded</strong>, the teacher will hit play when they are ready, instead of a predetermined set time that has to work for everyone. Sessions are 45min max so should fit in most classes, along with a pre/post resource we create to compliment each session.
                   </p>
                   <p>
                     With Option 1, we&apos;ll organize sessions into groups, across 4 separate blocks, to ensure no student has to watch the same session twice that day, <strong>just like how a real conference would work</strong>. As a class you&apos;ll pick the session you want to watch out of the ~5 that are available in that block.

@@ -80,6 +80,12 @@ export const faqs: FAQItem[] = [
     keywords: ['resources', 'lesson plans', 'pre-activities', 'post-activities', 'teachers']
   },
   {
+    id: 'teacher-prizes',
+    question: 'You mentioned prizes for teachers?',
+    answer: 'Yes :) We\'ll share specifics closer to the event, but there will be incentives at the educator, school, and board level based on participation over the course of Dec 1-5.',
+    keywords: ['prizes', 'teachers', 'incentives', 'rewards', 'participation']
+  },
+  {
     id: 'same-as-2024',
     question: 'Is this the same Launch event as the 2024 version?',
     answer: 'No. This was inspired by that event, but the myBlueprint Career Launch is being organized solely by the myBlueprint team.',
