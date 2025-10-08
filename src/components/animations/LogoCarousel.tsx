@@ -65,14 +65,14 @@ export const LogoCarousel: React.FC = () => {
             {logos.map((logo) => (
               <div
                 key={logo.id}
-                className="flex-shrink-0 w-32 h-16 tablet:w-40 tablet:h-20 desktop:w-48 desktop:h-24 relative"
+                className="flex-shrink-0 w-24 h-12 tablet:w-30 tablet:h-15 desktop:w-36 desktop:h-18 relative"
               >
                 <Image
                   src={logo.src}
                   alt={logo.alt}
                   fill
                   className="object-contain"
-                  sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 192px"
+                  sizes="(max-width: 768px) 96px, (max-width: 1024px) 120px, 144px"
                   priority={logo.id <= 5}
                 />
               </div>
