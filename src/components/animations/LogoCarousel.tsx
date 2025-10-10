@@ -11,11 +11,13 @@ const logos = [
   { id: 2, src: '/logos/bluewater.png', alt: 'Bluewater District School Board' },
   { id: 3, src: '/logos/dufferin-peel.png', alt: 'Dufferin-Peel Catholic District School Board' },
   { id: 4, src: '/logos/grand-erie.png', alt: 'Grand Erie District School Board' },
-  { id: 5, src: '/logos/lambton-kent.png', alt: 'Lambton Kent District School Board' },
-  { id: 6, src: '/logos/northwest-catholic.png', alt: 'Northwest Catholic District School Board' },
-  { id: 7, src: '/logos/peel.png', alt: 'Peel District School Board' },
-  { id: 8, src: '/logos/toronto-catholic.png', alt: 'Toronto Catholic District School Board' },
-  { id: 9, src: '/logos/upper-canada.png', alt: 'Upper Canada District School Board' },
+  { id: 5, src: '/logos/hammer.png', alt: 'Hamilton-Wentworth District School Board' },
+  { id: 6, src: '/logos/lambton-kent.png', alt: 'Lambton Kent District School Board' },
+  { id: 7, src: '/logos/northwest-catholic.png', alt: 'Northwest Catholic District School Board' },
+  { id: 8, src: '/logos/peel.png', alt: 'Peel District School Board' },
+  { id: 9, src: '/logos/renfrew-county.png', alt: 'Renfrew County District School Board' },
+  { id: 10, src: '/logos/toronto-catholic.png', alt: 'Toronto Catholic District School Board' },
+  { id: 11, src: '/logos/upper-canada.png', alt: 'Upper Canada District School Board' },
 ]
 
 export const LogoCarousel: React.FC = () => {
@@ -65,7 +67,7 @@ export const LogoCarousel: React.FC = () => {
             {logos.map((logo) => (
               <div
                 key={logo.id}
-                className="flex-shrink-0 w-24 h-12 tablet:w-30 tablet:h-15 desktop:w-36 desktop:h-18 relative"
+                className="flex-shrink-0 relative flex items-center w-24 h-12 tablet:w-30 tablet:h-15 desktop:w-36 desktop:h-18"
               >
                 <Image
                   src={logo.src}

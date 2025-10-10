@@ -1,19 +1,19 @@
-'use client'
+'use client';
 
-import React, { useEffect, useRef } from 'react'
-import { motion, useAnimation, useMotionValue } from 'framer-motion'
-import useMeasure from 'react-use-measure'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils';
+import { useMotionValue, animate, motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import useMeasure from 'react-use-measure';
 
-interface InfiniteSliderProps {
-  children: React.ReactNode
-  gap?: number
-  duration?: number
-  durationOnHover?: number
-  direction?: 'horizontal' | 'vertical'
-  reverse?: boolean
-  className?: string
-}
+type InfiniteSliderProps = {
+  children: React.ReactNode;
+  gap?: number;
+  duration?: number;
+  durationOnHover?: number;
+  direction?: 'horizontal' | 'vertical';
+  reverse?: boolean;
+  className?: string;
+};
 
 export function InfiniteSlider({
   children,
@@ -24,136 +24,68 @@ export function InfiniteSlider({
   reverse = false,
   className,
 }: InfiniteSliderProps) {
-  const [ref, { width, height }] = useMeasure()
-  const translation = useMotionValue(0)
-  const controls = useAnimation()
-  const isHovered = useRef(false)
-  const containerRef = useRef<HTMLDivElement>(null)
+  const [currentDuration, setCurrentDuration] = useState(duration);
+  const [ref, { width, height }] = useMeasure();
+  const translation = useMotionValue(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [key, setKey] = useState(0);
 
   useEffect(() => {
-    let animationFrame: number
+    let controls;
+    const size = direction === 'horizontal' ? width : height;
 
-    const startAnimation = async () => {
-      const dimension = direction === 'horizontal' ? width : height
-      const currentDuration = isHovered.current && durationOnHover ? durationOnHover : duration
+    // Don't start animation until we have size measurements
+    if (!size) return;
 
-      if (dimension === 0) return
+    const contentSize = size + gap;
+    const from = reverse ? -contentSize / 2 : 0;
+    const to = reverse ? 0 : -contentSize / 2;
 
-      if (direction === 'horizontal') {
-        await controls.start({
-          x: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
-          transition: {
-            duration: currentDuration,
-            ease: 'linear',
-            repeat: Infinity,
-            repeatType: 'loop',
-            repeatDelay: 0,
-          },
-        })
-      } else {
-        await controls.start({
-          y: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
-          transition: {
-            duration: currentDuration,
-            ease: 'linear',
-            repeat: Infinity,
-            repeatType: 'loop',
-            repeatDelay: 0,
-          },
-        })
-      }
+    if (isTransitioning) {
+      controls = animate(translation, [translation.get(), to], {
+        ease: 'linear',
+        duration:
+          currentDuration * Math.abs((translation.get() - to) / contentSize),
+        onComplete: () => {
+          setIsTransitioning(false);
+          setKey((prevKey) => prevKey + 1);
+        },
+      });
+    } else {
+      controls = animate(translation, [from, to], {
+        ease: 'linear',
+        duration: currentDuration,
+        repeat: Infinity,
+        repeatType: 'loop',
+        repeatDelay: 0,
+      });
     }
 
-    const handleResize = () => {
-      cancelAnimationFrame(animationFrame)
-      animationFrame = requestAnimationFrame(startAnimation)
-    }
+    return controls?.stop;
+  }, [
+    key,
+    currentDuration,
+    width,
+    height,
+    gap,
+    direction,
+    reverse,
+    isTransitioning,
+    translation,
+  ]);
 
-    handleResize()
-
-    return () => {
-      cancelAnimationFrame(animationFrame)
-      controls.stop()
-    }
-  }, [controls, direction, duration, durationOnHover, gap, reverse, width, height])
-
-  const handleHoverStart = () => {
-    isHovered.current = true
-    if (durationOnHover) {
-      controls.stop()
-      const dimension = direction === 'horizontal' ? width : height
-      if (direction === 'horizontal') {
-        controls.start({
-          x: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
-          transition: {
-            duration: durationOnHover,
-            ease: 'linear',
-            repeat: Infinity,
-            repeatType: 'loop',
-            repeatDelay: 0,
-          },
-        })
-      } else {
-        controls.start({
-          y: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
-          transition: {
-            duration: durationOnHover,
-            ease: 'linear',
-            repeat: Infinity,
-            repeatType: 'loop',
-            repeatDelay: 0,
-          },
-        })
-      }
-    }
-  }
-
-  const handleHoverEnd = () => {
-    isHovered.current = false
-    if (durationOnHover) {
-      controls.stop()
-      const dimension = direction === 'horizontal' ? width : height
-      if (direction === 'horizontal') {
-        controls.start({
-          x: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
-          transition: {
-            duration: duration,
-            ease: 'linear',
-            repeat: Infinity,
-            repeatType: 'loop',
-            repeatDelay: 0,
-          },
-        })
-      } else {
-        controls.start({
-          y: reverse ? dimension / 2 + gap / 2 : -(dimension / 2 + gap / 2),
-          transition: {
-            duration: duration,
-            ease: 'linear',
-            repeat: Infinity,
-            repeatType: 'loop',
-            repeatDelay: 0,
-          },
-        })
-      }
-    }
-  }
-
-  const childrenArray = React.Children.toArray(children)
-  const duplicatedChildren = [...childrenArray, ...childrenArray]
+  useEffect(() => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentDuration(durationOnHover ?? duration);
+  }, [durationOnHover, duration, isTransitioning]);
 
   return (
-    <div
-      ref={containerRef}
-      className={cn('overflow-hidden', className)}
-      onMouseEnter={handleHoverStart}
-      onMouseLeave={handleHoverEnd}
-    >
+    <div className={cn('overflow-hidden', className)}>
       <motion.div
-        ref={ref}
         className={cn(
-          'flex',
-          direction === 'horizontal' ? 'flex-row' : 'flex-col'
+          'flex w-max',
+          direction === 'vertical' ? 'flex-col' : 'flex-row'
         )}
         style={{
           ...(direction === 'horizontal'
@@ -161,20 +93,11 @@ export function InfiniteSlider({
             : { y: translation }),
           gap: `${gap}px`,
         }}
-        animate={controls}
+        ref={ref}
       >
-        {duplicatedChildren.map((child, index) => (
-          <div
-            key={index}
-            className={cn(
-              'flex-shrink-0',
-              direction === 'horizontal' ? 'h-auto' : 'w-auto'
-            )}
-          >
-            {child}
-          </div>
-        ))}
+        {children}
+        {children}
       </motion.div>
     </div>
-  )
+  );
 }
