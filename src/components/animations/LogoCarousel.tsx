@@ -8,18 +8,20 @@ import { InfiniteSlider } from '@/components/ui/infinite-slider'
 // School board logos
 const logos = [
   { id: 1, src: '/logos/algoma.png', alt: 'Algoma District School Board' },
-  { id: 2, src: '/logos/bluewater.png', alt: 'Bluewater District School Board' },
-  { id: 3, src: '/logos/dufferin-peel.png', alt: 'Dufferin-Peel Catholic District School Board' },
-  { id: 4, src: '/logos/grand-erie.png', alt: 'Grand Erie District School Board' },
-  { id: 5, src: '/logos/hammer.png', alt: 'Hamilton-Wentworth District School Board' },
-  { id: 6, src: '/logos/lambton-kent.png', alt: 'Lambton Kent District School Board' },
-  { id: 7, src: '/logos/northwest-catholic.png', alt: 'Northwest Catholic District School Board' },
-  { id: 8, src: '/logos/ottawa-catholic.webp', alt: 'Ottawa Catholic District School Board' },
-  { id: 9, src: '/logos/peel.png', alt: 'Peel District School Board' },
-  { id: 10, src: '/logos/renfrew-county.png', alt: 'Renfrew County District School Board' },
-  { id: 11, src: '/logos/toronto-catholic.png', alt: 'Toronto Catholic District School Board' },
-  { id: 12, src: '/logos/upper-canada.png', alt: 'Upper Canada District School Board' },
-  { id: 13, src: '/logos/upper-grand.webp', alt: 'Upper Grand District School Board' },
+  { id: 2, src: '/logos/algonquin-lakeshore.svg', alt: 'Algonquin & Lakeshore Catholic District School Board' },
+  { id: 3, src: '/logos/bluewater.png', alt: 'Bluewater District School Board' },
+  { id: 4, src: '/logos/dufferin-peel.png', alt: 'Dufferin-Peel Catholic District School Board' },
+  { id: 5, src: '/logos/grand-erie.png', alt: 'Grand Erie District School Board' },
+  { id: 6, src: '/logos/hammer.png', alt: 'Hamilton-Wentworth District School Board' },
+  { id: 7, src: '/logos/lambton-kent.png', alt: 'Lambton Kent District School Board' },
+  { id: 8, src: '/logos/northeastern-catholic.png', alt: 'Northeastern Catholic District School Board' },
+  { id: 9, src: '/logos/northwest-catholic.png', alt: 'Northwest Catholic District School Board' },
+  { id: 10, src: '/logos/ottawa-catholic.webp', alt: 'Ottawa Catholic District School Board' },
+  { id: 11, src: '/logos/peel.png', alt: 'Peel District School Board' },
+  { id: 12, src: '/logos/renfrew-county.png', alt: 'Renfrew County District School Board' },
+  { id: 13, src: '/logos/toronto-catholic.png', alt: 'Toronto Catholic District School Board' },
+  { id: 14, src: '/logos/upper-canada.png', alt: 'Upper Canada District School Board' },
+  { id: 15, src: '/logos/upper-grand.webp', alt: 'Upper Grand District School Board' },
 ]
 
 export const LogoCarousel: React.FC = () => {
