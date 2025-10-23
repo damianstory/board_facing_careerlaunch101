@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
+import { HeroPill } from '@/components/ui/HeroPill'
 
 const navigationLinks = [
   { id: 'hero', label: 'Home', href: '#hero' },
@@ -120,7 +121,17 @@ export const Navigation: React.FC = () => {
                 priority
               />
             </a>
-            
+
+            {/* Center - Hero Pill */}
+            <div className="flex-1 flex justify-center">
+              <HeroPill
+                announcement="📅 Event Agenda"
+                label="View Full Schedule"
+                href="https://phantom-harrier-dac.notion.site/278f4a4d79df8042a3f6e26838685056?v=278f4a4d79df803e85a6000c44612ed2"
+                isExternal={true}
+              />
+            </div>
+
             {/* Navigation Links */}
             <div className="flex items-center gap-8">
               {navigationLinks.map((link) => (
