@@ -98,12 +98,6 @@ export const faqs: FAQItem[] = [
     keywords: ['french', 'language', 'transcription', 'bilingual', 'translation']
   },
   {
-    id: 'oecd-stat',
-    question: 'Where did you get that 50% stat from above?',
-    answer: 'It\'s from a recently published OECD report titled: <a href="https://www.oecd.org/en/publications/the-state-of-global-teenage-career-preparation_d5f8e3f2-en.html" target="_blank" rel="noopener noreferrer" style="color: #0092ff; text-decoration: none;">The State of Global Teenage Career Preparation</a>',
-    keywords: ['oecd', 'statistics', 'report', 'data', 'research']
-  },
-  {
     id: 'industry-immersion',
     question: 'Is this connected to the Industry Immersion Series?',
     answer: 'No, this is completely independent from the <a href="https://www.industryimmersionseries.ca/" target="_blank" rel="noopener noreferrer" style="color: #0092ff; text-decoration: none;">Industry Immersion Series</a>.',
