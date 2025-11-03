@@ -199,6 +199,7 @@ export const About: React.FC = () => {
 
           {/* Agenda Card - Notion Embed */}
           <BentoCard
+            id="agenda"
             className={cn(
               "col-span-6 bg-white transition-all duration-slow delay-300",
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
