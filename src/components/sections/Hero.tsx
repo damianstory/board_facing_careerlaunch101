@@ -116,7 +116,7 @@ export const Hero: React.FC = () => {
             
             {/* Statistics */}
             <div className="grid grid-cols-3 gap-6 tablet:gap-8 text-center tablet:text-left">
-              <AnimatedStatistic value={10} suffix="+" label="Boards Attending" />
+              <AnimatedStatistic value={25} suffix="+" label="Boards Attending" />
               <AnimatedStatistic value={1000} suffix="+" label="Classrooms Watching" format="k" />
               <AnimatedStatistic value={25} suffix="+" label="Industry Partners" />
             </div>

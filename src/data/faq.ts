@@ -22,8 +22,8 @@ export const faqs: FAQItem[] = [
   {
     id: 'virtual-platform',
     question: 'What is the virtual conference tool you are using to host the videos?',
-    answer: 'It\'s a well known platform called RingCentral Events (formerly Hopin Events). This is what teachers will use during the week of December 1-5 to access recordings to play in class. We will make sure you have access to the url well in advance to share with your IT teams.\n\nStudents are not expected to create accounts with this platform. They will be able to access recordings from their myBlueprint account as of December 7th, 2025.',
-    keywords: ['platform', 'ringcentral', 'hopin', 'virtual', 'conference', 'access']
+    answer: 'myBlueprint will be developing our own platform to host career launch video content. Only educators are being asked to register for an account during the first week of December so that we can provide reports on usage within your school board. Students will not create an account on the platform. The Career Launch platform is being hosted on Canadian servers. For any questions, reach out to Damian.',
+    keywords: ['platform', 'career launch', 'virtual', 'conference', 'access', 'canadian servers']
   },
   {
     id: 'student-access-recordings',
@@ -34,7 +34,7 @@ export const faqs: FAQItem[] = [
   {
     id: 'participation-tracking',
     question: 'Will we be able to see how many of our board/school classes participated?',
-    answer: 'Yes. Because teachers need to create an account on RingCentral to access the recordings during the week of December 1-5, we will be able to tell how many individual sessions were watched at a teacher, school, and board level for that week. ',
+    answer: 'Yes. Because teachers need to create an account on Career Launch platform to access the recordings during the week of December 1-5, we will be able to tell how many individual sessions were watched at a teacher, school, and board level for that week. ',
     keywords: ['tracking', 'participation', 'analytics', 'data', 'reporting']
   },
   {
