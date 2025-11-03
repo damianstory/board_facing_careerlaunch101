@@ -132,132 +132,18 @@ export const About: React.FC = () => {
 
         {/* Bento Grid */}
         <BentoGrid>
-          {/* Event Details Card - Small */}
-          <BentoCard
-            className={cn(
-              "col-span-6 desktop:col-span-2 bg-white border-l-4 border-primary-blue transition-all duration-slow delay-200",
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            )}
-          >
-            <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-6">
-              Event Details
-            </h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <div>
-                  <p className="text-body font-semibold text-brand-navy">December 2, 2025</p>
-                  <p className="text-body-small text-neutral-4">Join for a full day on Dec 2, or throughout the week. </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <div>
-                  <p className="text-body font-semibold text-brand-navy">Virtual & On-Demand</p>
-                  <p className="text-body-small text-neutral-4">During Career Launch Week, students watch from their classes. After that, they can access recordings on-demand from their myBlueprint account.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Star className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-body font-semibold text-brand-navy">Prizes for Teachers</p>
-                  <p className="text-body-small text-neutral-4">The more sessions you watch in class during Career Launch Week, the more chances you have to win.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-accent-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                <div>
-                  <p className="text-body font-semibold text-brand-navy">View the Agenda</p>
-                  <p className="text-body-small text-neutral-4">The working <a href="https://phantom-harrier-dac.notion.site/278f4a4d79df8042a3f6e26838685056?v=278f4a4d79df803e85a6000c44612ed2" target="_blank" rel="noopener noreferrer" className="text-primary-blue hover:underline font-bold">agenda is now available</a>. Hover over a session title and click Open to see the full description.</p>
-                </div>
-              </div>
-            </div>
-          </BentoCard>
-
-          {/* Statistics Card */}
-          <BentoCard
-            className={cn(
-              "col-span-6 desktop:col-span-2 bg-white flex items-center transition-all duration-slow delay-300",
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            )}
-          >
-            <div className="space-y-4">
-              <p className="text-body text-brand-navy">
-                Career opportunities have never been more diverse,<strong> but about 50% of today's students expect to work in just 10 traditional jobs</strong> - doctor, teacher, lawyer, engineer. The OECD's landmark research (in FAQs) shows that 'you cannot be what you cannot see'.
-              </p>
-              <p className="text-body text-brand-navy">
-                With career uncertainty at an all-time high and student expectations 3x greater than actual job demand in professional fields, young people need direct employer engagement.
-              </p>
-              <p className="text-body text-brand-navy">
-              Attend <strong>myBlueprint Career Launch</strong> to help your students discover the meaningful careers, emerging industries, and non-traditional pathways that exist across Ontario.
-              </p>
-            </div>
-          </BentoCard>
-
-          {/* Investment/Pricing Card */}
-          <BentoCard
-            className={cn(
-              "col-span-6 desktop:col-span-2 bg-white border-l-4 border-accent-teal transition-all duration-slow delay-400",
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            )}
-          >
-            <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-6">
-              Your Investment
-            </h3>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="border-b-2 border-brand-navy">
-                    <th className="text-left py-3 px-2 text-body font-semibold text-brand-navy">Before Date</th>
-                    <th className="text-left py-3 px-2 text-body font-semibold text-brand-navy">Boards</th>
-                    <th className="text-center py-3 px-2 text-body font-semibold text-brand-navy">Independents</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-neutral-2">
-                    <td className="py-3 px-2 text-body text-brand-navy">Oct 31</td>
-                    <td className="py-3 px-2 text-body text-brand-navy">$1000</td>
-                    <td className="text-center py-3 px-2 text-body text-brand-navy">$500</td>
-                  </tr>
-                  <tr className="border-b border-neutral-2">
-                    <td className="py-3 px-2 text-body text-brand-navy">Nov 15</td>
-                    <td className="py-3 px-2 text-body text-brand-navy">$2000</td>
-                    <td className="text-center py-3 px-2 text-body text-brand-navy">$750</td>
-                  </tr>
-                  <tr>
-                    <td className="py-3 px-2 text-body text-brand-navy">Nov 30</td>
-                    <td className="py-3 px-2 text-body text-brand-navy">$2500</td>
-                    <td className="text-center py-3 px-2 text-body text-brand-navy">$1000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className="text-body text-brand-navy mt-6">
-              To secure your spot before the deadline, email your partner success specialist (or click the Talk to Us button above) with your intention to participate.
-            </p>
-          </BentoCard>
-
           {/* Event Logistics Options Card */}
           <BentoCard
             className={cn(
-              "col-span-6 bg-white transition-all duration-slow delay-500",
+              "col-span-6 bg-white border-l-4 border-primary-blue transition-all duration-slow delay-200",
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
             {/* Header Section */}
-            <div className="mb-6">
+            <div className="mb-6 text-center">
               <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-4">
                 Event Logistics
               </h3>
-              <p className="text-body text-neutral-4 leading-relaxed">
-                Based on conversations I&apos;ve had with many of you these past few weeks (thank you to those who have already committed your board to the event) this is now how I see it playing out logistically. The truly &quot;live&quot; day doesn&apos;t seem to make sense for anyone. Noted. Here are your options:
-              </p>
             </div>
 
             {/* Two-Column Options Grid */}
@@ -308,6 +194,26 @@ export const About: React.FC = () => {
               <p className="text-body text-brand-navy font-semibold leading-relaxed">
                 And as a reminder, with either option, your investment gives you on-demand access to all the Career Launch recordings for students/staff to watch for the remainder of the school year, whether in class, or at home.
               </p>
+            </div>
+          </BentoCard>
+
+          {/* Agenda Card - Notion Embed */}
+          <BentoCard
+            className={cn(
+              "col-span-6 bg-white transition-all duration-slow delay-300",
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            )}
+          >
+            <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-6 text-center">
+              Event Agenda - Click OPEN on the right side of a session title to see the full description
+            </h3>
+            <div className="w-full">
+              <iframe
+                src="https://phantom-harrier-dac.notion.site/ebd/278f4a4d79df8042a3f6e26838685056?v=278f4a4d79df803e85a6000c44612ed2"
+                className="w-full border-0 rounded-lg"
+                style={{ height: '1600px' }}
+                allowFullScreen
+              />
             </div>
           </BentoCard>
         </BentoGrid>
