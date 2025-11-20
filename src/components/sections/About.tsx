@@ -114,14 +114,38 @@ export const About: React.FC = () => {
   }, [])
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      id="about" 
+      id="about"
       className="py-16 tablet:py-20 bg-background-light"
     >
       <div className="container">
+        {/* Bento Grid */}
+        <BentoGrid>
+          {/* Agenda Card - Notion Embed */}
+          <BentoCard
+            id="agenda"
+            className={cn(
+              "col-span-6 bg-white transition-all duration-slow delay-200",
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            )}
+          >
+            <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-6 text-center">
+              Event Agenda - Click OPEN on the right side of a session title to see the full description
+            </h3>
+            <div className="w-full">
+              <iframe
+                src="https://phantom-harrier-dac.notion.site/ebd/278f4a4d79df8042a3f6e26838685056?v=278f4a4d79df803e85a6000c44612ed2"
+                className="w-full border-0 rounded-lg"
+                style={{ height: '1600px' }}
+                allowFullScreen
+              />
+            </div>
+          </BentoCard>
+        </BentoGrid>
+
         {/* Section Header */}
-        <div className="text-center mb-12 tablet:mb-16">
+        <div className="text-center mb-12 tablet:mb-16 mt-16">
           <h2 className={cn(
             "text-h2-mobile tablet:text-h2 text-brand-navy transition-all duration-slow",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -135,7 +159,7 @@ export const About: React.FC = () => {
           {/* Event Logistics Options Card */}
           <BentoCard
             className={cn(
-              "col-span-6 bg-white border-l-4 border-primary-blue transition-all duration-slow delay-200",
+              "col-span-6 bg-white border-l-4 border-primary-blue transition-all duration-slow delay-300",
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
@@ -194,27 +218,6 @@ export const About: React.FC = () => {
               <p className="text-body text-brand-navy font-semibold leading-relaxed">
                 And as a reminder, with either option, your investment gives you on-demand access to all the Career Launch recordings for students/staff to watch for the remainder of the school year, whether in class, or at home.
               </p>
-            </div>
-          </BentoCard>
-
-          {/* Agenda Card - Notion Embed */}
-          <BentoCard
-            id="agenda"
-            className={cn(
-              "col-span-6 bg-white transition-all duration-slow delay-300",
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            )}
-          >
-            <h3 className="text-h4-mobile tablet:text-h4 text-brand-navy mb-6 text-center">
-              Event Agenda - Click OPEN on the right side of a session title to see the full description
-            </h3>
-            <div className="w-full">
-              <iframe
-                src="https://phantom-harrier-dac.notion.site/ebd/278f4a4d79df8042a3f6e26838685056?v=278f4a4d79df803e85a6000c44612ed2"
-                className="w-full border-0 rounded-lg"
-                style={{ height: '1600px' }}
-                allowFullScreen
-              />
             </div>
           </BentoCard>
         </BentoGrid>
